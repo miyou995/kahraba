@@ -1,0 +1,51 @@
+{% load i18n %} 
+{% load static %}
+    <!-- Block2 -->
+    {% for product in filter.qs %}
+      
+    <div class="col-xs-6 col-md-4 col-xl-3" >
+
+    <div class="product">
+        <div class="product-img">
+            <a href="{{product.get_absolute_url}}">
+                {% if product.photos.all.0 %}
+                    <div class="product-preview">
+                        <img style="  width: 100%; height: auto;" src="{{product.photos.all.0.photo.url}}" alt="{{product.name}}">
+                    </div>
+                {% else %}
+                    <div class="product-preview">
+                        <img src="{% static "img/no-photo.jpg" %}" alt="">
+                    </div>
+                {% endif %}
+            </a>
+            <div class="product-label">
+                <!-- <span class="sale">-30%</span> -->
+                {% if product.new %}
+                    <span class="new">NOUVEAU</span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="product-body">
+            <p class="product-category">
+                <a href="{{product.category.get_absolute_url}}">
+                    {{product.category}}
+                </a>
+            </p>
+            <h3 class="product-name"><a href="{{product.get_absolute_url}}">{{product.name|truncatewords:5}}</a></h3>
+            <h4 class="product-price">{{product.price}} DA </h4>
+            <div class="product-btns">
+               
+                <button class="quick-view text-uppercase">
+                    <a href="{% url 'core:productDetail' product.slug %}"> 
+                        <i class="fa fa-eye"></i>
+                    </a>
+                    <span class="tooltipp">Voir</span>
+                </button>
+            </div>
+        </div>
+        <div class="add-to-cart">
+            <a href="{% url 'core:productDetail' product.slug %}" class="add-to-cart-btn text-uppercase"><i class="fa fa-shopping-cart"></i> Acheter</a>
+        </div>
+    </div>
+</div>
+{% endfor %}

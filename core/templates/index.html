@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+{% load static %}
+{% load mptt_tags %}
+
+{% block content %}
+<div class="slider-with-banner" style="margin-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <!-- Begin Category Menu Area -->
+            <div class="col-lg-3">
+                <!--Category Menu Start-->
+                <div class="category-menu">
+                    <div class="category-heading">
+                        <h2 class="categories-toggle"><span>categories</span></h2>
+                    </div>
+                    <div id="cate-toggle" class="category-menu-list">
+                        <ul>
+                            {% recursetree categories %}
+                                <li class="right-menu"><a class="tree-title" href="{{node.get_absolute_url}}">{{node.name}}</a>
+                                    {% if node.children.count > 0 %}
+                                        <ul class="cat-mega-menu">
+                                            {% for tree in node.children.all %}
+                                                <li class="right-menu cat-mega-title">
+                                                    <a href="{{node.get_absolute_url}}">{{tree.name}}</a>
+                                                    <ul>
+                                                        {% for sub in tree.children.all %}
+                                                            <li><a href="#">{{sub.name}}</a></li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </li>
+                            {% endrecursetree %}
+                        </ul>
+                    </div>
+                </div>
+                <!--Category Menu End-->
+            </div>
+            <!-- Category Menu Area End Here -->
+            <!-- Begin Slider Area -->
+            <!-- SALAMAT -->
+            <div class="col-lg-9">
+                <div class="slider-area pt-sm-30 pt-xs-30">
+                    <div class="slider-active owl-carousel">
+                        {% for slide in big_slides %}
+                        <div class="single-slide align-center-left animation-style-02 bg-4" style="background-image: url({{slide.photo.url}});">
+                            <div class="slider-progress"></div>
+                            <div class="slider-content">
+                                {% if slide.title %}
+                                    <h2>{{slide.title}}</h2>
+                                {% endif %}
+                                {% if slide.sub_title %}
+                                    <h3><span>{{slide.sub_title}}</span></h3>
+                                {% endif %}
+                                {% if slide.url %}
+                                    <div class="default-btn slide-btn">
+                                        <a class="links" href="{{banner.url}}">Acheter</a>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Slider With Category Menu Area End Here -->
+            <!-- Begin Li's Static Banner Area -->
+           <div class="li-static-banner pt-20 pt-sm-30 pt-xs-30">
+                <div class="container">
+                    <div class="row">
+                        {% for slide in three_photos %}
+                            <div class="col-lg-4 col-md-4">
+                                <div class="single-banner pb-xs-30">
+                                    <a href="{{slide.photo.url}}">
+                                        <img src="{{slide.photo.url}}" alt="banner">
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Static Banner Area End Here -->
+            <!-- Begin Li's Special Product Area -->
+            <section class="product-area li-laptop-product Special-product pt-60 pb-45">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Li's Section Area -->
+                        <div class="col-lg-12">
+                            <div class="li-section-title">
+                                <h2>
+                                    <span>Nouvel Arrivage</span>
+                                </h2>
+                            </div>
+                            <div class="row">
+                                <div class="special-product-active owl-carousel">
+                                    {% for product in new_products %}
+                                        <div class="col-lg-12">
+                                            {% include "snipetts/product-block.html" %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Li's Section Area End Here -->
+                    </div>
+                </div>
+            </section>
+            <!-- Li's Special Product Area End Here -->
+            <!-- Begin Li's Laptops Product | Home V2 Area -->
+            <section class="product-area li-laptop-product li-laptop-product-2 pb-45">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Li's Section Area -->
+                        <div class="col-lg-12">
+                            <div class="li-banner-2 pt-15 pb-15">
+                                <div class="row">
+                                    <!-- Begin Single Banner Area -->
+                                   {% for banner in dual_banners %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-banner">
+                                                <a href="{{banner.url}}">
+                                                    <img src="{{banner.photo.url}}" alt="Li's Static Banner">
+                                                </a>
+                                            </div>
+                                        </div>
+                                   {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="product-area li-trending-product li-trending-product-2  pb-45">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Li's Tab Menu Area -->
+                        <div class="col-lg-12">
+                            <div class="li-product-tab li-trending-product-tab">
+                                <h2>
+                                    <span>Produits a découvrir</span>
+                                </h2>
+                                <ul class="nav li-product-menu li-trending-product-menu">
+                                    {% for cat in random_cat %}
+                                        <li><a 
+                                            {% if forloop.first %}
+                                              class="active"
+                                            {% endif %}
+                                            data-toggle="tab" href="#{{cat.id}}"><span>{{cat.name}}</span></a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <!-- Begin Li's Tab Menu Content Area -->
+                            <div class="tab-content li-tab-content li-trending-product-content">
+                                {% for cat in random_cat %}
+                                    <div id="{{cat.id}}" 
+                                    {% if forloop.first %}
+                                        class="tab-pane show fade in active"
+                                    {% else %}
+                                        class="tab-pane fade"
+                                    {% endif %}
+                                    >
+                                        <div class="row">
+                                            <div class="product-active owl-carousel">
+                                                {% for product in cat.products.all %}
+                                                    <div class="col-lg-12">
+                                                        {% include "snipetts/product-block.html" %}
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <!-- Tab Menu Content Area End Here -->
+                        </div>
+                        <!-- Tab Menu Area End Here -->
+                    </div>
+                </div>
+            </section>
+            <div class="li-static-home pb-45">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Begin Li's Static Home Image Area -->
+                            <div class="li-static-home-image" style="background-image: url({{large_banner.photo.url}});"></div>
+                            <!-- Li's Static Home Image Area End Here -->
+                            <!-- Begin Li's Static Home Content Area -->
+                            <div class="li-static-home-content">
+                                <h2>{{large_banner.title}}</h2>
+                                <p class="schedule">
+                                   {{large_banner.sub_title}}
+                                </p>
+                                <div class="default-btn">
+                                    <a href="{{large_banner.url}}" class="links">Acheter</a>
+                                </div>
+                            </div>
+                            <!-- Li's Static Home Content Area End Here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Static Home Area End Here -->
+            <!-- Begin Li's Trending Product | Home V2 Area -->
+
+
+            <!-- Li's Trending Product | Home V2 Area End Here -->
+{% endblock content %}

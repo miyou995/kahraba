@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load static %}
+{% static "img" as baseUrl %}
+
+{% block content %}
+	<!-- Title Page -->
+	<div id="breadcrumb" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="breadcrumb-header">PANIER</h3>
+					<ul class="breadcrumb-tree">
+						<li><a href="{% url 'core:index' %}">Accueil</a></li>
+						<li class="active">Detail de commande </li>
+					</ul>
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+
+
+
+    <!--================Cart Area =================-->
+	<section class="order_details section_gap mb-5">
+		<div class="container">
+			<h3 class="title_confirmation">Merci, Votre commande a été effectué avec succée.</h3>
+			<div class="row order_d_inner">
+				<div class="col-lg-4">
+					<div class="details_item">
+						<h4>Commande Infos</h4>
+						<ul class="list">
+							<li><a href="#"><span>Commande Numéro </span> : {{ order.id }}</a></li>
+							<li><a href="#"><span>Date</span> : {{order.created}}</a></li>
+							<li><a href="#"><span>Total</span> : {{ order.get_total_cost }} DA</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="details_item">
+						<h4>Livraison info </h4>
+						<ul class="list">
+							<li><a href="#"><span>Wilaya</span> : {{ order.wilaya }} </a></li>
+							<li><a href="#"><span>Commune</span> : {{ order.commune }} </a></li>
+							<li><a href="#"><span>Adresse</span> : {{ order.address }} </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="order_details_table mb-5">
+				<h2>Commande Details</h2>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Produit</th>
+								<th scope="col">Quantité</th>
+								<th scope="col">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+						{% for item in order.items.all %}
+							<tr>
+								<td><p>{{ item.product.name }}</p></td>
+								<td><h5>x {{ item.quantity }}</h5></td>
+								<td><p> {{ item.price }} DA</p></td>
+							</tr>
+						{% endfor %}
+							<tr>
+								<td>
+									<h4>Sous-Total</h4>
+								</td>
+								<td>
+									<h5></h5>
+								</td>
+								<td>
+									<p>{{ order.get_total_cost }} DA</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h4>Livraison</h4>
+								</td>
+								<td>
+									<h5></h5>
+								</td>
+								<td>
+									<p>{{order.delivery_cost}} DA</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h4>Total</h4>
+								</td>
+								<td>
+									<h5></h5>
+								</td>
+								<td>
+									<p>{{ order.get_total_cost }}</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+    <!--================End Cart Area =================-->
+
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% load static %}
+
+
+{% block content %}
+	<section class=" p-t-66 p-b-38 m-b-50">
+		<div class="container">
+			<center><h1 classe="l-text2 t-center m-t-10">
+				Retours et remboursements  
+			</h1></center>
+			<div >
+				<p class=" m-t-30">Voir conditions <br> Les retours sont acceptés sous 48 heures à compter de la date de livraison.<br>
+					Conditions de reprise #checklist :
+				</p>
+				<ul class="m-t-30" style="list-style-type: circle;">
+					<li class="ml-5" style="list-style-type: circle;"> le produit doit être neuf (essayé, mais pas porté).</li>
+					<li class="ml-5" style="list-style-type: circle;"> le produit doit être renvoyé dans sa boîte ou son emballage d'origine.</li>
+				</ul>
+				<p class="text-center m-t-30">
+					Attention, n'utilisez jamais la boîte à chaussures comme colis de retour. Remettez la boîte à chaussures dans le carton d'emballage d'origine (ou un autre), puis scotchez ! Toute boîte à chaussures manquante ou détériorée sera facturée 1000 DZD
+					Après nous avoir contacter ! Vous recevrez un email automatique une fois le remboursement enclenché. Le remboursement sera effectué via le mode de paiement utilisé lors de la commande et sera visible sur votre compte sous 3 jours ouvrés environ.
+					Attention, les frais de transport ne sont pas remboursés.
+					CHECK ! Vérifiez bien que les conditions de retours soient toutes remplies, sinon, nous ne pourrons pas accepter votre retour et le colis vous sera renvoyé à vos frais, ce qui serait vraiment très dommage.
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock content %}

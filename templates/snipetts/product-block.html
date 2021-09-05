@@ -1,0 +1,47 @@
+{% load i18n %} 
+{% load static %}
+<div class="single-product-wrap">
+    <div class="product-image">
+        <a href="{{product.get_absolute_url}}">
+            <img 
+            {% if product.photos.all.0 %}
+                src="{{product.photos.all.0.fichier.url}}" alt="{{product.name}}">
+            {% else %}
+                src="{% static "images/pas-images.png" %}" alt="Pas de photo pour le moment">
+            {% endif %}
+        </a>
+        {% if product.status == 'N' %}
+            <span class="sticker">New</span>
+        {% endif %}
+    </div>
+    <div class="product_desc">
+        <div class="product_desc_info">
+            <div class="product-review">
+                <h5 class="manufacturer">
+                    <a href="{{product.category.get_absolute_url}}">{{product.category}}</a>
+                </h5>
+            </div>
+            <h4><a class="product_name" href="{{product.get_absolute_url}}">{{product.name}}</a></h4>
+            <div class="price-box">
+                <span class="new-price new-price-2">{{product.price}} DA</span>
+                {% if product.old_price %}
+                    <span class="old-price">{{product.old_price}} DA</span>
+                    <span class="discount-percentage">{{product.promo}}%</span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="add-actions">
+            <form id="add_one_cart" action="{% url 'cart:cart_one_add' product.id %}" method="POST">
+
+            {% csrf_token %}
+            <ul class="add-actions-link">
+                <li class="add-cart active" style="width: 80%;"><a href="#">Ajouter au panier</a></li>
+                <li id="lunch_modal" hx-get="{% url 'core:product-detail' %}" hx-target=".modal-body " hx-swap="beforeend" style="float: right;"><a href="{{product.get_absolute_url}}" title="quick view" class="quick-view-btn" ><i class="fa fa-eye"></i></a></li>
+            </ul>
+        </form>
+
+        </div>
+    </div>
+</div>
+
+

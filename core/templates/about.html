@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+            <!-- Begin Li's Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <div class="container">
+                    <div class="breadcrumb-content">
+                        <ul>
+                            <li><a href="{% url 'core:index' %}">Accueil</a></li>
+                            <li class="active">A propos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Breadcrumb Area End Here -->
+            <!-- about wrapper start -->
+            <div class="about-us-wrapper pt-60 pb-40">
+                <div class="container">
+                    <div class="row">
+                        <!-- About Text Start -->
+                        <div class="col-lg-6 order-last order-lg-first">
+                            <div class="about-text-wrap">
+                               {{business.about|safe}}
+                            </div>
+                        </div>
+                        <!-- About Text End -->
+                        <!-- About Image Start -->
+                        <div class="col-lg-5 col-md-10">
+                            <div class="about-image-wrap">
+                                {% if business.about_photo %}
+                                    <img src="{{business.about_photo.url}}" alt="a propode {{business.name}}" srcset="photo a propos">
+                                {% else %}
+                                    <img class="img-full" src="{% static "images/700.jpg" %}" alt="A propos de nous" />
+                                {% endif %}
+                            </div>
+                        </div>
+                        <!-- About Image End -->
+                    </div>
+                </div>
+            </div>
+            <!-- about wrapper end -->
+            <!-- Begin Counterup Area -->
+            <div class="counterup-area">
+                <div class="container-fluid p-0">
+                    <div class="row no-gutters">
+                        {% for counter in counters %}
+                            <div class="col-lg-3 col-md-6">
+                                <div class="limupa-counter white-smoke-bg">
+                                    <div class="container">
+                                        <div class="counter-img">
+                                            <img src="{{counter.icon.url}}" width="60" alt="{{counter.name}}">
+                                        </div>
+                                        <div class="counter-info">
+                                            <div class="counter-number">
+                                                {% if counter.before %}
+                                                    <h3 style="display: inline-block;">{{counter.before}}</h3>
+                                                {% endif %}
+                                                <h3 style="display: inline-block;" class="counter">{{counter.number}}</h3>
+                                            </div>
+                                            <div class="counter-text">
+                                                <span>{{counter.name}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+{% endblock content %}

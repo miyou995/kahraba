@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+            <!-- Begin Li's Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <div class="container">
+                    <div class="breadcrumb-content">
+                        {% with product.category as category %}
+                        <ul>
+                            <li><a href="{% url 'core:index' %}">Acceuil</a></li>
+                            {% for cat in category.get_ancestors %}
+                                <li><a href="{{cat.get_absolute_url}}">{{cat.name}}</a></li>
+                            {% endfor %}
+                            <li ><a href="{{product.category.get_absolute_url}}"> {{product.category}} </a></li>
+                            <li class="active"> {{product.name}}</li>
+                        </ul>
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Breadcrumb Area End Here -->
+            <!-- content-wraper start -->
+            <div class="content-wraper">
+                <div class="container">
+                    <div class="row single-product-area">
+                        <div class="col-lg-5 col-md-6">
+                           <!-- Product Details Left -->
+                            <div class="product-details-left sp-tab-style-left-page">
+                                <div class="product-details-images slider-navigation-1">
+                                    {% for photo in product.photos.all %}
+                                        <div class="lg-image">
+                                            <a class="popup-img venobox vbox-item" href="{{photo.fichier.url}}" data-gall="myGallery">
+                                                <img src="{{photo.fichier.url}}" alt="product image">
+                                            </a>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="tab-style-left">
+                                    {% for photo in product.photos.all %}
+                                        <div class="sm-image"><img src="{{photo.fichier.url}}" alt="product image thumb"></div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <!--// Product Details Left -->
+                        </div>
+
+                        <div class="col-lg-7 col-md-6">
+                            <div class="product-details-view-content pt-60">
+                                <div class="product-info">
+                                    <h2>{{product.name}}</h2>
+                                    {% if product.reference %}
+                                        <span class="product-details-ref">Reference: {{product.reference}}</span>
+                                    {% endif %}
+                                    
+                                    <div class="price-box pt-20">
+                                        {% if product.old_price %}
+                                            <span style="text-decoration: line-through;" class="old-price d-block">{{product.old_price}} DA</span>
+                                        {% endif %}
+                                        <span class="new-price new-price-2">{{product.price}} DA</span>
+                                    </div>
+                                    {% if product.text %}
+                                        <div class="product-desc">
+                                            <p>
+                                                <span>{{product.text}}</span>
+                                            </p>
+                                        </div>
+                                    {% endif %}
+                                    {% if product.product_type %}
+                                        <div class="product-variants">
+                                            <div class="produt-variants-size">
+                                                <label>Dimension</label>
+                                                <select class="nice-select">
+                                                    <option value="1" title="S" selected="selected">40x60cm</option>
+                                                    <option value="2" title="M">60x90cm</option>
+                                                    <option value="3" title="L">80x120cm</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                    <div class="single-add-to-cart">
+                                        <form action="#" class="cart-quantity">
+                                            <div class="quantity">
+                                                <label>Quantité</label>
+                                                <div class="cart-plus-minus">
+                                                    <input class="cart-plus-minus-box" value="1" type="text">
+                                                    <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
+                                                    <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
+                                                </div>
+                                            </div>
+                                            <button class="add-to-cart" type="submit">Ajouter au panier</button>
+                                        </form>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <!-- content-wraper end -->
+            <!-- Begin Product Area -->
+            <div class="product-area pt-35">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="li-product-tab">
+                                <ul class="nav li-product-menu">
+                                    {% if product.description %}
+                                        <li><a class="active" data-toggle="tab" href="#description"><span>Déscription</span></a></li>
+                                    {% endif %}
+                                    {% if product.specifications.count > 0 %}
+                                        <li><a data-toggle="tab" href="#product-details"><span>Caractéristiques</span></a></li>
+                                    {% endif %}
+                                    {% if product.documents.count > 0 %}
+                                        <li><a data-toggle="tab" href="#reviews"><span>Documents</span></a></li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            <!-- Begin Li's Tab Menu Content Area -->
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        {% if product.description %}
+                            <div id="description" class="tab-pane active show" role="tabpanel">
+                                <div class="product-description">
+                                   {{product.description|safe}}
+                                </div>
+                            </div>
+                        {% endif %}
+                        <div id="product-details" class="tab-pane" role="tabpanel">
+                            <div class="product-details-manufacturer">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        {% for carec in product.specifications.all %}
+                                            <tr>
+                                                <th scope="row">{{carec.key}}</th>
+                                                <td>{{carec.value}}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+                        <div id="reviews" class="tab-pane" role="tabpanel">
+                            <div class="product-reviews">
+                                {% for doc in product.documents.all %}
+                                    <li><i class="fa fa-file-pdf-o"></i> <a href="{{doc.file.url}}" download> {{doc.name}}</a></li>
+                                {% endfor %}
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Area End Here -->
+            <!-- Begin Li's Laptop Product Area -->
+            <section class="product-area li-laptop-product pt-30 pb-50">
+                <div class="container">
+                    <div class="row">
+                        <!-- Begin Li's Section Area -->
+                        <div class="col-lg-12">
+                            <div class="li-section-title">
+                                <h2>
+                                    <span>{{related_products_count}} autres produits dans {{product.category}} </span>
+                                </h2>
+                            </div>
+                            <div class="row">
+                                <div class="product-active owl-carousel">
+                                  {% for product in related_products %}
+                                    <div class="col-lg-12">
+                                        {% include "snipetts/product-block.html" %}
+                                    </div>
+                                  {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Li's Section Area End Here -->
+                    </div>
+                </div>
+            </section>
+            <!-- Li's Laptop Product Area End Here -->
+
+{% endblock content %}

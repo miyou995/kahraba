@@ -1,0 +1,49 @@
+{% load i18n %} 
+{% load static %}
+<div class="row product-layout-list">
+    <div class="col-lg-3 col-md-5 ">
+        <div class="product-image">
+            <a href="{{product.get_absolute_url}}">
+                <img 
+                {% if product.photos.all.0 %}
+                    src="{{product.photos.all.0.fichier.url}}" alt="{{product.name}}">
+                {% else %}
+                    src="{% static "images/pas-images.png" %}" alt="Pas de photo pour le moment">
+                {% endif %}
+            </a>
+            {% if product.status == 'N' %}
+                <span class="sticker">New</span>
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-lg-5 col-md-7">
+        <div class="product_desc">
+            <div class="product_desc_info">
+                <div class="product-review">
+                    <h5 class="manufacturer">
+                        <a href="{{product.category.get_absolute_url}}">{{product.category}}</a>
+                    </h5>
+                </div>
+                <h4><a class="product_name" href="{{product.get_absolute_url}}">{{product.name}}</a></h4>
+                <div class="price-box">
+                    <span class="new-price new-price-2">{{product.price}} DA</span>
+                    {% if product.old_price %}
+                        <span class="old-price">{{product.old_price}} DA</span>
+                        <span class="discount-percentage">{{product.promo}}%</span>
+                    {% endif %}
+                </div>
+                {% if product.text %}
+                    <p>{{product.text}}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="shop-add-action mb-xs-30">
+            <ul class="add-actions-link">
+                <li style="width: 100%;" class="add-cart"><a href="#">Ajouter au panier</a></li>
+                <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i>Vue Rapide</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
