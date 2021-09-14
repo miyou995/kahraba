@@ -1,12 +1,12 @@
 from django.db.models import Q 
-from atributes.models import Cheveux, Tag
+from atributes.models import Tag
 from django.db.models.query import QuerySet
 from django.shortcuts import get_object_or_404, render
 from django.http import JsonResponse, request
 from .forms import ContactForm
 from delivery.models import Wilaya, Commune
 from django.views.generic import TemplateView, DetailView, ListView, CreateView, View
-from .models import Product, Category
+from .models import Brand, Product, Category
 from business.models import Business, ThreePhotos, Slide, DualBanner, Counter, LargeBanner
 from cart.forms import CartAddProductForm
 from business.models import Counter
@@ -22,11 +22,11 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["new_products"] = Product.objects.filter(top=True)
         context["top_products"] = Product.objects.filter(top=True)
-        context["big_slides"] = Slide.objects.all()
+        context["big_slides"]   = Slide.objects.all()
         context["three_photos"] = ThreePhotos.objects.all()[:3]
         context["dual_banners"] = DualBanner.objects.all()[:2]
         context["large_banner"] = LargeBanner.objects.last()
-        context["random_cat"] = Category.objects.all()
+        context["random_cat"]   = Category.objects.all()
         all_cat = Category.objects.all()
         cat_list = []
         for cat in all_cat:
@@ -36,7 +36,6 @@ class IndexView(TemplateView):
         context["random_cat"] = cat_list[:3]
         print('a tchou hadi', context["random_cat"])
         return context
-#  STATIC
 
 class AboutView(TemplateView):
     template_name = "about.html"
@@ -74,6 +73,65 @@ def product_detail(request):
     product = Product.objects.get(id=Product.objects.first().id)
     return render(request, 'snipetts/product-modal.html', {'product': product})
 
+
+
+class ProductsView(ListView):
+    context_object_name = 'products'
+    model = Product
+    template_name = "products.html"
+
+    def get_queryset(self):
+        try:
+            param = self.request.GET.get('category')
+            print('category', param)
+            if param == 'all':
+                category = Category.objects.all()
+                products = Product.objects.all()
+            elif param is None:
+                category = Category.objects.all()
+                products = Product.objects.all()
+            else:
+                category = Category.objects.get(id = param)
+
+                products = Product.objects.filter(category__in=category.get_descendants(include_self=True))
+        except:
+            category = Category.objects.all()
+            products = Product.objects.all()
+
+
+        query = self.request.GET.get('name')
+        if query:
+            print('query', query)
+            qs = products.search(query=query)
+            print('les produits ')
+        else:
+            print('les ELSEEEE ', products)
+
+            qs = products
+        return qs
+        # except:
+        #     print(' kamel les produits kharjou :) excepty !!!')
+        #     return super().get_queryset() 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.request.GET.get('category'):
+            try:
+                category = self.request.GET.get('category')
+                if category == 'all':                
+                    context["category"] = Category.objects.all()
+                else:                
+                    context["category"] = Category.objects.get(id = category)
+            except:
+                pass
+        context["tags"] = Tag.objects.all()
+        context["brands"] = Brand.objects.all()
+        # context["filters"] = ProductFilter(self.request.GET, queryset= self.get_queryset())
+        # context["products"] = Product.objects.all()
+        return context
+
+
+
+
 # class CategoryProductsView(ListView):
 #     context_object_name = 'products'
 #     model = Product
@@ -109,35 +167,16 @@ class PaginatedFilterViews(View):
         return context
 
 
-
-class ProductsView(PaginatedFilterViews, ListView):
-    context_object_name = 'products'
-    model = Product
-    template_name = "products.html"
-    def get_queryset(self):
-        try:
-            param = self.request.GET.get('category')
-            category = Category.objects.get(id = param)
-            products = Product.objects.filter(category__in=category.get_descendants(include_self=True))
-            print('les produits ', products)
-            return products
-        except:
-            return super().get_queryset() 
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        if self.request.GET.get('category'):
-            param = self.request.GET.get('category')
-            context["category"] = Category.objects.get(id = param)
-        context["tags"] = Tag.objects.all()
-        # context["products"] = Product.objects.all()
-        return context
+def filtred_htmx_products(request):
+        filters = ProductFilter(request.GET, queryset= Product.objects.all())
+        return render(request, 'snipetts/htmx_products.html', {'products': filters})
 
 
 
 def filtered_view(request):
     # filter = ProductFilter(request.GET, queryset= Product.objects.all())
     html = render_to_string('snipetts/ajax-product-block.html', {'filter': filter}, request=request)
+    return JsonResponse({'form': html})
     # paginator = Paginator(filter.qs, 4)
     # page = request.GET.get('page')
     # try:
@@ -146,7 +185,6 @@ def filtered_view(request):
     #     products = paginator.page(1)
     # except EmptyPage:
     #     products = paginator.page(paginator.num_pages)
-    return JsonResponse({'form': html})
 
 # class ProductsView(ListView):
 #     context_object_name = 'products'

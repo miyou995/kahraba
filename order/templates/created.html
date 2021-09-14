@@ -3,33 +3,12 @@
 {% static "img" as baseUrl %}
 
 {% block content %}
-	<!-- Title Page -->
-	<div id="breadcrumb" class="section">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<div class="col-md-12">
-					<h3 class="breadcrumb-header">PANIER</h3>
-					<ul class="breadcrumb-tree">
-						<li><a href="{% url 'core:index' %}">Accueil</a></li>
-						<li class="active">Detail de commande </li>
-					</ul>
-				</div>
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</div>
 
-
-
-    <!--================Cart Area =================-->
 	<section class="order_details section_gap mb-5">
 		<div class="container">
 			<h3 class="title_confirmation">Merci, Votre commande a été effectué avec succée.</h3>
 			<div class="row order_d_inner">
-				<div class="col-lg-4">
+				<div class="col-lg-6">
 					<div class="details_item">
 						<h4>Commande Infos</h4>
 						<ul class="list">
@@ -39,11 +18,11 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-lg-4">
+				<div class="col-lg-6">
 					<div class="details_item">
-						<h4>Livraison info </h4>
+						<h4>Livraison info</h4>
 						<ul class="list">
-							<li><a href="#"><span>Wilaya</span> : {{ order.wilaya }} </a></li>
+							<li><a href="#"><span>Wilaya</span>  : {{ order.wilaya }} </a></li>
 							<li><a href="#"><span>Commune</span> : {{ order.commune }} </a></li>
 							<li><a href="#"><span>Adresse</span> : {{ order.address }} </a></li>
 						</ul>

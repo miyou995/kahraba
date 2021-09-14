@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Business, Slide, ThreePhotos, Counter, LargeBanner ,DualBanner, Realisation, Partner, RealisationPhotos
+from .models import Business, Slide, ThreePhotos, Counter, LargeBanner ,DualBanner, Realisation, Partner, RealisationPhotos, ClientService
 from django.utils.html import format_html
 
 # Register your models here.
@@ -49,6 +49,7 @@ class DualBannerAdmin(admin.ModelAdmin):
     list_editable = ['url']
     # def has_add_permission(self, request):
     #     return False
+
 @admin.register(Business)
 class BusinesAdmin(admin.ModelAdmin):
     list_display = ('id', 'name')
@@ -57,11 +58,19 @@ class BusinesAdmin(admin.ModelAdmin):
         return False
 
 
-
 @admin.register(Counter)
 class CounterAdmin(admin.ModelAdmin):
     list_display = ('name','number')
     list_editable = ['number']
+
+@admin.register(ClientService)
+class ClientServiceAdmin(admin.ModelAdmin):
+    def image_tag(self):
+        return format_html('<img src="{}" height="150" />'.format(self.icon.url))
+    list_display = ('name','sub_title', image_tag)
+    list_display_links = ('name',)
+    list_editable = ['sub_title']
+
 
 
 class PhotosLinesAdmin(admin.TabularInline):

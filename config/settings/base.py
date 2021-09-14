@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'import_export',
     'tinymce',
     'django_filters',
+    "django_htmx",
 ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -66,6 +67,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django_htmx.middleware.HtmxMiddleware",
 ]
 
 
@@ -180,6 +182,14 @@ MEDIA_ROOT = BASE_DIR / "media"
 CART_SESSION_ID = 'cart'
 
 
+BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+# CELERY_TIMEZONE = 'UTC'
+
+
 
 # TINYMCE_JS_URL = os.path.join(STATIC_URL, "tinymce/tinymce.min.js")
 # TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "tinymce")
@@ -210,3 +220,15 @@ TINYMCE_DEFAULT_CONFIG = {
 }
 
 
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_PORT = 587
+    SERVER_EMAIL = 'octopus.emailing@gmail.com'
+    EMAIL_HOST_USER = 'octopus.emailing@gmail.com'
+    EMAIL_HOST_PASSWORD = 'miyou0209'
+
+    EMAIL_USE_TLS = True
+    EMAIL_USE_SSL = False

@@ -16,7 +16,9 @@ class Business(models.Model):
     title       = models.CharField(verbose_name="Titre", max_length=50, blank=True)
     adress      = models.CharField(verbose_name="Adresse", max_length=50, blank=True)
     email       = models.EmailField(verbose_name="email de l'entreprise", max_length=50, blank=True)
+    email2       = models.EmailField(verbose_name="2eme email de l'entreprise", max_length=50, blank=True)
     phone       = models.CharField(verbose_name="numéro de téléphone de l'entreprise", max_length=50, blank=True)
+    phone2       = models.CharField(verbose_name="2eme numéro de téléphone de l'entreprise", max_length=50, blank=True)
     about       = tinymce_models.HTMLField(verbose_name='Text a propos', blank=True, null=True)
     about_photo = models.ImageField(verbose_name="Photo A propos 440 X 275 px", upload_to='slides/', blank=True, null=True)
     facebook    = models.URLField(verbose_name="Lien page Facebook", max_length=300, blank=True, null=True)
@@ -27,6 +29,8 @@ class Business(models.Model):
     chat_code   = models.TextField(verbose_name="Script messagerie instantané", blank=True, null=True)
     pixel       = models.TextField(verbose_name="Script Facebook pixel", blank=True, null=True)
     analytics   = models.TextField(verbose_name="Script Analytics", blank=True, null=True)
+    contact_message = models.TextField(verbose_name="Contact message", blank=True, null=True)
+    google_maps = models.TextField(verbose_name="iframe google maps", blank=True, null=True)
     # actif  = models.BooleanField(verbose_name='Active', default=False)
     # is_big  = models.BooleanField(verbose_name='Grande photo (1920 x 570)', default=False)
     # is_small  = models.BooleanField(verbose_name='Medium photo (720 x 540)', default=False)
@@ -85,8 +89,8 @@ class DualBanner(models.Model):
     objects = ActiveManager()
 
     class Meta:
-        verbose_name = '3. Petits Banners en duo'
-        verbose_name_plural = '3. Petits Banners en duo'
+        verbose_name = '4. Petits Banners en duo'
+        verbose_name_plural = '4. Petits Banners en duo'
 
     def clean(self):
         model = self.__class__
@@ -100,8 +104,8 @@ class LargeBanner(models.Model):
     sub_title  = models.CharField(verbose_name="Sous titre de la photo", max_length=50, blank=True, null=True) 
     url        = models.URLField(verbose_name="Lien", max_length=250)
     class Meta:
-        verbose_name = '3. Grand Banner bas de page d\'accueil'
-        verbose_name_plural = '3. Grand Banner bas de d\'accueil'
+        verbose_name = '5. Grand Banner bas de page d\'accueil'
+        verbose_name_plural = '5. Grand Banner bas de d\'accueil'
 
     def clean(self):
         model = self.__class__
@@ -121,14 +125,33 @@ class Counter(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = '5. Accomplissement'
-        verbose_name_plural = '5. Accomplissement'
+        verbose_name = '6. Accomplissement'
+        verbose_name_plural = '6. Accomplissement'
 
     def clean(self):
         model = self.__class__
         if model.objects.count() > 4:
             raise ValidationError("Vous ne pouvez pas rajouter plus de quatre Accomplissement")
 
+
+class ClientService(models.Model):
+    name        = models.CharField(verbose_name="nom de l'acomplissement", max_length=150) 
+    sub_title   = models.CharField(verbose_name="nom de l'acomplissement", max_length=150) 
+    icon        = models.ImageField(verbose_name="icon 67 X 57 px ", upload_to='icons/', )
+    actif       = models.BooleanField(verbose_name='actif', default=True)
+    objects     = ActiveManager()
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = '7. Service Clients'
+        verbose_name_plural = '7. Services Clients'
+
+    def clean(self):
+        model = self.__class__
+        if model.objects.count() > 4:
+            raise ValidationError("Vous ne pouvez pas rajouter plus de quatre Service Clients")
 
 
 class Realisation(models.Model):
@@ -142,17 +165,27 @@ class Realisation(models.Model):
 
     def __str__(self):
         return self.title
+    class Meta:
+        verbose_name = '8. Nos Projets'
+        verbose_name_plural = '8. Nos Projets'
 
 class RealisationPhotos(models.Model):
     realisation = models.ForeignKey(Realisation, verbose_name="Projet / Réalisation", on_delete=models.CASCADE)
     image    = models.ImageField(verbose_name="icon", upload_to='icons/')
     actif  = models.BooleanField(verbose_name='actif', default=True)
+    
+    class Meta:
+        verbose_name = '9. Photos de Nos Projets'
+        verbose_name_plural = '9. Photos de Nos Projets'
 
 class Partner(models.Model):
     logo    = models.ImageField(verbose_name="icon", upload_to='icons/', )
     siteweb = models.URLField(verbose_name="Lien", max_length=250)
     actif  = models.BooleanField(verbose_name='actif', default=True)
     
+    class Meta:
+        verbose_name = '9. Nos Partenaires'
+        verbose_name_plural = '9. Nos Partenaires'
 
 # def create_counter_signal(sender, **kwargs):
 #     if Counter.objects.count() > 3:

@@ -1,4 +1,6 @@
-<option value='' selected>---------</option>
-{% for commune in communes %}
-<option value="{{ commune.pk }}">{{ commune.name }}</option>
-{% endfor %}
+<select class="input" name="commune" required>
+    <option class="option" value='' selected>Commune (البلدية)</option>
+    {% for commune in communes %}
+        <option class="option" value={{commune.id}}>{{commune.name}}</option>
+    {% endfor %}
+</select>

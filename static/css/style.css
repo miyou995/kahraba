@@ -4063,7 +4063,7 @@ thead {
 .coupon {
 	float: left;
 }
-.coupon input {
+.coupon input, .coupon button {
 	background-color: transparent;
 	border: 1px solid #ddd;
 	color: #333;
@@ -4072,7 +4072,7 @@ thead {
 	height: 42px;
 	width: 120px;
 }
-.coupon-all input.button {
+.coupon-all .button {
 	background-color: #333;
 	border: 0 none;
 	border-radius: 2px;
@@ -4090,7 +4090,7 @@ thead {
 	transition: all 0.3s ease-in-out 0s;
 	width: inherit;
 }
-.coupon-all input.button:hover {
+.coupon-all .button:hover {
 	background: #fed700;
 }
 .coupon2 {
@@ -4774,8 +4774,8 @@ span.required {
 	border: 1px solid #e1e1e1;
 	border-radius: 3px;
 	box-shadow: none;
-	margin-bottom: 30px;
 	padding: 22.1px 15px 28px;
+	margin-bottom: 10px;
 }
 .sidebar-title {
 	border-bottom: 1px solid #e1e1e1;
@@ -5485,3 +5485,383 @@ span.required {
     overflow: hidden;
 	align-items: center!important;
 }
+
+  /* ORDER CONFIRMED */
+  .order_details .title_confirmation {
+    text-align: center;
+    color: #28d500;
+    margin-bottom: 80px; }
+  
+  .order_d_inner .details_item h4 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    font-size: 18px;
+    color: #222222;
+    padding-left: 18px; }
+  .order_d_inner .details_item .list {
+    padding-left: 18px; }
+    @media (min-width: 767px) {
+      .order_d_inner .details_item .list {
+        margin-bottom: 30px; } }
+    .order_d_inner .details_item .list li {
+      margin-bottom: 8px; }
+      .order_d_inner .details_item .list li:last-child {
+        margin-bottom: 0px; }
+      .order_d_inner .details_item .list li a {
+        font-size: 14px;
+        color: #222222;
+        font-family: "Roboto", sans-serif; }
+        .order_d_inner .details_item .list li a span {
+          width: 145px;
+          display: inline-block;
+          color: #777777; }
+
+          .order_details_table {
+            background: #e5ecee;
+            padding: 30px;
+            margin-top: 75px; }
+            @media (min-width: 767px) {
+              .order_details_table {
+                margin-top: 45px;
+                margin-bottom: 45px; } }
+            .order_details_table h2 {
+              color: #222222;
+              font-size: 18px;
+              padding-bottom: 15px; }
+            .order_details_table .table {
+              margin-bottom: 0px; }
+              .order_details_table .table thead tr th {
+                border-bottom: 1px solid #ddd;
+                font-size: 14px;
+                font-family: "Roboto", sans-serif;
+                font-weight: normal; }
+              .order_details_table .table tbody tr td p {
+                margin-bottom: 0px; }
+              .order_details_table .table tbody tr td h5 {
+                color: #222222;
+                margin-bottom: 0px; }
+              .order_details_table .table tbody tr td h4 {
+                font-size: 14px;
+                text-transform: uppercase;
+                margin-bottom: 0px;
+                color: #222222; }
+              .order_details_table .table tbody tr:last-child td {
+                border-top: 1px solid #ddd; }
+                .order_details_table .table tbody tr:last-child td p {
+                  color: #222222; }
+          
+  /* ORDER CONFIRMED END */
+
+        
+  /* ORDER CONFIRMED END */
+/*----------------------------------------*/
+.sidebar-title h2 {
+	color: #242424;
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 30px;
+	position: relative;
+	text-transform: uppercase;
+	margin-bottom: 21px;
+  }
+
+  
+  .sidebar-categores-box .filter-sub-area h5 {
+	color: #2f333a;
+	display: block;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	margin: 30px 0 10px;
+	padding: 0 0 10px;
+	position: relative;
+	text-transform: uppercase;
+  }
+  
+  
+  .category-sub-menu ul li ul {
+	display: none;
+	margin-top: 10px;
+  }
+  .category-sub-menu ul li {
+	  padding-top: 10px;
+	  transition: all 0.3s ease-in-out;
+  }
+  .category-sub-menu ul li:hover a {
+	  color: #e13b3b;
+  }
+  .category-sub-menu ul li:first-child {
+	  padding-top: 16px;
+  }
+  .category-sub-menu li.has-sub > a {
+	color: #242424;
+	cursor: pointer;
+	display: block;
+	line-height: 20px;
+	position: relative;
+  }
+  .category-sub-menu li.has-sub li a {
+	  border: 0 none;
+	  display: block;
+	  font-size: 14px;
+	  padding: 0 10px;
+	  color: #333;
+  }
+  .category-sub-menu li.has-sub li a:hover {
+	  color: #fed700;
+  }
+  .category-sub-menu li.has-sub > a::after {
+	  color: #242424;
+	  content: "\f067";
+	  font-family: fontawesome;
+	  font-size: 16px;
+	  position: absolute;
+	  right: 5px;
+  }
+  .category-sub-menu li.has-sub.open > a::after {
+	  content: "\f068";
+  }
+  .sidebar-categores-box .filter-sub-area h5 {
+	color: #2f333a;
+	display: block;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	margin: 30px 0 10px;
+	padding: 0 0 10px;
+	position: relative;
+	text-transform: uppercase;
+  }
+  .sidebar-categores-box .filter-sub-area h5 {
+	color: #2f333a;
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1;
+	margin: 30px 0 10px;
+	padding: 0 0 10px;
+	position: relative;
+	text-transform: uppercase;
+  }
+  
+  
+  
+  
+  .product-variants .produt-variants-size {
+	margin-right: 30px;
+  }
+  .product-variants .produt-variants-size label {
+	  display: block;
+	  font-size: 14px;
+	  font-weight: 400;
+  }
+  
+  /* CONTACT PAGTE */
+  .contact_contents
+  {
+	  padding-right: 30px;
+  }
+  .contact_contents h1,
+  .follow_us_contents h1,
+  .get_in_touch_contents h1
+  {
+	  font-size: 40px;
+	  font-weight: 500;
+  }
+  .contact_contents p,
+  .get_in_touch_contents p
+  {
+	  font-size: 16px;
+	  font-weight: 400;
+	  margin-bottom: 0px;
+  }
+  .contact_contents div
+  {
+	  margin-top: 22px;
+  }
+  .contact_contents div:first-of-type
+  {
+	  margin-top: 39px;
+  }
+  
+  /*********************************
+  7. Follow Us
+  *********************************/
+  
+  .follow_us_contents
+  {
+	  margin-top: 32px;
+  }
+  .social
+  {
+	  margin-top: 20px;
+  }
+  .social li
+  {
+	  margin-right: 12px;
+  }
+  .social li:last-child
+  {
+	  margin-right: 0px;
+  }
+  .social li a
+  {
+	  display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  width: 40px;
+	  height: 40px;
+	  border-radius: 50%;
+	  -webkit-transition: all 300ms ease;
+	  -moz-transition: all 300ms ease;
+	  -ms-transition: all 300ms ease;
+	  -o-transition: all 300ms ease;
+	  transition: all 300ms ease;
+  }
+  .social li a i
+  {
+	  color: #FFFFFF;
+  }
+  .social li:hover a
+  {
+	  transform: translateY(-5px);
+	  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+  }
+  
+  /*********************************
+  8. Contact Form
+  *********************************/
+  
+  .form_input
+  {
+	  display: block;
+	  width: 100%;
+	  height: 50px;
+	  border: solid 1px #e5e5e5;
+	  padding-left: 20px;
+	  font-size: 16px;
+	  margin-bottom: 20px;
+  }
+  .input_message
+  {
+	  width: 100%;
+	  margin-bottom: 15px;
+	  font-size: 16px;
+	  padding-bottom: 15px;
+  }
+  .form_input:focus,
+  #newsletter_email:focus
+  {
+	  border: solid 1px #7f7f7f !important;
+	  box-shadow: none !important;
+  }
+  .message_submit_btn
+  {
+	  background: #1e1e27;
+	  color: #FFFFFF;
+	  text-transform: uppercase;
+	  width: 165px;
+	  border: none;
+	  height: 46px;
+	  cursor: pointer;
+  }
+  .message_submit_btn:hover
+  {
+	  background: #2b2b34 !important;
+  }
+  :focus
+  {
+	  outline: none !important;
+  }
+  .input_ph::-webkit-input-placeholder
+  {
+	  font-size: 16px !important;
+	  font-weight: 400;
+	  color: #b9b4c7 !important;
+  }
+  .input_ph:-moz-placeholder /* older Firefox*/
+  {
+	  font-size: 16px !important;
+	  font-weight: 400;
+	  color: #b9b4c7 !important;
+  }
+  .input_ph::-moz-placeholder /* Firefox 19+ */
+  {
+	  font-size: 16px !important;
+	  font-weight: 400;
+	  color: #b9b4c7 !important;
+  }
+  .input_ph:-ms-input-placeholder
+  {
+	  font-size: 16px !important;
+	  font-weight: 400;
+	  color: #b9b4c7 !important;
+  }
+  .input_ph::input-placeholder
+  {
+	  font-size: 16px !important;
+	  font-weight: 400;
+	  color: #b9b4c7 !important;
+  }
+  textarea
+  {
+	  border: solid 1px #e5e5e5;
+	  padding-left: 20px;
+	  padding-top: 15px;
+  }
+  textarea:hover
+  {
+	  border-color: #7f7f7f !important;
+  }
+  .input_name
+  {
+	  margin-bottom: 19px;
+	  margin-top: 31px;
+  }
+  .input_review
+  {
+	  display: block;
+	  width: 100%;
+	  border: solid 1px #e5e5e5;
+	  margin-top: 23px;
+	  padding-left: 20px;
+	  padding-top: 13px;
+  }
+
+.apply-filters {
+	float: left;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+	width: 100%;
+	height: 40px;
+}
+
+.apply-filters:hover .filter-button{
+    background-color: #fed700;
+} 
+
+.filter-button {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	background-color: #eef0f1;
+	border: none;
+	border-radius: 4px;
+	color: #242424;
+	font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: block;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    -webkit-transition: all 300ms ease-in 0s;
+    transition: all 300ms ease-in 0s;
+}
+

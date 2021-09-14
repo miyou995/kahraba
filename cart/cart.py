@@ -89,6 +89,7 @@ class Cart(object):
             self.save()
 
     def update(self, product, quantity):
+        print('im on update cart view')
         product_id = str(product.id)
         self.cart[product_id]['quantity'] = quantity
         self.save()
@@ -97,7 +98,13 @@ class Cart(object):
         product_ids = self.cart.keys()
         products = Product.objects.filter(id__in=product_ids)
         cart = self.cart.copy()
-        
+        for product in products:
+            cart[str(product.id)]['product'] = product
+        for item in cart.values():
+            item['price'] = Decimal(item['price'])
+            item['total_price'] = item['price'] * item['quantity']
+            yield item
+
         # for product in products:
         #     desired_quantity = cart[str(product.id)]['quantity']
         #     removed = False
@@ -115,13 +122,6 @@ class Cart(object):
         #             quantity = 1
         #     cart[str(product.id)]['product'] = product
         #     cart[str(product.id)]['quantity'] = quantity
-        for product in products:
-            cart[str(product.id)]['product'] = product
-
-        for item in cart.values():
-            item['price'] = Decimal(item['price'])
-            item['total_price'] = item['price'] * item['quantity']
-            yield item
 
 
 

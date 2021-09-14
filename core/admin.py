@@ -60,7 +60,7 @@ class ProductAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
     list_display_links = ('id','name' )
     list_per_page = 40
-    list_filter = ('name', 'category','price', 'new')
+    list_filter = ('brand', 'category','new')
     list_editable = ['category', 'price', 'new', 'top', 'actif', 'old_price', 'status']
     search_fields = ('name',)
     exlude = ['slug']

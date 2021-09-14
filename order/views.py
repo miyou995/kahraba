@@ -13,8 +13,9 @@ from cart.cart import Cart
 from coupons.models import Coupon
 from delivery.models import Wilaya, Commune
 from business.models import Business
-
-
+from django.core.mail import EmailMessage
+import pprint
+from io import BytesIO
 def order_create_one_product(request,product_id=None):
     form = OrderFormWithQuantity()
     if request.method == 'POST':
@@ -26,7 +27,7 @@ def order_create_one_product(request,product_id=None):
         # coupon.stock -= 1
         # coupon.used += 1
         # coupon.save()
-        print('le FORMULAIRE', form)
+        # print('le FORMULAIRE', form)
         if form.is_valid():
             cd = form.cleaned_data
             quantity=cd['quantity']
@@ -34,13 +35,21 @@ def order_create_one_product(request,product_id=None):
             print('le formulaire est valid', quantity)
             # print('ORDER ITEM', order.quantity)
             OrderItem.objects.create(order=order,product=product,price=product.price,quantity=quantity)
-                # order_created.delay(order.id)
-                # order = Order.objects.get(id=order_id)
-                # subject = f'Commande N°: {order.id}'
-                # message = f'Chére {order.first_name},\n\n' \
-                #         f'vous avez passer une commande avec succés' \
-                #         f'votre identifiant de commande est le: {order.id}'
-                # mail_sent = send_mail(subject, message, 'inter.taki@gmail.com',[order.email])
+            # order = Order.objects.get(id=order)
+
+            subject = f'Commande N°: {order.id}'
+            message = f'Chére {order.first_name},\n\n' \
+                    f'vous avez passer une commande avec succés' \
+                    f'votre identifiant de commande est le: {order.id}'
+
+            response = HttpResponse(content_type='application/pdf' )
+            response['Content-Disposition' ] = f'filename=order_{order.id}.pdf'
+            business   = Business.objects.last().name
+            html = render_to_string('order_pdf.html' , {'order' : order, 'business': business})
+            pdf_file = weasyprint.HTML(string=html).write_pdf(response)
+            mail = EmailMessage(subject, message, 'inter.taki@gmail.com',[order.email])
+            mail.attach(pdf_file,out.getvalue(),'application/pdf')
+            mail.send()
             return render(request, 'created.html', {'order': order})
             # print('ORDER ITEM')
             # return render(request, 'created.html', {'order': order})
@@ -55,45 +64,62 @@ def order_create_one_product(request,product_id=None):
 def order_create(request):
     cart = Cart(request)
     wilayas= Wilaya.objects.all().order_by('name') 
+    communes= Commune.objects.all().order_by('name') 
     form = OrderCreateForm()
     
-    # if cart.__len__() :
-    print('request', request.method)
-    if request.method == 'POST':
-        form = OrderCreateForm(request.POST)
-        print('le formulaire ', form)
-        if form.is_valid():
-            print('le formulaire est valid')
-            order = form.save()
-            order.delivery_cost = order.wilaya.price
-            order.save()
-            print('delivery cost', order.wilaya.price)
-            for item in cart:
-                OrderItem.objects.create(order=order,product=item['product'],price=item['price'],quantity=item['quantity'])
+    if cart.__len__() :
+        # print('request', request.method)
+        if request.method == 'POST':
+            form = OrderCreateForm(request.POST)
+            # print(form)
+            if form.is_valid():
+                order = form.save()
+                order.delivery_cost = order.wilaya.price
+                order.save()
+                # print('delivery cost', order.wilaya.price)
+                for item in cart:
+                    OrderItem.objects.create(order=order,product=item['product'],price=item['price'],quantity=item['quantity'])
+                try:
+                    coupon_id = request.session['coupon_id']
+                    coupon = Coupon.objects.get(id=coupon_id)
+                    coupon.stock -= 1
+                    coupon.used += 1
+                    request.session['coupon_id'] = None
+                    coupon.save()
+                except:
+                    pass
+                cart.clear()
+                total_price = cart.get_total_price_after_discount()
+                total_price_with_delivery = total_price + order.delivery_cost
             
-            try:
-                coupon_id = request.session['coupon_id']
-                coupon = Coupon.objects.get(id=coupon_id)
-                coupon.stock -= 1
-                coupon.used += 1
-                request.session['coupon_id'] = None
-                coupon.save()
-            except:
-                pass
-            cart.clear()
-            total_price = cart.get_total_price_after_discount()
-            total_price_with_delivery = total_price + order.delivery_cost
-            context = {
-            'order': order,
-                # 'products_total': products_total, 
-                'total_price': total_price,
-                'delivery': order.delivery_cost,
-                'total_price_with_delivery': total_price_with_delivery
-            }
-            return render(request, 'created.html', context)
-    # else: 
-    #     return redirect(reverse('core:index'))
-    return render(request, 'create.html', {'cart':cart, 'form' : form, 'wilayas': wilayas})
+                subject = f'Commande N°: {order.id}'
+                message = f'Chére {order.first_name},\n\n vous avez passer une commande avec succés' f'votre identifiant de commande est le: {order.id}'
+                try :
+                    response = HttpResponse(content_type='application/pdf' )
+                    response['Content-Disposition' ] = f'filename=order_{order.id}.pdf'
+                    business   = Business.objects.last().name
+                    html = render_to_string('order_pdf.html' , {'order' : order, 'business': business})
+                    out = BytesIO()
+                    pdf_file = weasyprint.HTML(string=html).write_pdf(response)
+                    mail = EmailMessage(subject, message, 'inter.taki@gmail.com',[order.email])
+                    mail.attach(pdf_file,out.getvalue(),'application/pdf')
+                    mail.send()
+                    context = {
+                        'order': order,
+                        # 'products_total': products_total, 
+                        'total_price': total_price,
+                        'delivery': order.delivery_cost,
+                        'total_price_with_delivery': total_price_with_delivery,
+                        'pdf_file': pdf_file,
+                    }
+                    return render(request, 'created.html', context)
+                except :
+                    print('yaw matebaatch')
+                # stylesheets=[weasyprint.CSS(str(settings.STATIC_ROOT) + 'css/pdf.css' )]
+            else: 
+                print('the form is not valid')
+                return render(request, 'checkout.html', {'cart':cart, 'form' : form, 'wilayas': wilayas, 'communes': communes})
+    return render(request, 'checkout.html', {'cart':cart, 'form' : form, 'wilayas': wilayas, 'communes': communes})
     
     
 

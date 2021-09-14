@@ -21,6 +21,7 @@ class Order(models.Model):
     last_name     = models.CharField(verbose_name="Prenom" , max_length=50)
     address       = models.CharField(verbose_name="Adresse" , max_length=250)
     phone         = models.CharField(verbose_name="Téléphone" , max_length=25)
+    campany       = models.CharField(verbose_name="Entrprise" , max_length=150, null=True, blank=True)
     email         = models.EmailField(verbose_name="E-mail", null=True, blank=True)
     wilaya        = models.ForeignKey(Wilaya, on_delete=models.SET_NULL, null=True, blank=True)
     commune       = models.ForeignKey(Commune, on_delete=models.SET_NULL, null=True, blank=True)
@@ -41,7 +42,6 @@ class Order(models.Model):
     
     def get_ordering(self, request):
        return ['created']
-
     
     def get_discount(self):
         if self.coupon:

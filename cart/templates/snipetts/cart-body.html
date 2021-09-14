@@ -1,0 +1,42 @@
+{% load static %}
+<tbody class="cart-body" hx-target="this" hx-swap="outerHTML">
+    {% for item in cart %}
+        {% with product=item.product %}
+            <tr>
+                <td class="li-product-remove"><a style="cursor: pointer;"  ><i class="fa fa-times"></i></a></td>
+                {% if product.photos.all.0 %}
+                    <td class="li-product-thumbnail"><a href="{{product.get_absolute_url}}"><img width="100" src="{{product.photos.all.0.fichier.url}}" alt="{{product.name}}"></a></td>
+                {% else %}
+                    <div class="product-preview">
+                        <img src="{% static "img/pas-images.png" %}" >
+                    </div>
+                {% endif %}
+                <td class="li-product-name"><a href="{{product.get_absolute_url}}">{{product.name}}</a></td>
+                <td class="li-product-price"><span class="amount">{{item.price}}</span></td>
+                <td class="quantity">
+                    <label>Quantity</label>
+                    {{ item.update_quantity_form.override }}
+                    <div class="cart-plus-minus">
+                        <input type="hidden" name="product_id" value={{product.id}}>
+                        <input class="cart-plus-minus-box" name="quantity" value="{{item.quantity}}" type="text">
+                        <div class="dec qtybutton" ><i class="fa fa-angle-down"></i></div>
+                        <div class="inc qtybutton" ><i class="fa fa-angle-up"></i></div>
+                    </div>
+                </td>
+                <td class="product-subtotal"><span class="amount">{{item.total_price}}</span></td>
+            </tr>
+            {% endwith %}
+        {% endfor %}
+    {% if cart.coupon %}
+        <tr class="subtotal">
+            <td>Sous Total</td>
+            <td colspan="4"></td>
+            <td class="num">{{ cart.get_total_price|floatformat:2 }} DA</td>
+        </tr>
+        <tr>
+            <td>"<strong>{{ cart.coupon.code }}</strong>"</td>
+            <td colspan="4"></td>
+            <td class="num neg">-{{ cart.get_discount|floatformat:2 }} DA</td>
+        </tr>
+    {% endif %}
+    </tbody>

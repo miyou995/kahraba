@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import  Cheveux, Tag, Parfum
+from .models import Tag
 
 # @admin.register(Cheveux)
 # class CheveuxAdmin(admin.ModelAdmin):

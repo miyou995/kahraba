@@ -48,15 +48,19 @@
                             <div class="product-details-view-content pt-60">
                                 <div class="product-info">
                                     <h2>{{product.name}}</h2>
+                                    {% if product.brand %}
+                                        <span class="product-details-ref d-block">Marque: {{product.brand}}</span>
+                                    {% endif %}
                                     {% if product.reference %}
                                         <span class="product-details-ref">Reference: {{product.reference}}</span>
                                     {% endif %}
-                                    
+
                                     <div class="price-box pt-20">
+                                        <span class="new-price new-price-2">Prix: </span>
                                         {% if product.old_price %}
-                                            <span style="text-decoration: line-through;" class="old-price d-block">{{product.old_price}} DA</span>
+                                            <span style="text-decoration: line-through;" class="old-price">{{product.old_price}} DA</span>
                                         {% endif %}
-                                        <span class="new-price new-price-2">{{product.price}} DA</span>
+                                        <span class="new-price new-price-2"> {{product.price}} DA</span>
                                     </div>
                                     {% if product.text %}
                                         <div class="product-desc">
@@ -78,11 +82,12 @@
                                         </div>
                                     {% endif %}
                                     <div class="single-add-to-cart">
-                                        <form action="#" class="cart-quantity">
+                                        <form action="{% url 'cart:cart_add' product.pk %}" method="POST" class="cart-quantity">
+                                            {% csrf_token %}
                                             <div class="quantity">
                                                 <label>Quantité</label>
                                                 <div class="cart-plus-minus">
-                                                    <input class="cart-plus-minus-box" value="1" type="text">
+                                                    <input class="cart-plus-minus-box" name="quantity" value="1" type="text">
                                                     <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
                                                     <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
                                                 </div>

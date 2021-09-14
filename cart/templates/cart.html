@@ -6,8 +6,8 @@
                 <div class="container">
                     <div class="breadcrumb-content">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active">Shopping Cart</li>
+                            <li><a href="{% url 'core:index' %}">Home</a></li>
+                            <li class="active">Panier</li>
                         </ul>
                     </div>
                 </div>
@@ -18,79 +18,99 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <form action="#">
                                 <div class="table-content table-responsive">
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th class="li-product-remove">remove</th>
+                                                <th class="li-product-remove">supprimer</th>
                                                 <th class="li-product-thumbnail">images</th>
-                                                <th class="cart-product-name">Product</th>
-                                                <th class="li-product-price">Unit Price</th>
-                                                <th class="li-product-quantity">Quantity</th>
+                                                <th class="cart-product-name">Produit</th>
+                                                <th class="li-product-price">Prix / DA</th>
+                                                <th class="li-product-quantity">Quantité</th>
                                                 <th class="li-product-subtotal">Total</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                                <td class="li-product-thumbnail"><a href="#"><img src="images/product/small-size/5.jpg" alt="Li's Product Image"></a></td>
-                                                <td class="li-product-name"><a href="#">Accusantium dolorem1</a></td>
-                                                <td class="li-product-price"><span class="amount">$46.80</span></td>
-                                                <td class="quantity">
-                                                    <label>Quantity</label>
-                                                    <div class="cart-plus-minus">
-                                                        <input class="cart-plus-minus-box" value="1" type="text">
-                                                        <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
-                                                        <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
-                                                    </div>
-                                                </td>
-                                                <td class="product-subtotal"><span class="amount">$70.00</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                                <td class="li-product-thumbnail"><a href="#"><img src="images/product/small-size/6.jpg" alt="Li's Product Image"></a></td>
-                                                <td class="li-product-name"><a href="#">Mug Today is a good day</a></td>
-                                                <td class="li-product-price"><span class="amount">$71.80</span></td>
-                                                <td class="quantity">
-                                                    <label>Quantity</label>
-                                                    <div class="cart-plus-minus">
-                                                        <input class="cart-plus-minus-box" value="1" type="text">
-                                                        <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
-                                                        <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
-                                                    </div>
-                                                </td>
-                                                <td class="product-subtotal"><span class="amount">$60.50</span></td>
-                                            </tr>
-                                        </tbody>
+                                        <tbody class="cart-body" hx-target="this" hx-swap="outerHTML">
+                                            {% for item in cart %}
+                                                {% with product=item.product %}
+                                                    <tr>
+                                                        <td class="li-product-remove"><a style="cursor: pointer;" href="{% url 'cart:cart_remove' product.id %}" ><i class="fa fa-times"></i></a></td>
+                                                        {% if product.photos.all.0 %}
+                                                            <td class="li-product-thumbnail"><a href="{{product.get_absolute_url}}"><img width="100" src="{{product.photos.all.0.fichier.url}}" alt="{{product.name}}"></a></td>
+                                                        {% else %}
+                                                            <div class="product-preview">
+                                                                <img src="{% static "img/pas-images.png" %}" >
+                                                            </div>
+                                                        {% endif %}
+                                                        <td class="li-product-name"><a href="{{product.get_absolute_url}}">{{product.name}}</a></td>
+                                                        <td class="li-product-price"><span class="amount">{{item.price}}</span></td>
+                                                        <td class="quantity">
+                                                            <label>Quantity</label>
+                                                            <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                                                                {% csrf_token %}
+                                                            {{ item.update_quantity_form.override }}
+                                                            <div class="row d-inline-flex">
+                                                                <div class="cart-plus-minus">
+                                                                    <input type="hidden" name="product_id" value={{product.id}}>
+                                                                    <input class="cart-plus-minus-box" name="quantity" value="{{item.quantity}}" type="text">
+                                                                    <div class="dec qtybutton" ><i class="fa fa-angle-down"></i></div>
+                                                                    <div class="inc qtybutton" ><i class="fa fa-angle-up"></i></div>
+                                                                </div>
+                                                                <div class="d-inline">
+                                                                    <button style="background-color: #333;border: none;color: white;font-size: 20px;cursor: pointer;" class="btn ml-3" type="submit"> <i class="fa fa-check"></i></button>
+                                                            </div>
+                                                        </div>
+                                                            </form>
+
+                                                        </td>
+                                                        <td class="product-subtotal"><span class="amount">{{item.total_price}}</span></td>
+                                                    </tr>
+                                                    {% endwith %}
+                                                {% endfor %}
+                                            {% if cart.coupon %}
+                                                <tr class="subtotal">
+                                                    <td>Sous Total</td>
+                                                    <td colspan="4"></td>
+                                                    <td class="num">{{ cart.get_total_price|floatformat:2 }} DA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>"<strong>{{ cart.coupon.code }}</strong>"</td>
+                                                    <td colspan="4"></td>
+                                                    <td class="num neg">-{{ cart.get_discount|floatformat:2 }} DA</td>
+                                                </tr>
+                                            {% endif %}
+                                            </tbody>
                                     </table>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="coupon-all">
-                                            <div class="coupon">
-                                                <input id="coupon_code" class="input-text" name="coupon_code" value="" placeholder="Coupon code" type="text">
-                                                <input class="button" name="apply_coupon" value="Apply coupon" type="submit">
+                                            <form action="{% url "coupons:apply" %}" method="post">
+                                                {% csrf_token %}
+                                                <div class="coupon">
+                                                    <input id="coupon_code" class="input-text" name="code" placeholder="Coupon code" type="text">
+                                                    <input class="button" name="apply_coupon" value="Appliquer" type="submit">
+                                                </div>
+                                            </form>
+                                          {% comment %}
+                                            <div class="coupon2" >
+                                                <button class="button" type="submit"> Modifier le panier</button>
                                             </div>
-                                            <div class="coupon2">
-                                                <input class="button" name="update_cart" value="Update cart" type="submit">
-                                            </div>
+                                          {% endcomment %}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-5 ml-auto">
                                         <div class="cart-page-total">
-                                            <h2>Cart totals</h2>
+                                            <h2>Total Panier</h2>
                                             <ul>
-                                                <li>Subtotal <span>$130.00</span></li>
-                                                <li>Total <span>$130.00</span></li>
+                                                <li>Total <span>{{cart.get_total_price_after_discount}} DZD</span></li>
                                             </ul>
-                                            <a href="#">Proceed to checkout</a>
+                                            <a href="{% url 'order:order_create' %}">Finaliser ma commande</a>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </div>
                 </div>

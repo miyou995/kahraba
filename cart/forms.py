@@ -6,6 +6,7 @@ class CartAddProductForm(forms.Form):
     quantity = forms.IntegerField( min_value=1, widget=NumberInput(attrs={'class': 'form-control text-center','value': 1, 'max':20 }))
     override = forms.BooleanField(required=False, initial=False, widget=forms.HiddenInput)
 
-class CartAddProductQuantityForm(forms.Form):
+class CartUpdateProductQuantityForm(forms.Form):
+    product_id = forms.IntegerField(widget=forms.HiddenInput)
     quantity = forms.IntegerField(min_value=1)
 

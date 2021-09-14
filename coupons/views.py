@@ -7,9 +7,9 @@ from .forms import CouponApplyForm
 # Create your views here.
 @require_POST
 def coupon_apply(request):
+    print('Request non disponible')
     now = timezone.now()
     form = CouponApplyForm(request.POST)
-    
     if form.is_valid():
         code = form.cleaned_data['code']
         try:

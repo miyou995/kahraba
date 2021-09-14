@@ -61,6 +61,7 @@ Note: main.js, All Default Scripting Languages For This Theme Included In This F
 /*----------------------------------------*/
 	$(window).on('scroll',function() {
 		if ($(this).scrollTop() > 300) {
+			console.log('ctickyyyy');
 			$('.header-sticky').addClass("sticky");
 		} else {
 			$('.header-sticky').removeClass("sticky");
@@ -71,12 +72,40 @@ Note: main.js, All Default Scripting Languages For This Theme Included In This F
 /*----------------------------------------*/
 	$(document).ready(function() {
 		$('.nice-select').niceSelect();
+	
 	});
 
 
+/*----------------------------------------*/
+/* XX. WILAYA
+/*----------------------------------------*/
+$("#wilayaId").change(function () {
+	const url = $("#order_form").attr("data-communes-url"); 
+	const order_total_container = document.querySelector('#order_total')
+
+	const wilayaPk = $(this).val();
+	var wilaya = document.getElementById('wilayaId');
+	var selected = wilaya.options[wilaya.selectedIndex];
+	var price = selected.getAttribute('data-price');
+
+	const total_without_delivery = parseFloat(order_total_container.getAttribute('data-order-total'))
+	console.log('total_without_delivery', total_without_delivery);
+	const total_price = parseFloat(total_without_delivery) + parseFloat(price)
+	$.ajax({                   
+		url: url,                
+		data: {
+			'wilaya_id': wilayaPk      
+		},
+		success: function (data) { 
+			$("#communesId").html(data);
+			$('#deliveryCost').html(price);
+			$('#order_total').html(total_price);
+			console.log('succseeed', data);
+		}
+	});
+});
+
 	// $("#lunch_modal").on('click', function(){
-	// 	alert('booom')
-	// });
 
 /*----------------------------------------*/
 /* 05. Main Slider Activision
@@ -85,9 +114,9 @@ Note: main.js, All Default Scripting Languages For This Theme Included In This F
 		loop: true,
 		margin: 0,
 		nav: true,
-		autoplay: true,
+		autoplay: false,
 		items: 1,
-		autoplayTimeout: 10000,
+		autoplayTimeout: 2000,
 		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
 		dots: true,
 		autoHeight: true,
@@ -122,6 +151,7 @@ Note: main.js, All Default Scripting Languages For This Theme Included In This F
 			}
 		}
 	});
+
 /*----------------------------------------*/
 /* 07. Li's Product Activision
 /*----------------------------------------*/
