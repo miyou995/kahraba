@@ -20,4 +20,10 @@ class WilayaAdmin(ImportExportModelAdmin):
 @admin.register(Commune)
 class CommuneAdmin(ImportExportModelAdmin):
     # resource_class = CommuneResource  
+    list_display = ['id', 'name','wilaya']
+    list_display_links =('id', 'name')
+    search_fields = ('name',)
+
+    list_per_page = 40
+
     pass

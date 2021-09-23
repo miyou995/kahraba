@@ -56,6 +56,11 @@
         <script src="{% static "js/vendor/modernizr-2.8.3.min.js" %}"></script>
     </head>
     <body>
+        <style>
+            .container {
+                max-width: 1500px;
+            }
+        </style>
     <!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -97,9 +102,14 @@
                                 <!-- Header Middle Searchbox Area End Here -->
                                 <!-- Begin Header Middle Right Area -->
                                 <div class="header-middle-right">
-                                    <ul class="hm-menu">
+                                        <ul class="hm-menu">
                                         <!-- Begin Header Middle Wishlist Area -->
-                                        <li class="hm-minicart">
+                                            {% include "snipetts/cart-count.html" %}
+                                        </ul>
+                                </div>
+
+                                        {% comment %}
+                                        <!-- <li class="hm-minicart">
                                             <div class="hm-minicart-trigger">
                                                 <span class="item-icon"></span>
                                                 <span class="item-text">{{cart.get_total_price}} DA
@@ -114,11 +124,11 @@
                                                         {% for item in cart %}
                                                             {% with product=item.product %}
                                                                 <li>
-                                                                    <a href="single-product.html" class="minicart-product-image">
+                                                                    <a href="{% url 'cart:cart_detail' %}" class="minicart-product-image">
                                                                         <img src="{{product.photos.all.0.fichier.url}}" alt="cart products">
                                                                     </a>
                                                                     <div class="minicart-product-details">
-                                                                        <h6><a href="single-product.html">{{product.name}}</a></h6>
+                                                                        <h6><a href="{% url 'cart:cart_detail' %}">{{product.name}}</a></h6>
                                                                         <span>{{item.quantity}} X {{product.price}} DA</span>
                                                                     </div>
                                                                 </li>
@@ -139,10 +149,9 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                        </li>
+                                        </li> -->
+                                        {% endcomment %}
                                         <!-- Header Mini Cart Area End Here -->
-                                    </ul>
-                                </div>
                                 <!-- Header Middle Right Area End Here -->
                             </div>
                             <!-- Header Middle Right Area End Here -->
@@ -176,17 +185,14 @@
                                                                 </ul>
                                                             {% endif %}
                                                         </li>
-
                                                     {% endrecursetree %}
-                                                <li><a href="{% url 'business:realisation' %}">Promotions</a></li>
-
                                                 </ul>
                                             </li>
-                                            
-                                            <li class="gauches float-right"><a href="{% url 'business:realisation' %}">Nos Projets</a></li>
-                                            <li class="gauches float-right"><a href="{% url 'business:partner' %}">Nos Partenaires</a></li>
-                                            <li class="gauches float-right"><a href="{% url 'core:contact' %}">Contact</a></li>
-                                            
+                                            <li class="gauches "><a href="{% url 'business:realisation' %}">Nos Projets</a></li>
+                                            <li class="gauches "><a href="{% url 'business:partner' %}">Nos Partenaires</a></li>
+                                            <li class="gauches "><a href="{% url 'core:contact' %}">Contact</a></li>
+                                            <li class="gauches float-right"><a href="{% url 'core:products'  %}?new=new">Nouveautés</a></li>
+                                            <li class="gauches float-right"><a href="{% url 'core:products'  %}?new=promo">Promotion</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -464,6 +470,7 @@
         <!-- Main/Activator js -->
         <script src="{% static "js/main.js" %}"></script>
         <script src="{% static "js/custom.js" %}"></script>
+	    <script type="text/javascript" src="{% static "js/vendor/sweetalert.min.js" %}"></script>
 
         {% block extrajs %}
           
@@ -474,7 +481,7 @@
             document.body.addEventListener('htmx:configRequest', (event) => {
               event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
             })
-          </script>
+        </script>
     </body>
 <!-- 40432:14-->
 </html>

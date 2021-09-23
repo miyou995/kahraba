@@ -1790,7 +1790,7 @@ textarea:focus {
 }
 .ht-menu > li .ht-currency-trigger span::after,
 .ht-menu > li .ht-language-trigger span::after,
-.hm-minicart-trigger .item-text::after {
+/* .hm-minicart-trigger .item-text::after {
 	content: "\f106";
 	float: right;
 	font-weight: 400;
@@ -1798,17 +1798,17 @@ textarea:focus {
 	font-family: fontawesome;
 	color: #242424;
 	transition: all 0.3s ease-in-out;
-}
+} */
 .ht-menu > li:hover .ht-currency-trigger span,
 .ht-menu > li:hover .ht-currency-trigger span::after, 
 .ht-menu > li:hover .ht-language-trigger span,
 .ht-menu > li:hover .ht-language-trigger span::after {
 	color: #fed700;
 }
-.ht-menu > li .ht-setting-trigger span::after, 
+/* .ht-menu > li .ht-setting-trigger span::after, 
 .ht-menu > li .ht-currency-trigger span::after, 
-.ht-menu > li .ht-language-trigger span::after, 
-.hm-minicart-trigger .item-text::after {
+.ht-menu > li .ht-language-trigger span::after,  */
+/* .hm-minicart-trigger .item-text::after {
 	content: "\f107";
 	font-size: 14px;
 	color: #a4a4a4;
@@ -1817,7 +1817,7 @@ textarea:focus {
 }
 .hm-minicart-trigger .item-text::after {
 	color: #fff;
-} 
+}  */
 .ht-menu > li .ht-setting-trigger.is-active span::after, 
 .ht-menu > li .ht-currency-trigger.is-active span::after, 
 .ht-menu > li .ht-language-trigger.is-active span::after,
@@ -3805,7 +3805,7 @@ p.checkout-coupon input[type="submit"]:hover {
 	padding: 30px 40px 45px;
 }
 .your-order h3 {
-	border-bottom: 1px solid #d8d8d8;
+	/* border-bottom: 1px solid #d8d8d8; */
 	font-size: 25px;
 	margin: 0 0 20px;
 	padding-bottom: 10px;
@@ -4138,6 +4138,14 @@ thead {
 	background: #fed700;
 	border-color: #fed700;
 }
+
+.cart-product-name{
+	width: 50%;
+}
+.cart-product-total{
+	width: 50%;	
+}
+
 /*----------------------------------------*/
 /* 6.7 Li's Blog Page
 /*----------------------------------------*/
@@ -5486,6 +5494,9 @@ span.required {
 	align-items: center!important;
 }
 
+
+
+
   /* ORDER CONFIRMED */
   .order_details .title_confirmation {
     text-align: center;
@@ -5863,5 +5874,79 @@ span.required {
     text-align: center;
     -webkit-transition: all 300ms ease-in 0s;
     transition: all 300ms ease-in 0s;
+}
+
+li.atribut {
+	color: #000;
+	cursor: pointer;
+}
+
+li.atribut:hover {
+	color: #fff;
+}
+
+/*[ rs Sweetalert ]
+///////////////////////////////////////////////////////////
+*/
+.swal-overlay {
+    overflow-y: auto;
+}
+
+.swal-icon--success {
+    border-color: #66a8a6;
+}
+
+.swal-icon--success__line {
+    background-color: #66a8a6;
+}
+
+.swal-icon--success__ring {
+    border: 4px solid rgba(102, 168, 166, 0.2);
+}
+
+.swal-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.swal-button {
+    background-color: #e65540;
+    font-family: Montserrat-Regular;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: unset;
+    border-radius: 20px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.swal-button:hover {
+    background-color: #333333;
+}
+
+.swal-button:active {
+    background-color: #e65540;
+}
+
+.swal-title {
+  font-family: Montserrat-Medium;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0 15px;
+}
+
+.swal-text {
+  font-family: Montserrat-Regular;
+  color: #333333;
+  font-size: 15px;
+  text-align: center;
+}
+
+.swal-footer {
+    margin-top: 0;
 }
 

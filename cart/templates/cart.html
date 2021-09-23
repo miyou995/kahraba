@@ -13,108 +13,254 @@
                 </div>
             </div>
             <!-- Li's Breadcrumb Area End Here -->
+            
             <!--Shopping Cart Area Strat-->
             <div class="Shopping-cart-area pt-60 pb-60">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                                <div class="table-content table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th class="li-product-remove">supprimer</th>
-                                                <th class="li-product-thumbnail">images</th>
-                                                <th class="cart-product-name">Produit</th>
-                                                <th class="li-product-price">Prix / DA</th>
-                                                <th class="li-product-quantity">Quantité</th>
-                                                <th class="li-product-subtotal">Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="cart-body" hx-target="this" hx-swap="outerHTML">
-                                            {% for item in cart %}
-                                                {% with product=item.product %}
-                                                    <tr>
-                                                        <td class="li-product-remove"><a style="cursor: pointer;" href="{% url 'cart:cart_remove' product.id %}" ><i class="fa fa-times"></i></a></td>
-                                                        {% if product.photos.all.0 %}
-                                                            <td class="li-product-thumbnail"><a href="{{product.get_absolute_url}}"><img width="100" src="{{product.photos.all.0.fichier.url}}" alt="{{product.name}}"></a></td>
-                                                        {% else %}
-                                                            <div class="product-preview">
-                                                                <img src="{% static "img/pas-images.png" %}" >
-                                                            </div>
-                                                        {% endif %}
-                                                        <td class="li-product-name"><a href="{{product.get_absolute_url}}">{{product.name}}</a></td>
-                                                        <td class="li-product-price"><span class="amount">{{item.price}}</span></td>
-                                                        <td class="quantity">
-                                                            <label>Quantity</label>
-                                                            <form action="{% url 'cart:cart_add' product.id %}" method="post">
-                                                                {% csrf_token %}
-                                                            {{ item.update_quantity_form.override }}
-                                                            <div class="row d-inline-flex">
-                                                                <div class="cart-plus-minus">
-                                                                    <input type="hidden" name="product_id" value={{product.id}}>
-                                                                    <input class="cart-plus-minus-box" name="quantity" value="{{item.quantity}}" type="text">
-                                                                    <div class="dec qtybutton" ><i class="fa fa-angle-down"></i></div>
-                                                                    <div class="inc qtybutton" ><i class="fa fa-angle-up"></i></div>
-                                                                </div>
-                                                                <div class="d-inline">
-                                                                    <button style="background-color: #333;border: none;color: white;font-size: 20px;cursor: pointer;" class="btn ml-3" type="submit"> <i class="fa fa-check"></i></button>
-                                                            </div>
-                                                        </div>
-                                                            </form>
-
-                                                        </td>
-                                                        <td class="product-subtotal"><span class="amount">{{item.total_price}}</span></td>
-                                                    </tr>
-                                                    {% endwith %}
-                                                {% endfor %}
-                                            {% if cart.coupon %}
-                                                <tr class="subtotal">
-                                                    <td>Sous Total</td>
-                                                    <td colspan="4"></td>
-                                                    <td class="num">{{ cart.get_total_price|floatformat:2 }} DA</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>"<strong>{{ cart.coupon.code }}</strong>"</td>
-                                                    <td colspan="4"></td>
-                                                    <td class="num neg">-{{ cart.get_discount|floatformat:2 }} DA</td>
-                                                </tr>
+                            <div class="table-content table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="li-product-remove">supprimer</th>
+                                            <th class="li-product-thumbnail" style="max-width: 120px;">images</th>
+                                            <th class="cart-product-name" style="max-width: 250px;">Produit</th>
+                                            {% if has_attribute %}
+                                                <th class="cart-product-name">Spécificité</th>
                                             {% endif %}
-                                            </tbody>
-                                    </table>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="coupon-all">
-                                            <form action="{% url "coupons:apply" %}" method="post">
-                                                {% csrf_token %}
-                                                <div class="coupon">
-                                                    <input id="coupon_code" class="input-text" name="code" placeholder="Coupon code" type="text">
-                                                    <input class="button" name="apply_coupon" value="Appliquer" type="submit">
-                                                </div>
-                                            </form>
-                                          {% comment %}
-                                            <div class="coupon2" >
-                                                <button class="button" type="submit"> Modifier le panier</button>
+                                            <th class="li-product-price">Prix / DA</th>
+                                            <th class="li-product-quantity">Quantité</th>
+                                            <th class="li-product-subtotal">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="cart-body" hx-target="this" hx-swap="outerHTML">
+                                        {% for item in cart %}
+                                            {% with product=item.product %}
+                                                <tr>
+                                                    <td class="li-product-remove"><a style="cursor: pointer;" href="{% url 'cart:cart_remove' product.id %}" ><i class="fa fa-times"></i></a></td>
+                                                    <td class="li-product-thumbnail" style="max-width: 120px;"><a href="{{product.get_absolute_url}}"><img width="100" 
+                                                        {% if product.photos.all.0 %}
+                                                            src="{{product.photos.all.0.fichier.url}}">
+                                                        {% else %}
+                                                            src="{% static "img/pas-images.png" %}">
+                                                        {% endif %}
+                                                    <td class="li-product-name" style="max-width: 250px;"><a href="{{product.get_absolute_url}}" >
+                                                        {{product.name}}
+                                                    </a></td>
+                                                
+                                                    {% if has_attribute %}
+
+                                                    <td class="li-product-name" >
+                                                        {% if item.attribute_1 %}
+                                                        <div class="category-tags">
+                                                            <ul>
+                                                                {% if item.attribute_1 %}
+                                                                    <li class="atribut">{{item.attribute_1}}</li>
+                                                                {% endif %}
+                                                                {% if item.attribute_2 %}
+                                                                    <li class="atribut">{{item.attribute_2}}</li>
+                                                                {% endif %}
+                                                                {% if item.attribute_3 %}
+                                                                    <li class="atribut">{{item.attribute_3}}</li>
+                                                                {% endif %}
+                                                            </ul>
+                                                        </div>
+                                                        {% endif %}
+                                                    </td>
+                                                    {% endif %}
+
+                                                    <td class="li-product-price"><span class="amount">
+                                                        {{item.price}}
+                                                    </span></td>
+                                                    <td class="quantity">
+                                                        <label>Quantity</label>
+                                                        <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                                                            {% csrf_token %}
+                                                        {{ item.update_quantity_form.override }}
+                                                        <div class="row d-inline-flex">
+                                                            <div class="cart-plus-minus">
+                                                                <input class="cart-plus-minus-box" name="quantity" value="{{item.quantity}}" type="number">
+                                                                <div class="dec qtybutton" ><i class="fa fa-angle-down"></i></div>
+                                                                <div class="inc qtybutton" ><i class="fa fa-angle-up"></i></div>
+                                                            </div>
+                                                            <div class="d-inline">
+                                                                <button style="background-color: #333;border: none;color: white;font-size: 20px;cursor: pointer;" class="btn ml-3" type="submit"> <i class="fa fa-check"></i></button>
+                                                        </div>
+                                                    </div>
+                                                        </form>
+
+                                                    </td>
+                                                    <td class="product-subtotal"><span class="amount">{{item.total_price}}</span></td>
+                                                </tr>
+                                                {% endwith %}
+                                            {% endfor %}
+                                        {% if cart.coupon %}
+                                            <tr class="subtotal">
+                                                <td>Sous Total</td>
+                                                <td colspan="5"></td>
+                                                <td class="num">{{ cart.get_total_price|floatformat:2 }} DA</td>
+                                            </tr>
+                                            <tr>
+                                                <td>"<strong>{{ cart.coupon.code }}</strong>"</td>
+                                                <td colspan="5"></td>
+                                                <td class="num neg">-{{ cart.get_discount|floatformat:2 }} DA</td>
+                                            </tr>
+                                        {% endif %}
+                                        </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="coupon-all">
+                                        <form action="{% url "coupons:apply" %}" method="post">
+                                            {% csrf_token %}
+                                            <div class="coupon">
+                                                <input id="coupon_code" class="input-text" name="code" placeholder="Coupon code" type="text">
+                                                <input class="button" name="apply_coupon" value="Appliquer" type="submit">
                                             </div>
-                                          {% endcomment %}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-5 ml-auto">
-                                        <div class="cart-page-total">
-                                            <h2>Total Panier</h2>
+                                        </form>
+                                        <div class="coupon2" >
+                                            <div class="cart-page-total" style="min-width: 200px; padding-top: 0px;">
                                             <ul>
-                                                <li>Total <span>{{cart.get_total_price_after_discount}} DZD</span></li>
+                                                <li><strong>TOTAL:</strong>  {{cart.get_total_price_after_discount}} DZD</li>
                                             </ul>
-                                            <a href="{% url 'order:order_create' %}">Finaliser ma commande</a>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!--Shopping Cart Area End-->
- 
+            <div class="checkout-area pt-60 pb-30">
+                <div class="container">
+                    <form id="order_form" method="post" data-communes-url="{% url 'delivery:load_communes' %}">
+						{% csrf_token %}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="coupon-accordion">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="checkbox-form">
+                                <h3>Livraison Details</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="checkout-form-list">
+                                            <label>Nom<span class="required">*</span></label>
+                                            <input placeholder=""name="first_name" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="checkout-form-list">
+                                            <label>Prénom <span class="required">*</span></label>
+                                            <input placeholder=""name="last_name" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>Addresse <span class="required">*</span></label>
+                                            <input placeholder="Street address"name="address" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>Entreprise</label>
+                                            <input placeholder="(optional)"name="campany" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="country-select clearfix">
+                                            <label>Wilaya <span class="required">*</span></label>
+                                            <select class="nice-select wide" name="wilaya" id="wilayaId" >
+                                                <option class="option" value='' selected>Wilaya</option>
+                                                {% for wilaya in wilayas %}
+                                                    <option  data-price={{wilaya.price}}  value={{wilaya.id}} >{{wilaya.name}}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="country-select clearfix" id="communesId">
+                                            <label>Commune <span class="required">*</span></label>
+                                            <select class="nice-select wide" name="commune" id="communesId" required>
+                                                <option class="option" value='' selected>Communes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="checkout-form-list">
+                                            <label>Email Address </label>
+                                            <input placeholder=""name="email" type="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="checkout-form-list">
+                                            <label>Phone  <span class="required">*</span></label>
+                                            <input type="text" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="checkout-form-list">
+                                            <label>Note</label>
+                                            <textarea placeholder="" name="note" type="text"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="your-order">
+                                <h3>Votre Commande</h3>
+                                <div class="your-order-table table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                        {% with total_items=cart|length %}
+										{% if total_items > 0 %}
+                                                <tr class="cart_item">
+                                                    <td class="cart-product-name"> <strong class="product-quantity">Total panier</strong> </td>
+                                                    <td class="cart-product-total"><span class="amount">{{ cart.get_total_price|floatformat:2 }} DZD</span></td>  
+                                                  </tr>
+                                            {% if cart.coupon %}
+                                                <tr class="cart_item">
+                                                    <td class="cart-product-name"> <strong class="product-quantity">Réduction</strong> </td>
+                                                    <td class="cart-product-total"><span class="amount" >-{{ cart.get_discount|floatformat:2 }} DZD</span></td>  
+                                                </tr>
+                                            {% endif %}
+                                            <tr class="cart_item">
+                                                <td class="cart-product-name"> <strong class="product-quantity">Livraison</strong> </td>
+                                                <td class="cart-product-total"><span class="amount" id="deliveryCost">/ </span></td>  
+                                            </tr>
+										{% else %}
+											Vou n'avez pas de produit dans votre panier
+										{% endif %}
+										{% endwith %}
+                                        </tbody>
+                                        <tfoot style="background-color: #f6f6f6;">
+                                                <tr class="cart-subtotal">
+                                                    <th>Total</th>
+                                                    <th><div><strong class="order-total" id="order_total" data-order-total="{{ cart.get_total_price_after_discount|floatformat:2}}"></strong></div></th>
+                                                </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <div class="payment-method">
+                                    <div class="payment-accordion">
+                                        
+                                        <div class="order-button-payment">
+                                            <input value="Confirmer la commande" type="submit">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
             {% endblock content %}

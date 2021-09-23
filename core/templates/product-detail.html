@@ -18,13 +18,10 @@
                     </div>
                 </div>
             </div>
-            <!-- Li's Breadcrumb Area End Here -->
-            <!-- content-wraper start -->
             <div class="content-wraper">
                 <div class="container">
                     <div class="row single-product-area">
                         <div class="col-lg-5 col-md-6">
-                           <!-- Product Details Left -->
                             <div class="product-details-left sp-tab-style-left-page">
                                 <div class="product-details-images slider-navigation-1">
                                     {% for photo in product.photos.all %}
@@ -41,48 +38,49 @@
                                     {% endfor %}
                                 </div>
                             </div>
-                            <!--// Product Details Left -->
                         </div>
-
                         <div class="col-lg-7 col-md-6">
-                            <div class="product-details-view-content pt-60">
-                                <div class="product-info">
-                                    <h2>{{product.name}}</h2>
-                                    {% if product.brand %}
-                                        <span class="product-details-ref d-block">Marque: {{product.brand}}</span>
-                                    {% endif %}
-                                    {% if product.reference %}
-                                        <span class="product-details-ref">Reference: {{product.reference}}</span>
-                                    {% endif %}
-
-                                    <div class="price-box pt-20">
-                                        <span class="new-price new-price-2">Prix: </span>
-                                        {% if product.old_price %}
-                                            <span style="text-decoration: line-through;" class="old-price">{{product.old_price}} DA</span>
+                            <form action="{% url 'cart:cart_add' product.pk %}" method="POST" class="cart-quantity">
+                                <div class="product-details-view-content pt-60">
+                                    <div class="product-info">
+                                        <h2>{{product.name}}</h2>
+                                        {% if product.brand %}
+                                            <span class="product-details-ref d-block">Marque: {{product.brand}}</span>
                                         {% endif %}
-                                        <span class="new-price new-price-2"> {{product.price}} DA</span>
-                                    </div>
-                                    {% if product.text %}
-                                        <div class="product-desc">
-                                            <p>
-                                                <span>{{product.text}}</span>
-                                            </p>
+                                        {% if product.reference %}
+                                            <span class="product-details-ref">Reference: {{product.reference}}</span>
+                                        {% endif %}
+                                        <div class="price-box pt-20">
+                                            <span class="new-price new-price-2">Prix: </span>
+                                            {% if product.old_price %}
+                                                <span style="text-decoration: line-through;" class="old-price">{{product.old_price}} DA</span>
+                                            {% endif %}
+                                            <span class="new-price new-price-2"> {{product.price}} DA</span>
                                         </div>
-                                    {% endif %}
-                                    {% if product.product_type %}
-                                        <div class="product-variants">
-                                            <div class="produt-variants-size">
-                                                <label>Dimension</label>
-                                                <select class="nice-select">
-                                                    <option value="1" title="S" selected="selected">40x60cm</option>
-                                                    <option value="2" title="M">60x90cm</option>
-                                                    <option value="3" title="L">80x120cm</option>
-                                                </select>
+                                        {% if product.text %}
+                                            <div class="product-desc">
+                                                <p>
+                                                    <span>{{product.text}}</span>
+                                                </p>
                                             </div>
-                                        </div>
-                                    {% endif %}
-                                    <div class="single-add-to-cart">
-                                        <form action="{% url 'cart:cart_add' product.pk %}" method="POST" class="cart-quantity">
+                                        {% endif %}
+                                        {% if product.product_type.atributes %}
+                                            <div class="row d-flex" style="height: 200px">
+                                                {% for atribute in atributes %}
+                                                    <div class="product-variants col-3">
+                                                        <div class="produt-variants-size">
+                                                            <label>{{atribute.name}}</label>
+                                                            <select class="nice-select"  name="{% if forloop.counter == 1 %}attribute_1{% elif forloop.counter == 2 %}attribute_2{% elif forloop.counter == 3 %}attribute_3{% else %}atribute_4{% endif %}">
+                                                        {% for value in atribute.values.all %}
+                                                            <option value="{{value.value}}"{% if forloop.counter == 1 %} selected="selected" {% endif %}>{{value.value}}</option>
+                                                        {% endfor %}
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                        <div class="single-add-to-cart">
                                             {% csrf_token %}
                                             <div class="quantity">
                                                 <label>Quantité</label>
@@ -93,11 +91,10 @@
                                                 </div>
                                             </div>
                                             <button class="add-to-cart" type="submit">Ajouter au panier</button>
-                                        </form>
+                                        </div>
                                     </div>
-                                    
                                 </div>
-                            </div>
+                            </form>
                         </div> 
                     </div>
                 </div>
@@ -151,23 +148,18 @@
                                 {% for doc in product.documents.all %}
                                     <li><i class="fa fa-file-pdf-o"></i> <a href="{{doc.file.url}}" download> {{doc.name}}</a></li>
                                 {% endfor %}
-
-                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Product Area End Here -->
-            <!-- Begin Li's Laptop Product Area -->
             <section class="product-area li-laptop-product pt-30 pb-50">
                 <div class="container">
                     <div class="row">
-                        <!-- Begin Li's Section Area -->
                         <div class="col-lg-12">
                             <div class="li-section-title">
                                 <h2>
-                                    <span>{{related_products_count}} autres produits dans {{product.category}} </span>
+                                    <span>{{related_products_count}} autres produits dans {{product.category}}</span>
                                 </h2>
                             </div>
                             <div class="row">
@@ -180,10 +172,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Li's Section Area End Here -->
                     </div>
                 </div>
             </section>
-            <!-- Li's Laptop Product Area End Here -->
-
 {% endblock content %}

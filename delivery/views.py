@@ -2,7 +2,6 @@ from django.shortcuts import render
 from .models import Commune, Wilaya
 # Create your views here.
 
-
 def load_communes(request):
     wilaya_id = request.GET.get('wilaya_id')
     print('wilaya id', wilaya_id)

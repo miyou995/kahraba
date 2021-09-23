@@ -1,0 +1,10 @@
+<li class="hm-minicart">
+    <a href="{% url 'cart:cart_detail' %}">
+        <div class="hm-minicart-trigger">
+            <span class="item-icon"></span>
+            <span class="item-text">{{total_price}} DA
+                <span class="cart-item-count">{{length}}</span>
+            </span>
+        </div>
+    </a>
+</li>

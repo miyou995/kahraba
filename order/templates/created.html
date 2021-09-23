@@ -15,6 +15,10 @@
 							<li><a href="#"><span>Commande Numéro </span> : {{ order.id }}</a></li>
 							<li><a href="#"><span>Date</span> : {{order.created}}</a></li>
 							<li><a href="#"><span>Total</span> : {{ order.get_total_cost }} DA</a></li>
+							<li><a href="#"><span>Livraison</span> : {{ order.delivery_cost }} </a></li>
+							{% if order.get_discount > 0 %}
+								<li><a href="#"><span>Livraison</span> : {{ order.get_discount }} </a></li>
+							{% endif %}
 						</ul>
 					</div>
 				</div>

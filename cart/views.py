@@ -5,44 +5,113 @@ from django.views.generic import TemplateView
 from django.views.decorators.http import require_POST
 from .cart import Cart
 from core.models import Product
-from delivery.models import Wilaya
+from delivery.models import Wilaya, Commune
+from coupons.models import Coupon
+from order.models import  OrderItem, Order
+from business.models import Business
 from django.http import HttpResponse
 from django.contrib.admin.views.decorators import staff_member_required
 from .forms import CartAddProductForm, CartUpdateProductQuantityForm
 from django.template.loader import render_to_string
 from django.contrib import messages
 from django.core import serializers
-from coupons.models import Coupon
+from order.forms import OrderCreateForm
+from django.core.mail import EmailMessage
+from io import BytesIO
+import weasyprint
     
 # class CheckoutView(TemplateView):
 #     template_name = "checkout.html"
 
 def cart_detail(request):
     cart = Cart(request)
+    has_attribute = False
+    wilayas= Wilaya.objects.all().order_by('name') 
+    communes= Commune.objects.all().order_by('name') 
+    form = OrderCreateForm()
     for item in cart:
         item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'], 'override': True})
-        # print('baskets details', list(cart))
         # print('Wach ahda item details', item)
-    # for item in cart:
-    #     item['update_quantity_form'] = CartAddProductForm(initial={ 'quantity': item['quantity']})
-    #     item['total'] = item['product'].price * item['quantity']
-    #     items.append(item)
-    #     products.append(item['product'])
+        try:
+            if item['attribute_1']: 
+                has_attribute = True
+        except:
+            pass
+    # print('baskets details', list(cart))
+    if cart.__len__() :
+        # print('request', request.method)
+        if request.method == 'POST':
+            form = OrderCreateForm(request.POST)
+            # print(form)
+            if form.is_valid():
+                order = form.save()
+                order.delivery_cost = order.wilaya.price
+                order.save()
+                # print('delivery cost', order.wilaya.price)
+                for item in cart:
+                    OrderItem.objects.create(order=order,product=item['product'],price=item['price'],quantity=item['quantity'],attribute_1 = ['attrbute_1'], attribute_2 = ['attrbute_2'], attribute_3 = ['attrbute_3'])
+                try:
+                    coupon_id = request.session['coupon_id']
+                    coupon = Coupon.objects.get(id=coupon_id)
+                    coupon.stock -= 1
+                    coupon.used += 1
+                    request.session['coupon_id'] = None
+                    coupon.save()
+                except:
+                    pass
+                cart.clear()
+                total_price = cart.get_total_price_after_discount()
+                total_price_with_delivery = total_price + order.delivery_cost
+            
+                subject = f'Commande N°: {order.id}'
+                message = f'Chére {order.first_name},\n\n vous avez passer une commande avec succés' f'votre identifiant de commande est le: {order.id}'
+                try :
+                    response = HttpResponse(content_type='application/pdf' )
+                    response['Content-Disposition' ] = f'filename=order_{order.id}.pdf'
+                    business   = Business.objects.last().name
+                    html = render_to_string('order_pdf.html' , {'order' : order, 'business': business})
+                    out = BytesIO()
+                    pdf_file = weasyprint.HTML(string=html).write_pdf(response)
+                    mail = EmailMessage(subject, message, 'inter.taki@gmail.com',[order.email])
+                    mail.attach(pdf_file,out.getvalue(),'application/pdf')
+                    mail.send()
+                    context = {
+                        'order': order,
+                        # 'products_total': products_total, 
+                        'total_price': total_price,
+                        'delivery': order.delivery_cost,
+                        'total_price_with_delivery': total_price_with_delivery,
+                        'pdf_file': pdf_file,
+                    }
+                    return render(request, 'created.html', context)
+                except :
+                    print('yaw matebaatch')
+                # stylesheets=[weasyprint.CSS(str(settings.STATIC_ROOT) + 'css/pdf.css' )]
+            else: 
+                print('the form is not valid')
+                return render(request, 'cart.html', {'cart':cart, 'form' : form, 'wilayas': wilayas, 'communes': communes})
     context = {
         'cart': cart,
+        'has_attribute' : has_attribute,
+        'form' : form,
+        'wilayas': wilayas,
+        'communes': communes
         # 'coupon_apply_form': coupon_apply_form
     }
-    for item in cart:
-        print('itrem', item)
     return render(request, 'cart.html', context)
 
 
-@require_POST
+def set_if_not_none(mapping, key, value):
+    if value is not None:
+        mapping[key] = value
+
+
+
+@require_POST # 
 def cart_add(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
     form = CartAddProductForm(request.POST)
-    print('the Cart ')
     if form.is_valid():
         cd = form.cleaned_data
         print('cd', cd)
@@ -50,22 +119,79 @@ def cart_add(request, product_id):
             product=product,
             quantity=cd['quantity'],
             override_quantity=cd['override'],
+            attribute_1 = cd['attribute_1'],
+            attribute_2 = cd['attribute_2'],
+            attribute_3 = cd['attribute_3']
         )
-        print('the Cart one', cart)
-        # return render(request, 'snipetts/cart-body.html', {'cart':cart})
         return redirect('cart:cart_detail')
 
-                # print('piiiiw')
-    # except:
-    #     cd = form.cleaned_data
-    #     print('222cd', cd)
-    #     cart.add(
-    #         product=product,
-    #         quantity=1,
-    #     )
-    #     print('the Cart two', cart)
+def cart_one_add(request, product_id):
+    cart = Cart(request)
+    product = get_object_or_404(Product, id= product_id)
+        # for atribut in atributes:
+        #     print('atribut=> ',type(atribut))
+        #     values = atribut.values.all()
+        #     print('values=> ',values)
+    if product:
+        attribute_1 = False
+        attribute_2 = False
+        attribute_3 = False
+        quantity = 1
+        try:
+            if product.product_type:
+                if product.product_type.atributes:
+                    atributes = product.product_type.atributes.all()
+                    try:
+                        attribute_1 = atributes[0].values.first().value
+                    except:
+                        pass
+                    try:
+                        attribute_2 = atributes[1].values.first().value
+                    except:
+                        pass
+                    try:
+                        attribute_3 = atributes[2].values.first().value
+                    except:
+                        pass
+        except:
+            pass
+    if attribute_3:
+    
+        cart.add(
+            product=product,
+            quantity=quantity,
+            attribute_1=attribute_1,
+            attribute_2=attribute_2,
+            attribute_3=attribute_3
+        )
+    elif attribute_2:
+        cart.add(
+            product=product,
+            quantity=quantity,
+            attribute_1 = attribute_1,
+            attribute_2 = attribute_2
+        )
+    elif attribute_1:
 
-    #     return redirect('cart:cart_detail')
+        cart.add(
+            product=product,
+            quantity=quantity,
+            attribute_1 = attribute_1,
+        )
+    else:
+        cart.add(
+            product=product,
+            quantity=quantity,
+        )
+    items = len(cart)
+    context = {
+        'total_price': cart.get_total_price(),
+        'length' : len(cart),
+    }
+    return render(request, 'snipetts/cart-count.html',context)
+    # return HttpResponse(len(cart))
+    # pass
+
 
 # @require_POST
 # def cart_update(request):
@@ -101,7 +227,6 @@ def cart_add(request, product_id):
 
 @require_POST
 def cart_product_update(request, pk):
-    print('envoer')
     cart = Cart(request)
     form =CartUpdateProductQuantityForm(request.POST)
     context = {
@@ -132,7 +257,6 @@ def cart_product_update(request, pk):
     if request.htmx:
         print('yes htmx')
         return render(request, 'snipetts/cart-rows.html',  context)
-    print('bouuuuuu')
     return render(request, 'cart.html', {'cart' : cart})
 
 def cart_remove(request, product_id):
@@ -142,16 +266,7 @@ def cart_remove(request, product_id):
     return redirect('cart:cart_detail')
 
 
-def cart_one_add(request, product_id):
-    cart = Cart(request)
-    product = get_object_or_404(Product, id= product_id)
-    if product:
-        quantity = 1
-        cart.add(
-                product=product,
-                quantity=quantity,
-        )
-        return redirect('cart:cart_detail')
+
 
 # def cart_add_one_product(request):
 #     cart = Cart(request)

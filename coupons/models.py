@@ -34,13 +34,12 @@ class Coupon(models.Model):
     
     def clean(self):
         if (self.discount_amount == 0) & (self.discount_percentage == 0):
-                raise ValidationError("Le pourcentage ou le montant doivent être différents de zéro, pas les deux en même temps")
+                raise ValidationError("Le pourcentage ou le montant doivent être différents de 0, pas les deux en même temps")
         if (self.discount_amount > 0) & (self.discount_percentage > 0):
-                raise ValidationError('Le pourcentage ou le montant doivent être différents à 0, pas les deux en même temps')
-        
+                raise ValidationError('Le pourcentage ou le montant doivent être différents de 0, pas les deux en même temps')
     
-    def get_ordering(self, request):
-       return ['valid-from']
+    # def get_ordering(self, request):
+    #    return ['valid-from']
     
 
     def __str__(self):

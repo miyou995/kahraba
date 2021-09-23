@@ -111,12 +111,6 @@
 										{% endwith %}
                                         </tbody>
                                         <tfoot>
-                                           {% comment %}
-                                                <tr class="cart-subtotal">
-                                                    <th>Sous-Total</th>
-                                                    <td><span class="amount">£215.00</span></td>
-                                                </tr>
-                                           {% endcomment %}
                                             <tr class="order-total">
                                                 <th>Total</th>
 						                        <div><strong class="order-total" id="order_total" data-order-total="{{ cart.get_total_price_after_discount|floatformat:2}}"></strong></div>

@@ -26,7 +26,7 @@
             <div class="content-wraper pt-60 pb-60 pt-sm-30">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-9 order-1 order-lg-2">
+                        <div class="col-lg-9 order-1 order-lg-2" id="removed-products">
                             <div class="single-banner shop-page-banner">
                                 <div class="row">
                                     {% for cat in category.get_children %}
@@ -46,14 +46,12 @@
                                             </div>
                                         </a>
                                     </div>
-                                      
                                     {% endfor %}
                                 </div>
                             </div>
                             <div class="shop-top-bar mt-30">
                                 <div class="shop-bar-inner">
                                     <div class="product-view-mode">
-                                        <!-- shop-item-filter-list start -->
                                         <ul class="nav shop-item-filter-list" role="tablist">
                                             <li class="active" role="presentation"><a aria-selected="true" class="active show" data-toggle="tab" role="tab" aria-controls="grid-view" href="#grid-view"><i class="fa fa-th"></i></a></li>
                                             <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="list-view" href="#list-view"><i class="fa fa-th-list"></i></a></li>
@@ -63,27 +61,8 @@
                                         <span>{{products.count}} produit trouver</span>
                                     </div>
                                 </div>
-                                {% comment %}
-                                    <!-- <div class="product-select-box">
-                                        <div class="product-short">
-                                            <p>Sort By:</p>
-                                            <select class="nice-select">
-                                                <option value="trending">Relevance</option>
-                                                <option value="sales">Name (A - Z)</option>
-                                                <option value="sales">Name (Z - A)</option>
-                                                <option value="rating">Price (Low &gt; High)</option>
-                                                <option value="date">Rating (Lowest)</option>
-                                                <option value="price-asc">Model (A - Z)</option>
-                                                <option value="price-asc">Model (Z - A)</option>
-                                            </select>
-                                        </div>
-                                    </div> -->
-                                {% endcomment %}
-                                <!-- product-select-box end -->
                             </div>
-                            <!-- shop-top-bar end -->
-                            <!-- shop-products-wrapper start -->
-                            <div class="shop-products-wrapper" id="removed-products">
+                            <div class="shop-products-wrapper" >
                                 <div class="tab-content">
                                     <div id="grid-view" class="tab-pane fade active show" role="tabpanel">
                                         <div class="product-area shop-product-area">
@@ -109,86 +88,125 @@
                                             </div>
                                         </div>
                                     </div>
+                                 
                                     <div class="paginatoin-area">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 pt-xs-15">
-                                                <p>Showing 1-12 of 13 item(s)</p>
+                                                <p> {{ page_obj.start_index }} à {{ page_obj.end_index }} de {{page_obj.paginator.count}} Produits</p>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <ul class="pagination-box pt-xs-20 pb-xs-15">
-                                                    <li><a href="#" class="Previous"><i class="fa fa-chevron-left"></i> Previous</a>
+                                                    <li><a href="#" class="Previous"><i class="fa fa-chevron-left"></i> Précédent</a>
                                                     </li>
-                                                    <li class="active"><a href="#">1</a></li>
-                                                    <li><a href="#">2</a></li>
-                                                    <li><a href="#">3</a></li>
-                                                    <li><a href="#" class="Next"> Next <i class="fa fa-chevron-right"></i></a></li>
+                                                        {% for page in page_obj.paginator %}
+                                                            <li {% if page.number == page_obj.number %} class="active" {% endif %}><a href="?page={{page.number}}">{{page.number}}</a></li>
+                                                        {% endfor %}
+                                                    <li><a href="#" class="Next"> Suivant <i class="fa fa-chevron-right"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- shop-products-wrapper end -->
+                          
                         </div>
-                        <!--sidebar-categores-box start  -->
                         <div class="col-lg-3 order-2 order-lg-1">
-                            <form action="#" hx-get="{% url 'core:filtered-products' %}" hx-target="#removed-products" hx-swap="outerHTML ">
+                            <form action="." hx-get="{% url 'core:filtered-products' %}" hx-target="#removed-products" hx-swap="outerHTML "> 
                                 <div class="sidebar-categores-box mt-sm-30 mt-xs-30">
                                     <input type="text" name="name" placeholder="Recherchez..." >
                                 </div>
-                                
+
                                 <div class="sidebar-categores-box mt-sm-30 mt-xs-30">
                                     <div class="sidebar-title">
                                         <h2>Categories</h2>
                                     </div>
+
                                     <div class="category-sub-menu categori-checkbox">
                                         <ul>
                                             {% recursetree categories %}
-                                                <li class="has-sub"><a href="{{node.get_absolute_url}}" style="font-size: 15px;">{{node.name}}</a>
-                                                    <ul>
-                                                        {% for cat in node.children.all %}
-                                                        <li>
-                                                            <input class="d-inline" type="checkbox" name="cat" id="cat-{{cat.id}}" value="{{cat.id}}" >
-                                                            <label class="d-inline" for="cat-{{cat.id}}">
-                                                                <span></span>
-                                                                {{cat.name}}
-                                                            </label>
-                                                        </li>
-                                                        {% endfor %}
-                                                    </ul>
-                                                </li>
+                                                {% if node.children.count > 0 %}
+                                                    <li class="has-sub"><a href="{{node.get_absolute_url}}" style="font-size: 15px;">{{node.name}}</a>
+                                                        <ul>
+                                                            {% for cat in node.children.all %}
+                                                                <li>
+                                                                    <input class="d-inline" type="checkbox" value="" name="cat" id="cat-{{cat.id}}" value="{{cat.id}}" >
+                                                                    <label class="d-inline" for="cat-{{cat.id}}">
+                                                                        <span></span>
+                                                                        {{cat.name}}
+                                                                    </label>
+                                                                </li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </li>
+                                                {% endif %}
                                             {% endrecursetree %}
                                         </ul>
                                     </div>
                                 </div>
-
-                                <div class="sidebar-categores-box">
-                                    <div class="filter-sub-area">
-                                        <div class="categori-checkbox">
-                                                {% if brands.count > 0 %}
-                                                    <h5 class="filter-sub-titel">Marques</h5>
-                                                    <ul>
-                                                        {% for brand in brands %}
-                                                            <li>
-                                                                <input type="checkbox" name="brand" id="brand-{{brand.id}}" value="{{brand.id}}">
-                                                                <label for="brand-{{brand.id}}">
-                                                                    <span></span>
-                                                                    {{brand.name}}
-                                                                    <small>({{brand.brand_products.count}})</small>
-                                                                </label>
-                                                            </li>
-                                                        {% endfor %}
-                                                    </ul>
-                                                {% endif %}
-                                            </div>
-                                            
-                                        </div>
+<!-- DEBUUUUUUT -->
+                                <div class="sidebar-categores-box mt-sm-30 mt-xs-30">
+                                    <div class="sidebar-title">
+                                        <h2>Autres Filtres</h2>
                                     </div>
-                                    <div class="apply-filters">
-                                        <button class="filter-button" type="submit">Filtrer</button>
+
+                                    <div class="category-sub-menu categori-checkbox">
+                                        <ul>
+                                            <li  class="ml-5">
+                                                <input type="checkbox" name="new" id="nouveaux" >
+                                                <label for="nouveaux">
+                                                    <span></span>
+                                                    Nouveaux Produits
+                                                </label>
+                                            </li>
+                                            <li  class="ml-5">
+                                                <input type="checkbox" name="gamme__brand" id="promotions" >
+                                                <label for="promotions">
+                                                    <span></span>
+                                                    Promotions
+                                                </label>
+                                            </li>
+                                            <li class="has-sub"><a href="#" style="font-size: 15px;">Marques</a>
+                                                <ul>
+                                                    {% for brand in brands %}
+                                                        {% if brand.products_count > 0 %}
+                                                                <li>
+                                                                    <input type="checkbox" name="gamme__brand" id="brand-{{brand.id}}" value="{{brand.id}}">
+                                                                    <label for="brand-{{brand.id}}">
+                                                                        <span></span>
+                                                                        {{brand.name}}
+                                                                        <small>({{brand.products_count}})</small>
+                                                                    </label>
+                                                                </li>
+                                                        {% endif %}
+                                                    {% endfor %}
+
+                                                </ul>
+                                            </li>
+                                            <li class="has-sub"><a href="#" style="font-size: 15px;">Gammes</a>
+                                                <ul>
+                                                    {% for gamme in gammes %}
+                                                    {% if gamme.products.count > 0 %}
+                                                        <li>
+                                                            <input type="checkbox" name="gamme" id="gamme-{{gamme.id}}" value="{{gamme.id}}">
+                                                            <label for="gamme-{{gamme.id}}">
+                                                                <span></span>
+                                                                {{gamme.name}}
+                                                                <small>({{gamme.products.count}})</small>
+                                                            </label>
+                                                        </li>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                        </form>
+                                <div class="apply-filters">
+                                    <button class="filter-button" type="submit">Filtrer</button>
+                                </div>
+                              
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

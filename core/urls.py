@@ -10,7 +10,7 @@ urlpatterns = [
 
     path('produits/', ProductsView.as_view(), name='products'),
     # path('filtres-produits/', filtered_view, name='filtered-products'),
-    path('filtered-filtered/', filtred_htmx_products, name='filtered-products'),
+    path('produits-filtered/', filtred_htmx_products, name='filtered-products'),
     path('product-detail/', product_detail, name='product-detail'),
 
     # path('produits/<slug:slug>/', CategoryProductsView.as_view(), name='prod-by-cat'),

@@ -62,15 +62,23 @@ class Cart(object):
     #     self.save()
 
 
-    def add(self, product, quantity=1, override_quantity=False):
+    def add(self, product, quantity=1, override_quantity=False,attribute_1=False,attribute_2=False,attribute_3=False):
         product_id = str(product.id)
         if product_id not in self.cart:
-            self.cart[product_id] = {'quantity': 0, 'price': str(product.price) }
+            self.cart[product_id] = {'quantity': 0, 'price': str(product.price), 'attribute_1' :attribute_1, 'attribute_2' :attribute_2, 'attribute_3' :attribute_3}
+            # , 'attribute_1' :attribute_1, 'attribute_2' :attribute_2, 'attribute_3' :attribute_3
         if override_quantity:
             self.cart[product_id]['quantity'] = quantity
         else:
-            self.cart[product_id]['quantity'] += quantity
+            self.cart[product_id]['quantity'] = quantity
+        if attribute_1:
+            self.cart[product_id]['attribute_1'] = attribute_1
+        if attribute_2:
+            self.cart[product_id]['attribute_2'] = attribute_2
+        if attribute_3:
+            self.cart[product_id]['attribute_3'] = attribute_3
         self.save()
+
 
         
     # def add_one(self, product, taille, color, quantity=1, override_quantity=False):

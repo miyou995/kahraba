@@ -1,16 +1,20 @@
 from django.contrib import admin
-from .models import ProductType, Product, Category, ContactForm, PhotoProduct , Atributes, AtributesValue, ProductDetail, ProductDocument, Brand
+from .models import ProductType, Product, Category, ContactForm, PhotoProduct , Atribute, AtributesValue, ProductDetail, ProductDocument, Brand, Gamme
 from django.contrib.auth.models import Group, User
 from django.utils.html import format_html
 from django_mptt_admin.admin import DjangoMpttAdmin
 admin.autodiscover()
 admin.site.enable_nav_sidebar = False
 admin.site.unregister(Group)
-
+from django.db.models import Count
+from django.db import models
 
  
-# class AtributesInline(admin.TabularInline):
-#     model = Atributes
+class AtributesInline(admin.TabularInline):
+    model = Atribute
+
+class GammesInline(admin.TabularInline):
+    model = Gamme
 
 class ProductDocumentInline(admin.TabularInline):
     model = ProductDocument
@@ -36,19 +40,37 @@ class PhotosLinesAdmin(admin.TabularInline):
 # class ProductTypeAdmin(admin.ModelAdmin):
 #     inlines = [AtributesInline]
 
+# class ProductTypeAdmin(admin.ModelAdmin):
+#     list_display = ('id', 'name',  'is_active')
+#     list_display_links = ('id','name' )
+#     list_per_page = 40
+#     list_editable = [ 'is_active']
+#     search_fields = ('name',)
+#     inlines = [AtributesInline]
+
+
+
 class BrandAdmin(admin.ModelAdmin):
     list_display = ('id', 'name',  'actif')
     list_display_links = ('id','name' )
     list_per_page = 40
     list_editable = [ 'actif']
     search_fields = ('name',)
+    inlines = [GammesInline]
+
 
 
 class CategoryAdmin(DjangoMpttAdmin):
-    list_display = ('id', 'name',  'actif')
+    # def get_queryset(self, request):
+    #     qs = super(CategoryAdmin, self).get_queryset(request)
+    #     qs = qs.annotate(total_products=Product.objects.all(category__in=models.get_descendants(include_self=True)).count())
+    #     return qs
+    def count_products(self):
+        return Product.objects.filter(category__in=self.get_descendants(include_self=True)).count()
+    list_display = ('id', 'name', count_products, 'actif')
     prepopulated_fields = {"slug": ("name",)}
     list_display_links = ('id','name' )
-    list_per_page = 40
+    list_per_page = 50
     list_editable = [ 'actif']
     search_fields = ('name',)
     exlude = ['slug']
@@ -60,9 +82,9 @@ class ProductAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
     list_display_links = ('id','name' )
     list_per_page = 40
-    list_filter = ('brand', 'category','new')
+    list_filter = ('gamme', 'category','new')
     list_editable = ['category', 'price', 'new', 'top', 'actif', 'old_price', 'status']
-    search_fields = ('name',)
+    search_fields = ('name','reference')
     exlude = ['slug']
     inlines = [ProductDetailInline, ProductDocumentInline, PhotosLinesAdmin]# a comenter pour KAHRABACENTER.com
     save_as= True

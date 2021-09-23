@@ -17,6 +17,7 @@ class Wilaya(models.Model):
 class Commune(models.Model):
     wilaya = models.ForeignKey(Wilaya, on_delete=models.CASCADE, verbose_name="Wilaya")
     name = models.CharField(max_length=30, verbose_name="Commune")
+    # active = models.BooleanField(default=True, verbose_name="Livraison Active")
     class Meta:
         verbose_name = "Commune"
         verbose_name_plural = "2. Communes"        

@@ -21,11 +21,13 @@ class ActiveManager(models.Manager):
     def active(self):
         return self.filter(active=True)
 
+
+
 class ProductQuerySet(models.QuerySet):
     def search(self, query=None):
         if query is None or query == "":
             return self.none()
-        lookups = Q(name__icontains=query) | Q(reference__icontains=query) | Q(reference__icontains=query) | Q(brand__name__icontains=query) | Q(product_type__name__icontains=query) | Q(product_type__name__icontains=query) | Q(category__name__icontains=query) | Q(text__icontains=query) & Q(actif=True)
+        lookups = Q(name__icontains=query) | Q(reference__icontains=query) | Q(brand__name__icontains=query) | Q(product_type__name__icontains=query) |  Q(category__name__icontains=query) | Q(text__icontains=query) & Q(actif=True)
         return self.filter(lookups) 
 
 class ProductManager(models.Manager):
@@ -38,13 +40,29 @@ class ProductManager(models.Manager):
 class Brand(models.Model):
     name = models.CharField(max_length=150, verbose_name='Nom')
     actif = models.BooleanField(verbose_name='actif', default=True)
-    objects = ActiveManager()
     def __str__(self):
         return self.name
+    def products_count(self):
+        return Product.objects.filter(gamme__brand_id=self.id).count()
     class Meta:
         ordering = ('id',)
         verbose_name = '- Marque'
         verbose_name_plural = '- Marques'
+
+class Gamme(models.Model):
+    name = models.CharField(max_length=150, verbose_name='Nom')
+    brand = models.ForeignKey(Brand, related_name="gammes", on_delete=models.CASCADE, blank=True, null=True)
+
+    actif = models.BooleanField(verbose_name='actif', default=True)
+    objects = ActiveManager()
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ('id',)
+        verbose_name = '- Gamme'
+        verbose_name_plural = '- Gammes'
+
 
 class Category(MPTTModel):
     name  = models.CharField( max_length=150, verbose_name='Nom')
@@ -61,7 +79,6 @@ class Category(MPTTModel):
         ordering = ('id',)
         verbose_name = 'Catégorie'
         verbose_name_plural = '- Catégories'
-
     class MPTTMeta:
         order_insertion_by = ["name"]
     
@@ -86,10 +103,10 @@ class ProductType(models.Model):
     def __str__(self):
         return self.name
 
-class Atributes(models.Model):
+class Atribute(models.Model):
 
     name = models.CharField(verbose_name=_("Atribut"), help_text=_("Required"), max_length=255)
-    product_type = models.ForeignKey(ProductType, on_delete=models.CASCADE)
+    product_type = models.ForeignKey(ProductType, related_name="atributes",on_delete=models.CASCADE)
     class Meta:
         verbose_name = _("Produits Specification")
         verbose_name_plural = _("Produits Specifications")
@@ -101,14 +118,14 @@ class Product(models.Model):
     name            = models.CharField( max_length=200, verbose_name='Nom')
     reference       = models.CharField( max_length=200, verbose_name='Référence', blank=True, null=True)
     slug            = models.SlugField( max_length=150, unique= True, verbose_name='URL')
-    brand           = models.ForeignKey(Brand, related_name="brand_products", on_delete=models.CASCADE, blank=True, null=True)
-    product_type    = models.ForeignKey(ProductType, on_delete=models.RESTRICT, blank=True, null=True)
+    # brand           = models.ForeignKey(Brand, related_name="brand_products", on_delete=models.CASCADE, blank=True, null=True)
+    # product_type    = models.ForeignKey(ProductType, on_delete=models.RESTRICT, blank=True, null=True)
     category        = TreeForeignKey(Category, verbose_name="Catégorie",related_name="products" ,on_delete=models.CASCADE, blank=True, null=True)
     text            = models.TextField(verbose_name='petit text', blank=True, null=True)
     description     = tinymce_models.HTMLField(verbose_name='Déscription du produit', blank=True, null=True)
     price           = models.DecimalField(max_digits=10, decimal_places=2, default=1)
     old_price       = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Ancien prix",blank=True, null=True)
-    # gamme      = models.ForeignKey(Gamme, blank=True, null=True,related_name="products", on_delete=models.CASCADE)
+    gamme      = models.ForeignKey(Gamme, blank=True, null=True,related_name="products", on_delete=models.CASCADE)
     # tag        = models.ManyToManyField(Tag, blank=True)
     actif      = models.BooleanField(verbose_name='actif', default=True)
     new        = models.BooleanField(verbose_name='Nouveau', default=True)
@@ -162,7 +179,7 @@ class ProductDetail(models.Model):
 
 class AtributesValue(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    specification = models.ForeignKey(Atributes, on_delete=models.RESTRICT)
+    specification = models.ForeignKey(Atribute, related_name='values',on_delete=models.RESTRICT)
     value = models.CharField(
         verbose_name=_("value"),
         help_text=_("Atribute Value(maximum of 255 words"),
