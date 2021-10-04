@@ -15,14 +15,12 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="li-blog-single-item pb-25">
                                         <div class="li-blog-banner">
-                                            <a href="blog-details-left-sidebar.html"><img class="img-full" src="images/blog-banner/2.jpg" alt=""></a>
+                                            <img class="img-full" src="{{project.images.all.0.image.url}}" alt="">
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">
-                                                <h3 class="li-blog-heading pt-25"><a href="blog-details-left-sidebar.html">{{project.title}}</a></h3>
-                                                    {% comment %}
-                                                        <a class="read-more" href="blog-details-left-sidebar.html">Lire plus...</a>
-                                                    {% endcomment %}                                            
+                                                <h3 class="li-blog-heading pt-25">{{project.title}}</h3>
+                                                <p>{{project.description}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -35,7 +33,9 @@
                                             </div>
                                             <div class="li-blog-content">
                                                 <div class="li-blog-details">
-                                                    <h3 class="li-blog-heading pt-25"><a href="blog-details-left-sidebar.html">Exemple de Projet</a></h3>
+                                                    <h3 class="li-blog-heading pt-25"><a href="blog-details-left-sidebar.html">blog image post</a></h3>
+                                                 
+                                                    <p>{{project.}}</p>
                                                 </div>
                                             </div>
                                         </div>

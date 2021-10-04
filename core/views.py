@@ -144,6 +144,7 @@ def filtred_htmx_products(request):
     print('request', request.GET)
     products = ProductFilter(request.GET, queryset= Product.objects.all())
     context['products'] = products.qs
+    print('context[products]', context['products'])
     return render(request, 'snipetts/htmx_products.html', context)
 
 
@@ -163,7 +164,7 @@ class ProductDetailView(DetailView):
         context["related_products"] = products.exclude(id= prod.id).order_by('?')[:8]
         context["related_products_count"] = products.count() - 1
         context['form'] = CartAddProductForm()
-        context['atributes'] = prod.product_type.atributes.all()
+        # context['atributes'] = prod.product_type.atributes.all()
         return context
     
 

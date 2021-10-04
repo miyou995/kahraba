@@ -111,11 +111,10 @@
                           
                         </div>
                         <div class="col-lg-3 order-2 order-lg-1">
-                            <form action="." hx-get="{% url 'core:filtered-products' %}" hx-target="#removed-products" hx-swap="outerHTML "> 
+                            <form method="GET" hx-get="{% url 'core:filtered-products' %}" hx-target="#removed-products" hx-swap="outerHTML"> 
                                 <div class="sidebar-categores-box mt-sm-30 mt-xs-30">
                                     <input type="text" name="name" placeholder="Recherchez..." >
                                 </div>
-
                                 <div class="sidebar-categores-box mt-sm-30 mt-xs-30">
                                     <div class="sidebar-title">
                                         <h2>Categories</h2>
@@ -143,12 +142,10 @@
                                         </ul>
                                     </div>
                                 </div>
-<!-- DEBUUUUUUT -->
                                 <div class="sidebar-categores-box mt-sm-30 mt-xs-30">
                                     <div class="sidebar-title">
                                         <h2>Autres Filtres</h2>
                                     </div>
-
                                     <div class="category-sub-menu categori-checkbox">
                                         <ul>
                                             <li  class="ml-5">
@@ -204,7 +201,6 @@
                                 <div class="apply-filters">
                                     <button class="filter-button" type="submit">Filtrer</button>
                                 </div>
-                              
                             </form>
                         </div>
                     </div>

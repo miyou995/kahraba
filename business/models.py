@@ -156,7 +156,7 @@ class ClientService(models.Model):
 
 class Realisation(models.Model):
     title    = models.CharField(verbose_name="nom de l'acomplissement", max_length=150) 
-    description     = tinymce_models.HTMLField(verbose_name='Déscription du produit', blank=True, null=True)
+    description     = models.TextField(verbose_name='Déscription du produit', blank=True, null=True)
 
     actif  = models.BooleanField(verbose_name='actif', default=True)
     created = models.DateTimeField(verbose_name='Date de Création', auto_now_add=True)
@@ -170,8 +170,8 @@ class Realisation(models.Model):
         verbose_name_plural = '8. Nos Projets'
 
 class RealisationPhotos(models.Model):
-    realisation = models.ForeignKey(Realisation, verbose_name="Projet / Réalisation", on_delete=models.CASCADE)
-    image    = models.ImageField(verbose_name="icon", upload_to='icons/')
+    realisation = models.ForeignKey(Realisation, verbose_name="Projet / Réalisation", on_delete=models.CASCADE, related_name="images")
+    image    = models.ImageField(verbose_name="image", upload_to='images/projets/')
     actif  = models.BooleanField(verbose_name='actif', default=True)
     
     class Meta:
@@ -179,8 +179,8 @@ class RealisationPhotos(models.Model):
         verbose_name_plural = '9. Photos de Nos Projets'
 
 class Partner(models.Model):
-    logo    = models.ImageField(verbose_name="icon", upload_to='icons/', )
-    siteweb = models.URLField(verbose_name="Lien", max_length=250)
+    logo    = models.ImageField(verbose_name="icon", upload_to='icons/', blank=True, null=True)
+    siteweb = models.URLField(verbose_name="Lien", max_length=250, blank=True, null=True)
     actif  = models.BooleanField(verbose_name='actif', default=True)
     
     class Meta:
