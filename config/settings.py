@@ -3,7 +3,11 @@ from pathlib import Path
 import dj_database_url
 from decouple import Csv, config
 import os
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
@@ -231,3 +235,25 @@ else:
     EMAIL_USE_SSL = False
 
     
+
+# CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_HTTPONLY = True
+
+# SECURE_HSTS_SECONDS = 60 * 60 * 24 * 7 * 52  # one year
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_SSL_REDIRECT = True
+# SECURE_BROWSER_XSS_FILTER = True
+# SECURE_CONTENT_TYPE_NOSNIFF = True
+# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+# SESSION_COOKIE_SECURE = True
+
+
+sentry_sdk.init(
+    dsn=config("SENTRY_DSN", default=""),
+    integrations=[DjangoIntegration()],
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    # We recommend adjusting this value in production.
+    traces_sample_rate=1.0,
+)
