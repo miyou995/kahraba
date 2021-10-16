@@ -86,7 +86,7 @@ def cart_detail(request):
                     return render(request, 'created.html', context)
                 except :
                     print('yaw matebaatch')
-                # stylesheets=[weasyprint.CSS(str(settings.STATIC_ROOT) + 'css/pdf.css' )]
+                # stylesheets=[weasyprint.CSS(str(configs.STATIC_ROOT) + 'css/pdf.css' )]
             else: 
                 print('the form is not valid')
                 return render(request, 'cart.html', {'cart':cart, 'form' : form, 'wilayas': wilayas, 'communes': communes})

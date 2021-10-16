@@ -115,7 +115,7 @@ def order_create(request):
                     return render(request, 'created.html', context)
                 except :
                     print('yaw matebaatch')
-                # stylesheets=[weasyprint.CSS(str(settings.STATIC_ROOT) + 'css/pdf.css' )]
+                # stylesheets=[weasyprint.CSS(str(configs.STATIC_ROOT) + 'css/pdf.css' )]
             else: 
                 print('the form is not valid')
                 return render(request, 'checkout.html', {'cart':cart, 'form' : form, 'wilayas': wilayas, 'communes': communes})
@@ -135,7 +135,7 @@ def admin_order_pdf(request, order_id):
     response['Content-Disposition' ] = f'filename=order_{order.id}.pdf'
     business   = Business.objects.get(id=1).name
     html = render_to_string('order_pdf.html' , {'order' : order, 'business': business})
-    # stylesheets=[weasyprint.CSS(str(settings.STATIC_ROOT) + 'css/pdf.css' )]
+    # stylesheets=[weasyprint.CSS(str(configs.STATIC_ROOT) + 'css/pdf.css' )]
     weasyprint.HTML(string=html).write_pdf(response)
     return response
 
@@ -151,7 +151,7 @@ def admin_order_pdf(request, order_id):
 #     # weasyprint.HTML(string=html).write_pdf(response)
 
 #     html = render_to_string('pdf.html' , {'order' : order})
-#     stylesheets=[weasyprint.CSS(settings.STATIC_ROOT + 'css/pdf.css' )]
+#     stylesheets=[weasyprint.CSS(configs.STATIC_ROOT + 'css/pdf.css' )]
 #     weasyprint.HTML(string=html).write_pdf(response,stylesheets=stylesheets)
 
 #     return response
