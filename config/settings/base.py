@@ -11,9 +11,7 @@ SECRET_KEY = config("SECRET_KEY", default="django-insecure$kahraba.settings.loca
 
 DEBUG = config("DEBUG", default=True, cast=bool)
 
-ALLOWED_HOSTS = config("*", default="*", cast=Csv())
-
-
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="*", cast=Csv())
 
 
 INSTALLED_APPS = [
@@ -53,14 +51,13 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 
 
-
-
 # ==============================================================================
 # MIDDLEWARE SETTINGS
 # ==============================================================================
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -100,23 +97,23 @@ TEMPLATES = [
 # DATABASES SETTINGS
 # ==============================================================================
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('NAME'),
+        'USER': config('USER'),
+        'PASSWORD': config('PASSWORD'),
+        'HOST': config('HOST'),
+        'PORT': config('PORT'),
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'shop4000',
-#         'USER': 'postgres',#octopus
-#         'PASSWORD': 'miyou0209',#octopus2021@! 
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
 # ==============================================================================
 # AUTHENTICATION AND AUTHORIZATION SETTINGS
 # ==============================================================================
@@ -232,3 +229,5 @@ else:
 
     EMAIL_USE_TLS = True
     EMAIL_USE_SSL = False
+
+    

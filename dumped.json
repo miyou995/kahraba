@@ -1,0 +1,6649 @@
+[
+{
+  "model": "core.brand",
+  "pk": 1,
+  "fields": {
+    "name": "socomec",
+    "actif": true
+  }
+},
+{
+  "model": "core.brand",
+  "pk": 2,
+  "fields": {
+    "name": "energizer",
+    "actif": true
+  }
+},
+{
+  "model": "core.brand",
+  "pk": 3,
+  "fields": {
+    "name": "philips",
+    "actif": true
+  }
+},
+{
+  "model": "core.brand",
+  "pk": 4,
+  "fields": {
+    "name": "legrand",
+    "actif": true
+  }
+},
+{
+  "model": "core.brand",
+  "pk": 6,
+  "fields": {
+    "name": "schneider",
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 1,
+  "fields": {
+    "name": "ASFORA",
+    "brand": 6,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 2,
+  "fields": {
+    "name": "ODACE",
+    "brand": 6,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 3,
+  "fields": {
+    "name": "Dooxie",
+    "brand": 4,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 4,
+  "fields": {
+    "name": "Céliane",
+    "brand": 4,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 5,
+  "fields": {
+    "name": "Mosaic",
+    "brand": 4,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 6,
+  "fields": {
+    "name": "Niloé",
+    "brand": 4,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 7,
+  "fields": {
+    "name": "Kaptika",
+    "brand": 4,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 8,
+  "fields": {
+    "name": "Pelxo",
+    "brand": 4,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 9,
+  "fields": {
+    "name": "Forix",
+    "brand": 4,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 10,
+  "fields": {
+    "name": "philips",
+    "brand": 3,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 11,
+  "fields": {
+    "name": "schneider",
+    "brand": 6,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 12,
+  "fields": {
+    "name": "legrand",
+    "brand": 4,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 13,
+  "fields": {
+    "name": "energizer",
+    "brand": 2,
+    "actif": true
+  }
+},
+{
+  "model": "core.gamme",
+  "pk": 14,
+  "fields": {
+    "name": "socomec",
+    "brand": 1,
+    "actif": true
+  }
+},
+{
+  "model": "core.category",
+  "pk": 42,
+  "fields": {
+    "name": "Protection résidentielle",
+    "slug": "protection-residentielle-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 194,
+    "tree_id": 22,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 49,
+  "fields": {
+    "name": "Boîte et Coffret",
+    "slug": "boite-et-coffret-none",
+    "actif": true,
+    "icon": "",
+    "parent": 42,
+    "lft": 2,
+    "rght": 73,
+    "tree_id": 22,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 50,
+  "fields": {
+    "name": "Boîte",
+    "slug": "boite-none",
+    "actif": true,
+    "icon": "",
+    "parent": 49,
+    "lft": 3,
+    "rght": 30,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 51,
+  "fields": {
+    "name": "Boîtes d'encastrement",
+    "slug": "boites-dencastrement-none",
+    "actif": true,
+    "icon": "",
+    "parent": 50,
+    "lft": 4,
+    "rght": 11,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 52,
+  "fields": {
+    "name": "Boîte maçonnerie",
+    "slug": "boite-maconnerie-none",
+    "actif": true,
+    "icon": "",
+    "parent": 51,
+    "lft": 5,
+    "rght": 6,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 54,
+  "fields": {
+    "name": "Boîte pour Placoplâtre",
+    "slug": "boite-pour-placoplatre-54",
+    "actif": true,
+    "icon": "",
+    "parent": 51,
+    "lft": 7,
+    "rght": 8,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 55,
+  "fields": {
+    "name": "Boîte pour béton",
+    "slug": "boite-pour-beton-none",
+    "actif": true,
+    "icon": "",
+    "parent": 51,
+    "lft": 9,
+    "rght": 10,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 56,
+  "fields": {
+    "name": "Boîtes de dérivation",
+    "slug": "boites-de-derivation-none",
+    "actif": true,
+    "icon": "",
+    "parent": 50,
+    "lft": 12,
+    "rght": 29,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 57,
+  "fields": {
+    "name": "Encastrée",
+    "slug": "encastree-none",
+    "actif": true,
+    "icon": "",
+    "parent": 56,
+    "lft": 21,
+    "rght": 28,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 58,
+  "fields": {
+    "name": "Maçonnerie",
+    "slug": "maconnerie-none",
+    "actif": true,
+    "icon": "",
+    "parent": 57,
+    "lft": 24,
+    "rght": 25,
+    "tree_id": 22,
+    "level": 5
+  }
+},
+{
+  "model": "core.category",
+  "pk": 60,
+  "fields": {
+    "name": "Placoplâtre",
+    "slug": "placoplatre-60",
+    "actif": true,
+    "icon": "",
+    "parent": 57,
+    "lft": 26,
+    "rght": 27,
+    "tree_id": 22,
+    "level": 5
+  }
+},
+{
+  "model": "core.category",
+  "pk": 61,
+  "fields": {
+    "name": "Béton",
+    "slug": "beton-none",
+    "actif": true,
+    "icon": "",
+    "parent": 57,
+    "lft": 22,
+    "rght": 23,
+    "tree_id": 22,
+    "level": 5
+  }
+},
+{
+  "model": "core.category",
+  "pk": 62,
+  "fields": {
+    "name": "Apparente",
+    "slug": "apparente-none",
+    "actif": true,
+    "icon": "",
+    "parent": 56,
+    "lft": 13,
+    "rght": 20,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 63,
+  "fields": {
+    "name": "Maçonnerie apparente",
+    "slug": "maconnerie-apparente-none",
+    "actif": true,
+    "icon": "",
+    "parent": 62,
+    "lft": 14,
+    "rght": 15,
+    "tree_id": 22,
+    "level": 5
+  }
+},
+{
+  "model": "core.category",
+  "pk": 64,
+  "fields": {
+    "name": "Maçonnerie carrée",
+    "slug": "maconnerie-carree-none",
+    "actif": true,
+    "icon": "",
+    "parent": 62,
+    "lft": 16,
+    "rght": 17,
+    "tree_id": 22,
+    "level": 5
+  }
+},
+{
+  "model": "core.category",
+  "pk": 65,
+  "fields": {
+    "name": "Maçonnerie ronde",
+    "slug": "maconnerie-ronde-none",
+    "actif": true,
+    "icon": "",
+    "parent": 62,
+    "lft": 18,
+    "rght": 19,
+    "tree_id": 22,
+    "level": 5
+  }
+},
+{
+  "model": "core.category",
+  "pk": 66,
+  "fields": {
+    "name": "Coffret (Legrand / Schneider / Hager )",
+    "slug": "coffret-legrand-schneider-hager-none",
+    "actif": true,
+    "icon": "",
+    "parent": 49,
+    "lft": 31,
+    "rght": 72,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 67,
+  "fields": {
+    "name": "Encastré",
+    "slug": "encastre-none",
+    "actif": true,
+    "icon": "",
+    "parent": 66,
+    "lft": 54,
+    "rght": 71,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 68,
+  "fields": {
+    "name": "4 départs",
+    "slug": "4-departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 67,
+    "lft": 63,
+    "rght": 64,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 69,
+  "fields": {
+    "name": "6 départs",
+    "slug": "6-departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 67,
+    "lft": 67,
+    "rght": 68,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 70,
+  "fields": {
+    "name": "8 départs",
+    "slug": "8-departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 67,
+    "lft": 69,
+    "rght": 70,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 71,
+  "fields": {
+    "name": "12 départs",
+    "slug": "12-departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 67,
+    "lft": 55,
+    "rght": 56,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 72,
+  "fields": {
+    "name": "18 départs",
+    "slug": "18-departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 67,
+    "lft": 57,
+    "rght": 58,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 73,
+  "fields": {
+    "name": "24 départs",
+    "slug": "24-departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 67,
+    "lft": 59,
+    "rght": 60,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 74,
+  "fields": {
+    "name": "36 départs",
+    "slug": "36-departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 67,
+    "lft": 61,
+    "rght": 62,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 75,
+  "fields": {
+    "name": "48 départs",
+    "slug": "48-departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 67,
+    "lft": 65,
+    "rght": 66,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 76,
+  "fields": {
+    "name": "Apparent sans cache",
+    "slug": "apparent-sans-cache-none",
+    "actif": true,
+    "icon": "",
+    "parent": 66,
+    "lft": 42,
+    "rght": 51,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 77,
+  "fields": {
+    "name": "02 départs",
+    "slug": "02-departs-77",
+    "actif": true,
+    "icon": "",
+    "parent": 76,
+    "lft": 43,
+    "rght": 44,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 80,
+  "fields": {
+    "name": "04 départs",
+    "slug": "04-departs-80",
+    "actif": true,
+    "icon": "",
+    "parent": 76,
+    "lft": 45,
+    "rght": 46,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 81,
+  "fields": {
+    "name": "06 départs",
+    "slug": "06-departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 76,
+    "lft": 47,
+    "rght": 48,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 82,
+  "fields": {
+    "name": "08 départs",
+    "slug": "08-departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 76,
+    "lft": 49,
+    "rght": 50,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 83,
+  "fields": {
+    "name": "Apparent avec cache",
+    "slug": "apparent-avec-cache-none",
+    "actif": true,
+    "icon": "",
+    "parent": 66,
+    "lft": 32,
+    "rght": 41,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 84,
+  "fields": {
+    "name": "06_départs",
+    "slug": "06_departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 83,
+    "lft": 33,
+    "rght": 34,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 85,
+  "fields": {
+    "name": "08_départs",
+    "slug": "08_departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 83,
+    "lft": 35,
+    "rght": 36,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 86,
+  "fields": {
+    "name": "12_départs",
+    "slug": "12_departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 83,
+    "lft": 37,
+    "rght": 38,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 87,
+  "fields": {
+    "name": "24_départs",
+    "slug": "24_departs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 83,
+    "lft": 39,
+    "rght": 40,
+    "tree_id": 22,
+    "level": 4
+  }
+},
+{
+  "model": "core.category",
+  "pk": 90,
+  "fields": {
+    "name": "Disjoncteur Modulaire",
+    "slug": "disjoncteur-modulaire-none",
+    "actif": true,
+    "icon": "",
+    "parent": 42,
+    "lft": 82,
+    "rght": 179,
+    "tree_id": 22,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 91,
+  "fields": {
+    "name": "1 Pôle",
+    "slug": "1-pole-91",
+    "actif": true,
+    "icon": "",
+    "parent": 90,
+    "lft": 83,
+    "rght": 104,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 92,
+  "fields": {
+    "name": "2A",
+    "slug": "2a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 91,
+    "lft": 92,
+    "rght": 93,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 93,
+  "fields": {
+    "name": "6A",
+    "slug": "6a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 91,
+    "lft": 102,
+    "rght": 103,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 94,
+  "fields": {
+    "name": "10A",
+    "slug": "10a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 91,
+    "lft": 84,
+    "rght": 85,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 95,
+  "fields": {
+    "name": "16A",
+    "slug": "16a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 91,
+    "lft": 86,
+    "rght": 87,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 96,
+  "fields": {
+    "name": "20A",
+    "slug": "20a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 91,
+    "lft": 88,
+    "rght": 89,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 97,
+  "fields": {
+    "name": "25A",
+    "slug": "25a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 91,
+    "lft": 90,
+    "rght": 91,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 98,
+  "fields": {
+    "name": "32A",
+    "slug": "32a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 91,
+    "lft": 94,
+    "rght": 95,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 99,
+  "fields": {
+    "name": "40A",
+    "slug": "40a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 91,
+    "lft": 96,
+    "rght": 97,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 100,
+  "fields": {
+    "name": "50A",
+    "slug": "50a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 91,
+    "lft": 98,
+    "rght": 99,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 101,
+  "fields": {
+    "name": "63A",
+    "slug": "63a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 91,
+    "lft": 100,
+    "rght": 101,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 102,
+  "fields": {
+    "name": "2 Pôles",
+    "slug": "2-poles-none",
+    "actif": true,
+    "icon": "",
+    "parent": 90,
+    "lft": 141,
+    "rght": 148,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 103,
+  "fields": {
+    "name": "02A",
+    "slug": "02a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 102,
+    "lft": 144,
+    "rght": 145,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 104,
+  "fields": {
+    "name": "06A",
+    "slug": "06a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 102,
+    "lft": 146,
+    "rght": 147,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 105,
+  "fields": {
+    "name": "010A",
+    "slug": "010a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 102,
+    "lft": 142,
+    "rght": 143,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 106,
+  "fields": {
+    "name": "4 Pôles",
+    "slug": "4-poles-none",
+    "actif": true,
+    "icon": "",
+    "parent": 90,
+    "lft": 149,
+    "rght": 176,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 107,
+  "fields": {
+    "name": "6_A",
+    "slug": "6_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 172,
+    "rght": 173,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 108,
+  "fields": {
+    "name": "10_A",
+    "slug": "10_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 152,
+    "rght": 153,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 109,
+  "fields": {
+    "name": "16_A",
+    "slug": "16_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 156,
+    "rght": 157,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 110,
+  "fields": {
+    "name": "20_A",
+    "slug": "20_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 158,
+    "rght": 159,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 111,
+  "fields": {
+    "name": "25_A",
+    "slug": "25_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 160,
+    "rght": 161,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 112,
+  "fields": {
+    "name": "32_A",
+    "slug": "32_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 162,
+    "rght": 163,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 113,
+  "fields": {
+    "name": "40_A",
+    "slug": "40_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 164,
+    "rght": 165,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 114,
+  "fields": {
+    "name": "50_A",
+    "slug": "50_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 166,
+    "rght": 167,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 115,
+  "fields": {
+    "name": "63_A",
+    "slug": "63_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 170,
+    "rght": 171,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 116,
+  "fields": {
+    "name": "80_A",
+    "slug": "80_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 174,
+    "rght": 175,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 117,
+  "fields": {
+    "name": "100_A",
+    "slug": "100_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 150,
+    "rght": 151,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 118,
+  "fields": {
+    "name": "125_A",
+    "slug": "125_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 154,
+    "rght": 155,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 119,
+  "fields": {
+    "name": "1 Pôle + N",
+    "slug": "1-pole-n-none",
+    "actif": true,
+    "icon": "",
+    "parent": 90,
+    "lft": 105,
+    "rght": 126,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 120,
+  "fields": {
+    "name": "2-A",
+    "slug": "2-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 119,
+    "lft": 110,
+    "rght": 111,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 121,
+  "fields": {
+    "name": "6-A",
+    "slug": "6-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 119,
+    "lft": 122,
+    "rght": 123,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 122,
+  "fields": {
+    "name": "10-A",
+    "slug": "10-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 119,
+    "lft": 106,
+    "rght": 107,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 123,
+  "fields": {
+    "name": "16-A",
+    "slug": "16-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 119,
+    "lft": 108,
+    "rght": 109,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 124,
+  "fields": {
+    "name": "20-A",
+    "slug": "20-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 119,
+    "lft": 112,
+    "rght": 113,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 125,
+  "fields": {
+    "name": "25-A",
+    "slug": "25-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 119,
+    "lft": 114,
+    "rght": 115,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 126,
+  "fields": {
+    "name": "32-A",
+    "slug": "32-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 119,
+    "lft": 116,
+    "rght": 117,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 127,
+  "fields": {
+    "name": "40-A",
+    "slug": "40-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 119,
+    "lft": 118,
+    "rght": 119,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 128,
+  "fields": {
+    "name": "50-A",
+    "slug": "50-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 119,
+    "lft": 120,
+    "rght": 121,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 129,
+  "fields": {
+    "name": "63-A",
+    "slug": "63-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 119,
+    "lft": 124,
+    "rght": 125,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 130,
+  "fields": {
+    "name": "Disjoncteur et interrupteur différentiel",
+    "slug": "disjoncteur-et-interrupteur-differentiel-none",
+    "actif": true,
+    "icon": "",
+    "parent": 42,
+    "lft": 180,
+    "rght": 193,
+    "tree_id": 22,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 131,
+  "fields": {
+    "name": "1 Pôle + N Réduit",
+    "slug": "1-pole-n-reduit-none",
+    "actif": true,
+    "icon": "",
+    "parent": 90,
+    "lft": 127,
+    "rght": 140,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 132,
+  "fields": {
+    "name": "06-A",
+    "slug": "06-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 131,
+    "lft": 138,
+    "rght": 139,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 133,
+  "fields": {
+    "name": "010-A",
+    "slug": "010-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 131,
+    "lft": 128,
+    "rght": 129,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 134,
+  "fields": {
+    "name": "016-A",
+    "slug": "016-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 131,
+    "lft": 130,
+    "rght": 131,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 135,
+  "fields": {
+    "name": "020-A",
+    "slug": "020-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 131,
+    "lft": 132,
+    "rght": 133,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 136,
+  "fields": {
+    "name": "025-A",
+    "slug": "025-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 131,
+    "lft": 134,
+    "rght": 135,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 137,
+  "fields": {
+    "name": "032-A",
+    "slug": "032-a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 131,
+    "lft": 136,
+    "rght": 137,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 138,
+  "fields": {
+    "name": "Télérupteur",
+    "slug": "telerupteur-none",
+    "actif": true,
+    "icon": "",
+    "parent": 90,
+    "lft": 177,
+    "rght": 178,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 139,
+  "fields": {
+    "name": "2_Pôles",
+    "slug": "2_poles-none",
+    "actif": true,
+    "icon": "",
+    "parent": 130,
+    "lft": 181,
+    "rght": 192,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 140,
+  "fields": {
+    "name": "25__A",
+    "slug": "25__a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 139,
+    "lft": 182,
+    "rght": 183,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 141,
+  "fields": {
+    "name": "40__A",
+    "slug": "40__a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 139,
+    "lft": 186,
+    "rght": 187,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 142,
+  "fields": {
+    "name": "63__A",
+    "slug": "63__a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 139,
+    "lft": 190,
+    "rght": 191,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 143,
+  "fields": {
+    "name": "45__A",
+    "slug": "45__a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 139,
+    "lft": 188,
+    "rght": 189,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 144,
+  "fields": {
+    "name": "60_A",
+    "slug": "60_a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 106,
+    "lft": 168,
+    "rght": 169,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 145,
+  "fields": {
+    "name": "Cache Borne",
+    "slug": "cache-borne-none",
+    "actif": true,
+    "icon": "",
+    "parent": 42,
+    "lft": 74,
+    "rght": 81,
+    "tree_id": 22,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 146,
+  "fields": {
+    "name": "2 modules",
+    "slug": "2-modules-none",
+    "actif": true,
+    "icon": "",
+    "parent": 145,
+    "lft": 75,
+    "rght": 76,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 147,
+  "fields": {
+    "name": "4 modules",
+    "slug": "4-modules-none",
+    "actif": true,
+    "icon": "",
+    "parent": 145,
+    "lft": 77,
+    "rght": 78,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 148,
+  "fields": {
+    "name": "6 modules",
+    "slug": "6-modules-148",
+    "actif": true,
+    "icon": "",
+    "parent": 145,
+    "lft": 79,
+    "rght": 80,
+    "tree_id": 22,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 150,
+  "fields": {
+    "name": "MODULAIRE & DISTRIBUTION",
+    "slug": "modulaire-distribution-150",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 42,
+    "tree_id": 8,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 151,
+  "fields": {
+    "name": "Disjoncteurs modulaires",
+    "slug": "disjoncteurs-modulaires-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 12,
+    "rght": 23,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 152,
+  "fields": {
+    "name": "Disjoncteurs de branchement",
+    "slug": "disjoncteurs-de-branchement-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 153,
+  "fields": {
+    "name": "Interrupteurs différentiels",
+    "slug": "interrupteurs-differentiels-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 26,
+    "rght": 27,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 154,
+  "fields": {
+    "name": "Blocs différentiels",
+    "slug": "blocs-differentiels-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 155,
+  "fields": {
+    "name": "Contacteurs",
+    "slug": "contacteurs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 156,
+  "fields": {
+    "name": "Minuteries",
+    "slug": "minuteries-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 34,
+    "rght": 35,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 157,
+  "fields": {
+    "name": "Interrupteurs horaires",
+    "slug": "interrupteurs-horaires-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 28,
+    "rght": 29,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 158,
+  "fields": {
+    "name": "Transformateurs et alimentations",
+    "slug": "transformateurs-et-alimentations-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 40,
+    "rght": 41,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 159,
+  "fields": {
+    "name": "Prises électriques modulaires",
+    "slug": "prises-electriques-modulaires-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 36,
+    "rght": 37,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 160,
+  "fields": {
+    "name": "Disjoncteurs Unipolaire",
+    "slug": "disjoncteurs-unipolaire-none",
+    "actif": true,
+    "icon": "",
+    "parent": 151,
+    "lft": 17,
+    "rght": 18,
+    "tree_id": 8,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 161,
+  "fields": {
+    "name": "Disjoncteurs Unipolaire + Neutre   2 modules",
+    "slug": "disjoncteurs-unipolaire-neutre-2-modules-none",
+    "actif": true,
+    "icon": "",
+    "parent": 151,
+    "lft": 21,
+    "rght": 22,
+    "tree_id": 8,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 162,
+  "fields": {
+    "name": "Disjoncteurs Unipolaire + Neutre   1 modules",
+    "slug": "disjoncteurs-unipolaire-neutre-1-modules-none",
+    "actif": true,
+    "icon": "",
+    "parent": 151,
+    "lft": 19,
+    "rght": 20,
+    "tree_id": 8,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 163,
+  "fields": {
+    "name": "Disjoncteurs Tripolaire + neutre",
+    "slug": "disjoncteurs-tripolaire-neutre-none",
+    "actif": true,
+    "icon": "",
+    "parent": 151,
+    "lft": 15,
+    "rght": 16,
+    "tree_id": 8,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 164,
+  "fields": {
+    "name": "Disjoncteurs Mod 80…100A",
+    "slug": "disjoncteurs-mod-80100a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 151,
+    "lft": 13,
+    "rght": 14,
+    "tree_id": 8,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 165,
+  "fields": {
+    "name": "Enrouleur",
+    "slug": "enrouleur-165",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 24,
+    "rght": 25,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 166,
+  "fields": {
+    "name": "Vidéophonie et Interphonie",
+    "slug": "videophonie-et-interphonie-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 6,
+    "tree_id": 27,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 167,
+  "fields": {
+    "name": "Vidéophonie",
+    "slug": "videophonie-none",
+    "actif": true,
+    "icon": "",
+    "parent": 166,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 27,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 168,
+  "fields": {
+    "name": "Interphonie",
+    "slug": "interphonie-none",
+    "actif": true,
+    "icon": "",
+    "parent": 166,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 27,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 169,
+  "fields": {
+    "name": "PROTECTION DE PUISSANCE",
+    "slug": "protection-de-puissance-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 24,
+    "tree_id": 21,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 170,
+  "fields": {
+    "name": "Disjoncteurs ouverts DMX³",
+    "slug": "disjoncteurs-ouverts-dmx3-none",
+    "actif": true,
+    "icon": "",
+    "parent": 169,
+    "lft": 18,
+    "rght": 19,
+    "tree_id": 21,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 171,
+  "fields": {
+    "name": "Disjoncteurs de puissance DPX³",
+    "slug": "disjoncteurs-de-puissance-dpx3-171",
+    "actif": true,
+    "icon": "",
+    "parent": 169,
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 21,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 172,
+  "fields": {
+    "name": "Boîtiers d'automatisme pour inverseurs de source",
+    "slug": "boitiers-dautomatisme-pour-inverseurs-de-source-none",
+    "actif": true,
+    "icon": "",
+    "parent": 169,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 21,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 173,
+  "fields": {
+    "name": "Disjoncteurs moteurs",
+    "slug": "disjoncteurs-moteurs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 169,
+    "lft": 16,
+    "rght": 17,
+    "tree_id": 21,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 174,
+  "fields": {
+    "name": "Contacteurs industriels",
+    "slug": "contacteurs-industriels-none",
+    "actif": true,
+    "icon": "",
+    "parent": 169,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 21,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 175,
+  "fields": {
+    "name": "Interrupteurs-sectionneurs",
+    "slug": "interrupteurs-sectionneurs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 169,
+    "lft": 20,
+    "rght": 21,
+    "tree_id": 21,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 176,
+  "fields": {
+    "name": "CÂBLE ET ACCESOIRES",
+    "slug": "cable-et-accesoires-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 16,
+    "tree_id": 11,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 177,
+  "fields": {
+    "name": "Commande et signalisation Osmoz",
+    "slug": "commande-et-signalisation-osmoz-none",
+    "actif": true,
+    "icon": "",
+    "parent": 176,
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 11,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 178,
+  "fields": {
+    "name": "Repérages",
+    "slug": "reperages-none",
+    "actif": true,
+    "icon": "",
+    "parent": 169,
+    "lft": 22,
+    "rght": 23,
+    "tree_id": 21,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 179,
+  "fields": {
+    "name": "Embouts de câbles Starfix",
+    "slug": "embouts-de-cables-starfix-179",
+    "actif": true,
+    "icon": "",
+    "parent": 176,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 11,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 180,
+  "fields": {
+    "name": "Colliers Colring et Colson",
+    "slug": "colliers-colring-et-colson-none",
+    "actif": true,
+    "icon": "",
+    "parent": 176,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 11,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 181,
+  "fields": {
+    "name": "Conduits flexibles RTA",
+    "slug": "conduits-flexibles-rta-none",
+    "actif": true,
+    "icon": "",
+    "parent": 176,
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 11,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 182,
+  "fields": {
+    "name": "Goulotte de câblage coffret",
+    "slug": "goulotte-de-cablage-coffret-182",
+    "actif": true,
+    "icon": "",
+    "parent": 176,
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 11,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 183,
+  "fields": {
+    "name": "SYSTÈMES DE GOULOTTES, DE COLONNES ET DE SOL",
+    "slug": "systemes-de-goulottes-de-colonnes-et-de-sol-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 18,
+    "tree_id": 25,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 184,
+  "fields": {
+    "name": "Moulures et plinthes",
+    "slug": "moulures-et-plinthes-none",
+    "actif": true,
+    "icon": "",
+    "parent": 183,
+    "lft": 14,
+    "rght": 15,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 185,
+  "fields": {
+    "name": "Goulottes DLP",
+    "slug": "goulottes-dlp-none",
+    "actif": true,
+    "icon": "",
+    "parent": 183,
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 186,
+  "fields": {
+    "name": "Goulottes sans halogène",
+    "slug": "goulottes-sans-halogene-none",
+    "actif": true,
+    "icon": "",
+    "parent": 183,
+    "lft": 12,
+    "rght": 13,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 187,
+  "fields": {
+    "name": "Goulottes DLP aluminium et acier",
+    "slug": "goulottes-dlp-aluminium-et-acier-none",
+    "actif": true,
+    "icon": "",
+    "parent": 183,
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 188,
+  "fields": {
+    "name": "Colonnes",
+    "slug": "colonnes-none",
+    "actif": true,
+    "icon": "",
+    "parent": 183,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 189,
+  "fields": {
+    "name": "Solutions bureau",
+    "slug": "solutions-bureau-none",
+    "actif": true,
+    "icon": "",
+    "parent": 183,
+    "lft": 16,
+    "rght": 17,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 190,
+  "fields": {
+    "name": "Boîtes de sol",
+    "slug": "boites-de-sol-none",
+    "actif": true,
+    "icon": "",
+    "parent": 183,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 191,
+  "fields": {
+    "name": "Gaines de sol",
+    "slug": "gaines-de-sol-none",
+    "actif": true,
+    "icon": "",
+    "parent": 183,
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 192,
+  "fields": {
+    "name": "APPAREILLAGE",
+    "slug": "appareillage-192",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 26,
+    "tree_id": 5,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 193,
+  "fields": {
+    "name": "Valena Next",
+    "slug": "valena-next-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 22,
+    "rght": 23,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 195,
+  "fields": {
+    "name": "Mosaic",
+    "slug": "mosaic-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 12,
+    "rght": 13,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 196,
+  "fields": {
+    "name": "Valena Next with Netatmo",
+    "slug": "valena-next-with-netatmo-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 24,
+    "rght": 25,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 197,
+  "fields": {
+    "name": "Niloé",
+    "slug": "niloe-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 14,
+    "rght": 15,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 199,
+  "fields": {
+    "name": "Art d'Arnould",
+    "slug": "art-darnould-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 200,
+  "fields": {
+    "name": "Oteo appareillage saillie",
+    "slug": "oteo-appareillage-saillie-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 16,
+    "rght": 17,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 201,
+  "fields": {
+    "name": "Soliroc appareillage antivandale",
+    "slug": "soliroc-appareillage-antivandale-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 20,
+    "rght": 21,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 202,
+  "fields": {
+    "name": "SYSTÈMES DE CHEMINS DE CÂBLES",
+    "slug": "systemes-de-chemins-de-cables-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 14,
+    "tree_id": 24,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 203,
+  "fields": {
+    "name": "Chemins de câbles en tôle",
+    "slug": "chemins-de-cables-en-tole-none",
+    "actif": true,
+    "icon": "",
+    "parent": 202,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 24,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 204,
+  "fields": {
+    "name": "Chemins de câbles en fil",
+    "slug": "chemins-de-cables-en-fil-none",
+    "actif": true,
+    "icon": "",
+    "parent": 202,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 24,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 205,
+  "fields": {
+    "name": "échelles à câbles",
+    "slug": "echelles-a-cables-none",
+    "actif": true,
+    "icon": "",
+    "parent": 202,
+    "lft": 12,
+    "rght": 13,
+    "tree_id": 24,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 206,
+  "fields": {
+    "name": "Systèmes de suspension universels",
+    "slug": "systemes-de-suspension-universels-none",
+    "actif": true,
+    "icon": "",
+    "parent": 202,
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 24,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 207,
+  "fields": {
+    "name": "Le maintien de la fonction en cas d'incendie",
+    "slug": "le-maintien-de-la-fonction-en-cas-dincendie-none",
+    "actif": true,
+    "icon": "",
+    "parent": 202,
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 24,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 208,
+  "fields": {
+    "name": "EZ-Path module coupe-feu",
+    "slug": "ez-path-module-coupe-feu-none",
+    "actif": true,
+    "icon": "",
+    "parent": 202,
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 24,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 209,
+  "fields": {
+    "name": "SMART HOME & BUILDING",
+    "slug": "smart-home-building-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 12,
+    "tree_id": 23,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 210,
+  "fields": {
+    "name": "Living Now with Netatmo",
+    "slug": "living-now-with-netatmo-none",
+    "actif": true,
+    "icon": "",
+    "parent": 209,
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 23,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 211,
+  "fields": {
+    "name": "Netatmo",
+    "slug": "netatmo-none",
+    "actif": true,
+    "icon": "",
+    "parent": 209,
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 23,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 212,
+  "fields": {
+    "name": "Domotique MyHOME_Up",
+    "slug": "domotique-myhome_up-none",
+    "actif": true,
+    "icon": "",
+    "parent": 209,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 23,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 213,
+  "fields": {
+    "name": "Nuvo Distribution sonore",
+    "slug": "nuvo-distribution-sonore-none",
+    "actif": true,
+    "icon": "",
+    "parent": 209,
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 23,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 214,
+  "fields": {
+    "name": "Lighting management",
+    "slug": "lighting-management-none",
+    "actif": true,
+    "icon": "",
+    "parent": 209,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 23,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 215,
+  "fields": {
+    "name": "ACCESSOIRES D'INSTALLATION",
+    "slug": "accessoires-dinstallation-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 12,
+    "tree_id": 15,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 216,
+  "fields": {
+    "name": "Batibox",
+    "slug": "batibox-none",
+    "actif": true,
+    "icon": "",
+    "parent": 215,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 15,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 217,
+  "fields": {
+    "name": "Les fiches et prolongateurs",
+    "slug": "les-fiches-et-prolongateurs-none",
+    "actif": true,
+    "icon": "",
+    "parent": 215,
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 15,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 218,
+  "fields": {
+    "name": "Blocs multiprises",
+    "slug": "blocs-multiprises-none",
+    "actif": true,
+    "icon": "",
+    "parent": 215,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 15,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 219,
+  "fields": {
+    "name": "Sonneries & carillons",
+    "slug": "sonneries-carillons-none",
+    "actif": true,
+    "icon": "",
+    "parent": 215,
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 15,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 220,
+  "fields": {
+    "name": "Céliane",
+    "slug": "celiane-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 221,
+  "fields": {
+    "name": "Fiche et prise industrielle",
+    "slug": "fiche-et-prise-industrielle-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 14,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 222,
+  "fields": {
+    "name": "Kaptika",
+    "slug": "kaptika-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 223,
+  "fields": {
+    "name": "Plexo",
+    "slug": "plexo-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 18,
+    "rght": 19,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 224,
+  "fields": {
+    "name": "Forix",
+    "slug": "forix-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 225,
+  "fields": {
+    "name": "Multiprise",
+    "slug": "multiprise-none",
+    "actif": true,
+    "icon": "",
+    "parent": 215,
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 15,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 226,
+  "fields": {
+    "name": "32__A",
+    "slug": "32__a-none",
+    "actif": true,
+    "icon": "",
+    "parent": 139,
+    "lft": 184,
+    "rght": 185,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 227,
+  "fields": {
+    "name": "Coffret Plexo Etanche IP65",
+    "slug": "coffret-plexo-etanche-ip65-none",
+    "actif": true,
+    "icon": "",
+    "parent": 66,
+    "lft": 52,
+    "rght": 53,
+    "tree_id": 22,
+    "level": 3
+  }
+},
+{
+  "model": "core.category",
+  "pk": 228,
+  "fields": {
+    "name": "Presse Etoupe",
+    "slug": "presse-etoupe-none",
+    "actif": true,
+    "icon": "",
+    "parent": 176,
+    "lft": 12,
+    "rght": 13,
+    "tree_id": 11,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 229,
+  "fields": {
+    "name": "Bloc de jonction",
+    "slug": "bloc-de-jonction-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 2,
+    "rght": 5,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 230,
+  "fields": {
+    "name": "Disjoncteur DRX",
+    "slug": "disjoncteur-drx-none",
+    "actif": true,
+    "icon": "",
+    "parent": 169,
+    "lft": 14,
+    "rght": 15,
+    "tree_id": 21,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 231,
+  "fields": {
+    "name": "Disjoncteur DPX Différentiel",
+    "slug": "disjoncteur-dpx-differentiel-none",
+    "actif": true,
+    "icon": "",
+    "parent": 169,
+    "lft": 12,
+    "rght": 13,
+    "tree_id": 21,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 232,
+  "fields": {
+    "name": "Onduleur",
+    "slug": "onduleur-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 20,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 233,
+  "fields": {
+    "name": "Repartiteur",
+    "slug": "repartiteur-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 38,
+    "rght": 39,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 234,
+  "fields": {
+    "name": "Disjoncteur bip DX3",
+    "slug": "disjoncteur-bip-dx3-none",
+    "actif": true,
+    "icon": "",
+    "parent": 169,
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 21,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 235,
+  "fields": {
+    "name": "Lumière",
+    "slug": "lumiere-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 26,
+    "tree_id": 7,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 236,
+  "fields": {
+    "name": "Sun flower",
+    "slug": "sun-flower-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 24,
+    "rght": 25,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 237,
+  "fields": {
+    "name": "Sun carré",
+    "slug": "sun-carre-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 22,
+    "rght": 23,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 238,
+  "fields": {
+    "name": "Orientable",
+    "slug": "orientable-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 239,
+  "fields": {
+    "name": "Orientable carré",
+    "slug": "orientable-carre-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 12,
+    "rght": 13,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 240,
+  "fields": {
+    "name": "Etanche",
+    "slug": "etanche-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 241,
+  "fields": {
+    "name": "3 Positions",
+    "slug": "3-positions-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 242,
+  "fields": {
+    "name": "3D",
+    "slug": "3d-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 243,
+  "fields": {
+    "name": "Lempe LED",
+    "slug": "lempe-led-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 32,
+    "rght": 33,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 244,
+  "fields": {
+    "name": "Led Détecteur + Hammer",
+    "slug": "led-detecteur-hammer-none",
+    "actif": true,
+    "icon": "",
+    "parent": 150,
+    "lft": 30,
+    "rght": 31,
+    "tree_id": 8,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 245,
+  "fields": {
+    "name": "Filament",
+    "slug": "filament-none",
+    "actif": true,
+    "icon": "",
+    "parent": 192,
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 5,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 246,
+  "fields": {
+    "name": "Hublot",
+    "slug": "hublot-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 247,
+  "fields": {
+    "name": "Spot apparent",
+    "slug": "spot-apparent-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 20,
+    "rght": 21,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 248,
+  "fields": {
+    "name": "Spot Glass",
+    "slug": "spot-glass-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 18,
+    "rght": 19,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 249,
+  "fields": {
+    "name": "Plafonnier",
+    "slug": "plafonnier-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 14,
+    "rght": 15,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 250,
+  "fields": {
+    "name": "Réglette",
+    "slug": "reglette-none",
+    "actif": true,
+    "icon": "",
+    "parent": 235,
+    "lft": 16,
+    "rght": 17,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 251,
+  "fields": {
+    "name": "Vigi",
+    "slug": "vigi-none",
+    "actif": true,
+    "icon": "",
+    "parent": 229,
+    "lft": 3,
+    "rght": 4,
+    "tree_id": 8,
+    "level": 2
+  }
+},
+{
+  "model": "core.category",
+  "pk": 252,
+  "fields": {
+    "name": "Disjoncteur Différentiel",
+    "slug": "disjoncteur-differentiel-none",
+    "actif": true,
+    "icon": "",
+    "parent": 169,
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 21,
+    "level": 1
+  }
+},
+{
+  "model": "core.category",
+  "pk": 253,
+  "fields": {
+    "name": "Tube IRO",
+    "slug": "tube-iro-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 26,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 254,
+  "fields": {
+    "name": "Cordon de brassage",
+    "slug": "cordon-de-brassage-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 10,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 255,
+  "fields": {
+    "name": "CABLE FTP",
+    "slug": "cable-ftp-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 9,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 256,
+  "fields": {
+    "name": "GAINE CINTRABLE",
+    "slug": "gaine-cintrable-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 6,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 257,
+  "fields": {
+    "name": "Eclairage de sécurité",
+    "slug": "eclairage-de-securite-none",
+    "actif": true,
+    "icon": "",
+    "parent": null,
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 13,
+    "level": 0
+  }
+},
+{
+  "model": "core.category",
+  "pk": 258,
+  "fields": {
+    "name": "Raccordement de terre",
+    "slug": "raccordement-de-terre-none",
+    "actif": true,
+    "icon": "",
+    "parent": 176,
+    "lft": 14,
+    "rght": 15,
+    "tree_id": 11,
+    "level": 1
+  }
+},
+{
+  "model": "core.producttype",
+  "pk": 3,
+  "fields": {
+    "name": "legrand",
+    "is_active": true
+  }
+},
+{
+  "model": "core.producttype",
+  "pk": 4,
+  "fields": {
+    "name": "philips",
+    "is_active": true
+  }
+},
+{
+  "model": "core.producttype",
+  "pk": 5,
+  "fields": {
+    "name": "energizer",
+    "is_active": true
+  }
+},
+{
+  "model": "core.producttype",
+  "pk": 6,
+  "fields": {
+    "name": "socomec",
+    "is_active": true
+  }
+},
+{
+  "model": "core.product",
+  "pk": 10,
+  "fields": {
+    "name": "RX3 DISJONCTEUR 1P C6 4500A — MCB RX 4500 - 1P - 230/400 V~ - 6 A - C curve",
+    "reference": "419661",
+    "slug": "rx3-disjoncteur-1p-c6-4500a-mcb-rx-4500-1p-230400-v-6-a-c-curve",
+    "category": 93,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-14T09:21:57.286Z",
+    "updated": "2021-09-14T09:23:55.926Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 11,
+  "fields": {
+    "name": "RX3 DISJONCTEUR 1P C10 4500A — MCB RX 4500 - 1P - 230/400 V~ - 10 A - C curve — 419662",
+    "reference": "419662",
+    "slug": "rx3-disjoncteur-1p-c10-4500a-mcb-rx-4500-1p-230400-v-10-a-c-curve-419662",
+    "category": 94,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-14T10:02:09.407Z",
+    "updated": "2021-09-16T06:29:31.810Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 12,
+  "fields": {
+    "name": "DISJONCTEUR 1P 16 4500A RX3 — MCB RX 4500 - 1P - 230/400 V~ - 16 A - C curve",
+    "reference": "419664",
+    "slug": "disjoncteur-1p-16-4500a-rx3-mcb-rx-4500-1p-230400-v-16-a-c-curve",
+    "category": 95,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-14T14:11:26.987Z",
+    "updated": "2021-09-14T14:33:52.515Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 13,
+  "fields": {
+    "name": "DISJ RX3 1P 20A 4500A — MCB RX 4500 - 1P - 230/400 V~ - 20 A - C curve",
+    "reference": "419665",
+    "slug": "disj-rx3-1p-20a-4500a-mcb-rx-4500-1p-230400-v-20-a-c-curve",
+    "category": 96,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-14T14:27:38.149Z",
+    "updated": "2021-09-14T14:27:38.149Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 14,
+  "fields": {
+    "name": "RX3 DISJ 1P 25A 4500A — MCB RX 4500 - 1P - 230/400 V~ - 25 A - C curve",
+    "reference": "419666",
+    "slug": "rx3-disj-1p-25a-4500a-mcb-rx-4500-1p-230400-v-25-a-c-curve",
+    "category": 97,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-14T14:48:33.325Z",
+    "updated": "2021-09-14T14:48:33.325Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 15,
+  "fields": {
+    "name": "RX3 DISJ 1P 32A 4500A — MCB RX 4500 - 1P - 230/400 V~ - 32 A - C curve",
+    "reference": "419667",
+    "slug": "rx3-disj-1p-32a-4500a-mcb-rx-4500-1p-230400-v-32-a-c-curve",
+    "category": 98,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-14T15:04:01.746Z",
+    "updated": "2021-09-14T15:04:01.746Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 16,
+  "fields": {
+    "name": "DISJ 1P+NL 10 A 4500A RX3 — RX3 MCB 1P+NL C10 4500A",
+    "reference": "419673",
+    "slug": "disj-1pnl-10-a-4500a-rx3-rx3-mcb-1pnl-c10-4500a",
+    "category": 122,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-14T15:18:17.982Z",
+    "updated": "2021-09-14T15:18:17.983Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 17,
+  "fields": {
+    "name": "DISJ 1P+N 16A 4500 RX3 — RX3 MCB 1P+NL C16 4500A",
+    "reference": "419675",
+    "slug": "disj-1pn-16a-4500-rx3-rx3-mcb-1pnl-c16-4500a",
+    "category": 123,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-14T15:21:49.066Z",
+    "updated": "2021-09-14T15:27:46.392Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 18,
+  "fields": {
+    "name": "DISJ 1P+N 20A RX3 — RX3 MCB 1P+NL C20 4500A",
+    "reference": "419676",
+    "slug": "disj-1pn-20a-rx3-rx3-mcb-1pnl-c20-4500a",
+    "category": 124,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-14T15:32:20.701Z",
+    "updated": "2021-09-14T15:32:20.701Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 19,
+  "fields": {
+    "name": "DISJ 1P+N 25A RX3 — RX3 MCB 1P+NL C25 4500A",
+    "reference": "419677",
+    "slug": "disj-1pn-25a-rx3-rx3-mcb-1pnl-c25-4500a",
+    "category": 125,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-15T08:04:12.044Z",
+    "updated": "2021-09-15T08:04:12.044Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 20,
+  "fields": {
+    "name": "RX3 DISJ 1P+NL C32 4500A — RX3 MCB 1P+NL C32 4500A",
+    "reference": "419678",
+    "slug": "rx3-disj-1pnl-c32-4500a-rx3-mcb-1pnl-c32-4500a",
+    "category": 126,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-15T08:22:55.674Z",
+    "updated": "2021-09-15T08:22:55.674Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 21,
+  "fields": {
+    "name": "DISJ 1P+N 40A RX3 — RX3 MCB 1P+NL C40 4500A",
+    "reference": "419679",
+    "slug": "disj-1pn-40a-rx3-rx3-mcb-1pnl-c40-4500a",
+    "category": 127,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-15T08:29:09.195Z",
+    "updated": "2021-09-15T08:29:09.195Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 22,
+  "fields": {
+    "name": "RX3 DISJ 1P+NG C6 4500A 1MOD — MCB RX 4500 - 1P+N 230 V~ - 6 A - C curve - neutral on left-hand side",
+    "reference": "419946",
+    "slug": "rx3-disj-1png-c6-4500a-1mod-mcb-rx-4500-1pn-230-v-6-a-c-curve-neutral-on-left-hand-side",
+    "category": 132,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-15T09:41:08.423Z",
+    "updated": "2021-09-15T09:41:08.423Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 23,
+  "fields": {
+    "name": "RX3 DISJ 1P+NG C10 4500A 1MOD — MCB RX 4500 - 1P+N 230 V~ - 10 A - C curve - neutral on left-hand side",
+    "reference": "419947",
+    "slug": "rx3-disj-1png-c10-4500a-1mod-mcb-rx-4500-1pn-230-v-10-a-c-curve-neutral-on-left-hand-side",
+    "category": 133,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-15T09:50:29.450Z",
+    "updated": "2021-09-15T09:50:29.450Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 24,
+  "fields": {
+    "name": "RX3 C16A Disjoncteur Phase + Neutre",
+    "reference": "419949",
+    "slug": "rx3-c16a-disjoncteur-phase-neutre",
+    "category": 134,
+    "text": "",
+    "description": "<div id=\"product-description-short-546\" class=\"product-description-short border-top border-bottom py-3\">\r\n<p>Disjoncteur RX3 1P+N 16A Courbe C 4.5KA vis/vis</p>\r\n</div>\r\n<div class=\"product-actions\"><form id=\"add-to-cart-or-refresh\" action=\"https://lbautomation.fr/panier\" method=\"post\">\r\n<div class=\"product-variants\">\r\n<div class=\"product-reference product-variants-item d-flex justify-content-between align-items-center border-bottom py-2\">\r\n<p>Disjoncteur RX&sup3; 4500&nbsp;- Lexic &agrave; vis LEG419949</p>\r\n<p>Courbe C</p>\r\n<p>Intensit&eacute; nominale :&nbsp;16 A</p>\r\n<p>Bornes &agrave; vis</p>\r\n<p>Nombre de modules : 1</p>\r\n<p>Pouvoir de coupure : 4500 - IEC 60898-1 - 230/400 V~ 4.5 kA - IEC 60947-2 - 230/400 V~</p>\r\n<p>Produit Fabriqu&eacute; en France avec CopyTracer</p>\r\n<p>Conformes &agrave; la norme NFC 15100</p>\r\n</div>\r\n</div>\r\n</form></div>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-15T10:04:32.168Z",
+    "updated": "2021-09-15T10:04:32.168Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 25,
+  "fields": {
+    "name": "RX3 C20A Disjoncteur Phase + Neutre",
+    "reference": "419950",
+    "slug": "rx3-c20a-disjoncteur-phase-neutre",
+    "category": 135,
+    "text": "",
+    "description": "<p>Disjoncteur RX&sup3; 4500&nbsp;- Lexic &agrave; vis LEG419950</p>\r\n<p>Courbe C</p>\r\n<p>Intensit&eacute; nominale :&nbsp;20 A</p>\r\n<p>Bornes &agrave; vis</p>\r\n<p>Nombre de modules : 1</p>\r\n<p>Pouvoir de coupure : 4500 - IEC 60898-1 - 230/400 V~ 4.5 kA - IEC 60947-2 - 230/400 V~</p>\r\n<p>Produit Fabriqu&eacute; en France avec CopyTracer</p>\r\n<p>Conformes &agrave; la norme NFC 15100</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-15T10:22:25.078Z",
+    "updated": "2021-09-15T10:22:25.078Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 26,
+  "fields": {
+    "name": "RX3 DISJ 1P+NG C25 4500A 1MOD — MCB RX 4500 - 1P+N 230 V~ - 25 A - C curve - neutral on left-hand side",
+    "reference": "419951",
+    "slug": "rx3-disj-1png-c25-4500a-1mod-mcb-rx-4500-1pn-230-v-25-a-c-curve-neutral-on-left-hand-side",
+    "category": 136,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-15T10:29:09.374Z",
+    "updated": "2021-09-15T10:29:09.374Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 27,
+  "fields": {
+    "name": "RX3 C32A Disjoncteur Phase + Neutre",
+    "reference": "419952",
+    "slug": "rx3-c32a-disjoncteur-phase-neutre",
+    "category": 137,
+    "text": "Disjoncteur RX3 1P+N 32A Courbe C 4.5KA vis/vis",
+    "description": "<p>Disjoncteur RX&sup3; 4500&nbsp;- Lexic &agrave; vis LEG419952</p>\r\n<p>Courbe C</p>\r\n<p>Intensit&eacute; nominale :&nbsp;32 A</p>\r\n<p>Bornes &agrave; vis</p>\r\n<p>Nombre de modules : 1</p>\r\n<p>Pouvoir de coupure : 4500 - IEC 60898-1 - 230/400 V~ 4.5 kA - IEC 60947-2 - 230/400 V~</p>\r\n<p>Produit Fabriqu&eacute; en France avec CopyTracer</p>\r\n<p>Conformes &agrave; la norme NFC 15100</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-15T10:32:45.931Z",
+    "updated": "2021-09-15T10:32:45.931Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 28,
+  "fields": {
+    "name": "RX3 DISJ 3P+NL C10 4500A — RX3 MCB 3P+NL C10 4500A",
+    "reference": "419717",
+    "slug": "rx3-disj-3pnl-c10-4500a-rx3-mcb-3pnl-c10-4500a",
+    "category": 108,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-16T09:48:38.180Z",
+    "updated": "2021-09-16T09:48:38.180Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 29,
+  "fields": {
+    "name": "DISJ 3P+N 25A RX3 — RX3 MCB 3P+NL C25 4500A",
+    "reference": "419721",
+    "slug": "disj-3pn-25a-rx3-rx3-mcb-3pnl-c25-4500a",
+    "category": 111,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T08:19:22.447Z",
+    "updated": "2021-09-19T08:34:15.321Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 30,
+  "fields": {
+    "name": "RX3 DISJ 3P+NL C32 4500A — RX3 MCB 3P+NL C32 4500A",
+    "reference": "419722",
+    "slug": "rx3-disj-3pnl-c32-4500a-rx3-mcb-3pnl-c32-4500a",
+    "category": 112,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T08:26:40.363Z",
+    "updated": "2021-09-19T08:34:15.376Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 31,
+  "fields": {
+    "name": "DISJ 4P 40A RX3 4500A — RX3 MCB 3P+NL C40 4500A",
+    "reference": "419723",
+    "slug": "disj-4p-40a-rx3-4500a-rx3-mcb-3pnl-c40-4500a",
+    "category": 113,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T08:33:44.582Z",
+    "updated": "2021-09-19T08:33:44.582Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 32,
+  "fields": {
+    "name": "DISJ 4P C50A 4500A — MCB RX 4500 - 4P 400 V~ - 50 A - C curve",
+    "reference": "419746",
+    "slug": "disj-4p-c50a-4500a-mcb-rx-4500-4p-400-v-50-a-c-curve",
+    "category": 114,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T08:59:17.878Z",
+    "updated": "2021-09-19T08:59:17.878Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 33,
+  "fields": {
+    "name": "RX3 DISJ 4P C63 4500A",
+    "reference": "419747",
+    "slug": "rx3-disj-4p-c63-4500a",
+    "category": 115,
+    "text": "",
+    "description": "<p>MCB RX&sup3; 4500 - 4P 400 V~ - 63 A - Courbe CZoom<br />Pack (nombre d'unit&eacute;s)3<br />Volume (dm3)1.864<br />Poids (g)1 767,00</p>\r\n<p>Caract&eacute;ristiques du produit<br />4 p&ocirc;les 400 V~<br />courbe C<br />Intensit&eacute; nominale In : 63 A<br />Nombre de modules : 4</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T09:03:06.937Z",
+    "updated": "2021-09-19T09:03:06.937Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 34,
+  "fields": {
+    "name": "Télérupteur 1NO 16A bobine 230V",
+    "reference": "412408",
+    "slug": "telerupteur-1no-16a-bobine-230v",
+    "category": 138,
+    "text": "",
+    "description": "<p class=\"text\">CX&sup3;, t&eacute;l&eacute;rupteur modulaire permettant d'allumer et d&rsquo;&eacute;teindre une charge au niveau de plusieurs points de commande &agrave; l&rsquo;aide de boutons poussoirs</p>\r\n<ul>\r\n<li>T&eacute;l&eacute;rupteur unipolaire 16A 250V~</li>\r\n<li>Tension du courant de commande 230V~</li>\r\n<li>Type de contact : 1F</li>\r\n<li>1 module - Bornes &agrave; vis</li>\r\n<li>Conforme &agrave; la norme NF EN 60669-2-2</li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T11:02:21.374Z",
+    "updated": "2021-09-19T11:02:21.374Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 35,
+  "fields": {
+    "name": "Télérupteur 2NO 16A bobine 24V",
+    "reference": "412410",
+    "slug": "telerupteur-2no-16a-bobine-24v",
+    "category": 138,
+    "text": "",
+    "description": "<section id=\"wrapper\">\r\n<div class=\"container\">\r\n<div id=\"content-wrapper\">\r\n<section id=\"main\">\r\n<div class=\"row bottom-30\">\r\n<div class=\"col-lg-12\">\r\n<div class=\"tabs product-tabs\">\r\n<div id=\"tab-content\" class=\"tab-content\">\r\n<div id=\"description\" class=\"tab-pane fade in active\" role=\"tabpanel\">\r\n<div class=\"product-description\">T&eacute;l&eacute;rupteur CX&sup3; standard avec bornes &agrave; vis 2P 16A 250V~ contact 2F - tension commande 24V~ - 1 module</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n<div id=\"js-ps_checkout-express-button-container\"></div>\r\n<footer class=\"page-footer\"></footer></section>\r\n</div>\r\n</div>\r\n</section>\r\n<footer id=\"footer\">\r\n<div class=\"container\">\r\n<div class=\"row\">\r\n<div class=\"block_brand col-lg-12 col-md-12 col-sm-12\">\r\n<div class=\"row bottom-40\">&nbsp;</div>\r\n</div>\r\n</div>\r\n</div>\r\n</footer>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T11:07:56.854Z",
+    "updated": "2021-09-19T11:07:56.854Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 36,
+  "fields": {
+    "name": "Minuterie modulaire 230V, 50Hz/60Hz, sortie 16A, 250V, 1 module",
+    "reference": "412602",
+    "slug": "minuterie-modulaire-230v-50hz60hz-sortie-16a-250v-1-module",
+    "category": 138,
+    "text": "",
+    "description": "<table id=\"product-specification-table\" class=\"a-keyvalue\">\r\n<tbody>\r\n<tr>\r\n<th class=\"a-span4 a-text-right\">Composants inclus</th>\r\n<td>1 Minuterie recyclable 16 A 230 V 50/60 Hz</td>\r\n</tr>\r\n<tr>\r\n<th class=\"a-span4 a-text-right\">Couleur</th>\r\n<td>Gris</td>\r\n</tr>\r\n<tr>\r\n<th class=\"a-span4 a-text-right\">Ean</th>\r\n<td>3245064126021</td>\r\n</tr>\r\n<tr>\r\n<th class=\"a-span4 a-text-right\">Mat&eacute;riau</th>\r\n<td>Polyamide-Imide</td>\r\n</tr>\r\n<tr>\r\n<th class=\"a-span4 a-text-right\">Nom de la marque</th>\r\n<td>Legrand</td>\r\n</tr>\r\n<tr>\r\n<th class=\"a-span4 a-text-right\">Nombre d'articles</th>\r\n<td>1</td>\r\n</tr>\r\n<tr>\r\n<th class=\"a-span4 a-text-right\">Num&eacute;ro de la pi&egrave;ce</th>\r\n<td>LEG412602</td>\r\n</tr>\r\n<tr>\r\n<th class=\"a-span4 a-text-right\">Num&eacute;ro de mod&egrave;le</th>\r\n<td>LEG412602</td>\r\n</tr>\r\n<tr>\r\n<th class=\"a-span4 a-text-right\">Sp&eacute;cification respect&eacute;e</th>\r\n<td>NF</td>\r\n</tr>\r\n<tr>\r\n<th class=\"a-span4 a-text-right\">Usages sp&eacute;cifiques du produit</th>\r\n<td>Int&eacute;rieur^Professionnel</td>\r\n</tr>\r\n<tr>\r\n<th class=\"a-span4 a-text-right\">Volume de l&rsquo;article</th>\r\n<td>1.00 centim&egrave;tres_cubes</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T11:11:48.679Z",
+    "updated": "2021-09-19T11:11:48.679Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 37,
+  "fields": {
+    "name": "Disjoncteur MCB DX3 4P C80 10000A",
+    "reference": "408703",
+    "slug": "disjoncteur-mcb-dx3-4p-c80-10000a",
+    "category": 116,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T11:36:51.566Z",
+    "updated": "2021-09-19T11:36:51.566Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 38,
+  "fields": {
+    "name": "DISJ S/RAIL 4P 100A 10KA — DX3 4P C100 10000A",
+    "reference": "408704",
+    "slug": "disj-srail-4p-100a-10ka-dx3-4p-c100-10000a",
+    "category": 117,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T11:43:12.757Z",
+    "updated": "2021-09-19T11:43:12.757Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 39,
+  "fields": {
+    "name": "DISJ S/RAIL 4P 125A 10KA — DX3 4P C125 10000A",
+    "reference": "408705",
+    "slug": "disj-srail-4p-125a-10ka-dx3-4p-c125-10000a",
+    "category": 118,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T12:33:06.349Z",
+    "updated": "2021-09-19T12:33:06.349Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 40,
+  "fields": {
+    "name": "BLOC DIFF 4P 125A 10KA — DX3 RCD 4P 125A AC 300MA",
+    "reference": "410629",
+    "slug": "bloc-diff-4p-125a-10ka-dx3-rcd-4p-125a-ac-300ma",
+    "category": 118,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T12:36:57.545Z",
+    "updated": "2021-09-19T12:36:57.545Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 41,
+  "fields": {
+    "name": "DISJONCTEUR DE COURANT RÉSIDUEL LE- MONOPHASÉ, TYPE AC 30 mA 25 A",
+    "reference": "402024",
+    "slug": "disjoncteur-de-courant-residuel-le-monophase-type-ac-30-ma-25-a",
+    "category": 140,
+    "text": "",
+    "description": "<ul id=\"product-properties\" class=\"m-0 list-unstyled product-properies\" data-hook=\"\">\r\n<li><span class=\"font-weight-bold text-break\">Type d&rsquo;appareil :</span>&nbsp;<span class=\"text-break\">Disjoncteur de courant r&eacute;siduel, Monophas&eacute;, Type AC</span></li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T12:51:07.372Z",
+    "updated": "2021-10-10T07:51:11.237Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 42,
+  "fields": {
+    "name": "RX3 ID 2P 40A AC 30MA",
+    "reference": "402025",
+    "slug": "rx3-id-2p-25a-ac-30ma",
+    "category": 141,
+    "text": "",
+    "description": "<div class=\"title\">\r\n<p>2 p&ocirc;les - 230 V~<br />Type de courant alternatif<br />Sensibilit&eacute; : 30 mA<br />En : 40 A<br />Nombre de modules : 2</p>\r\n<p>RCCBs RX&sup3; - Disjoncteurs diff&eacute;rentiels de 25 A &agrave; 63 A - Types AC et A<br />Conforme &agrave; la norme CEI 61008-1<br />Type AC : d&eacute;tecter les d&eacute;fauts des composants AC<br />Type A : d&eacute;tecter les d&eacute;fauts des composants AC et DC<br />Compatible avec les jeux de barres d'alimentation &agrave; broches et &agrave; fourches<br />Ne pas accepter les auxiliaires</p>\r\n</div>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 12,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T12:54:52.997Z",
+    "updated": "2021-10-10T07:50:39.813Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 43,
+  "fields": {
+    "name": "Courant résiduel disjoncteur 63 A RX3 2P AC Type 30 mA",
+    "reference": "402026",
+    "slug": "courant-residuel-disjoncteur-63-a-rx3-2p-ac-type-30-ma",
+    "category": 142,
+    "text": "",
+    "description": "<p>2 p&ocirc;les - 230 V~<br />Type de courant alternatif<br />Sensibilit&eacute; : 30 mA<br />En : 63 A<br />Nombre de modules : 2<br />Caract&eacute;ristiques g&eacute;n&eacute;rales<br />RCCBs RX&sup3; - Disjoncteurs diff&eacute;rentiels de 25 A &agrave; 63 A - Types AC et A<br />Conforme &agrave; la norme CEI 61008-1<br />Type AC : d&eacute;tecter les d&eacute;fauts des composants AC<br />Type A : d&eacute;tecter les d&eacute;fauts des composants AC et DC<br />Compatible avec les jeux de barres d'alimentation &agrave; broches et &agrave; fourches<br />Ne pas accepter les auxiliaires</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:00:14.418Z",
+    "updated": "2021-09-19T13:00:14.418Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 44,
+  "fields": {
+    "name": "INTER DIFF 2P 25A 300MA RX3 — RCD RX - 2P 230 V~ - 25 A - 300 mA - AC type",
+    "reference": "402032",
+    "slug": "inter-diff-2p-25a-300ma-rx3-rcd-rx-2p-230-v-25-a-300-ma-ac-type",
+    "category": 140,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:05:20.425Z",
+    "updated": "2021-09-19T13:05:20.425Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 45,
+  "fields": {
+    "name": "RX3 ID 2P 40A AC 300MA — RCD RX - 2P 230 V~ - 40 A - 300 mA - AC type",
+    "reference": "402033",
+    "slug": "rx3-id-2p-40a-ac-300ma-rcd-rx-2p-230-v-40-a-300-ma-ac-type",
+    "category": 141,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:09:58.676Z",
+    "updated": "2021-09-19T13:09:58.676Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 46,
+  "fields": {
+    "name": "RCD RX³ - 2P 230 V~ - 63 A - 300 mA - AC type",
+    "reference": "402034",
+    "slug": "rcd-rx-2p-230-v-63-a-300-ma-ac-type",
+    "category": 142,
+    "text": "",
+    "description": "<p>2 p&ocirc;les - 230 V~<br />Type de courant alternatif<br />Sensibilit&eacute; : 300 mA<br />En : 63 A<br />Nombre de modules : 2</p>\r\n<p><br />RCCBs RX&sup3; - Disjoncteurs diff&eacute;rentiels de 25 A &agrave; 63 A - Types AC et A<br />Conforme &agrave; la norme CEI 61008-1<br />Type AC : d&eacute;tecter les d&eacute;fauts des composants AC<br />Type A : d&eacute;tecter les d&eacute;fauts des composants AC et DC<br />Compatible avec les jeux de barres d'alimentation &agrave; broches et &agrave; fourches<br />Ne pas accepter les auxiliaires</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:12:15.378Z",
+    "updated": "2021-09-19T13:12:15.378Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 47,
+  "fields": {
+    "name": "Interrupteur différentiel - 25A - 30mA - Type AC - 400V - Vis/Vis - Haut/Bas",
+    "reference": "411660",
+    "slug": "interrupteur-differentiel-25a-30ma-type-ac-400v-visvis-hautbas",
+    "category": 111,
+    "text": "",
+    "description": "<p><strong>Interrupteur diff&eacute;rentiel DX<sup>3</sup>-ID 25A type AC par Legrand - 411660 :</strong></p>\r\n<p>Un interrupteur diff&eacute;rentiel permet de contr&ocirc;ler les courants de fuites sur un circuit &eacute;lectrique pour assurer la s&eacute;curit&eacute; des personnes.</p>\r\n<ul>\r\n<li>Intensit&eacute; : 25 A</li>\r\n<li>Sensibilit&eacute; : 30 mA</li>\r\n<li>Type : AC</li>\r\n<li>Tension de fonctionnement : 400V</li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:15:49.097Z",
+    "updated": "2021-09-19T13:15:49.097Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 48,
+  "fields": {
+    "name": "Interrupteur différentiel DX³-ID arrivée haute et départ bas à vis - 4P 400V~ 40A typeAC 30mA - 4 modules",
+    "reference": "411661",
+    "slug": "interrupteur-differentiel-dx-id-arrivee-haute-et-depart-bas-a-vis-4p-400v-40a-typeac-30ma-4-modules",
+    "category": 113,
+    "text": "",
+    "description": "<ul id=\"product-properties\" class=\"m-0 list-unstyled product-properies\" data-hook=\"\">\r\n<li><span class=\"font-weight-bold text-break\">Emballage :</span>&nbsp;<span class=\"text-break\">1 unit&eacute;</span></li>\r\n<li><span class=\"font-weight-bold text-break\">Volume :</span>&nbsp;<span class=\"text-break\">0.70 dm3</span></li>\r\n<li><span class=\"font-weight-bold text-break\">Poids :</span>&nbsp;<span class=\"text-break\">352.00 g</span></li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:21:58.586Z",
+    "updated": "2021-09-19T13:21:58.586Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 49,
+  "fields": {
+    "name": "Interrupteur différentiel DX³-ID arrivée haute et départ bas à vis - 4P 400V~ 63A typeAC 30mA - 4 modules",
+    "reference": "411662",
+    "slug": "interrupteur-differentiel-dx-id-arrivee-haute-et-depart-bas-a-vis-4p-400v-63a-typeac-30ma-4-modules",
+    "category": 115,
+    "text": "",
+    "description": "<ul class=\"attributes details  attributes--double \">\r\n<li><span class=\"attributes__label\">Sensibilit&eacute;</span>&nbsp;: 30 mA</li>\r\n<li><span class=\"attributes__label\">In</span>&nbsp;: 63 A</li>\r\n<li><span class=\"attributes__label\">Nombre de modules</span>&nbsp;: 4</li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:24:14.869Z",
+    "updated": "2021-09-19T13:24:14.869Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 50,
+  "fields": {
+    "name": "Interrupteur différentiel DX³-ID arrivée haute et départ bas à vis - 4P 400V~ 80A typeAC 30mA - 4 modules",
+    "reference": "411663",
+    "slug": "interrupteur-differentiel-dx-id-arrivee-haute-et-depart-bas-a-vis-4p-400v-80a-typeac-30ma-4-modules",
+    "category": 116,
+    "text": "",
+    "description": "<p>Interrupteur diff&eacute;rentiel DX&sup3;-ID arriv&eacute;e haute et d&eacute;part bas &agrave; vis - 4P 400V~ 80A typeAC 30mA - 4 module</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:29:30.237Z",
+    "updated": "2021-09-19T13:29:30.237Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 51,
+  "fields": {
+    "name": "Interrupteur différentiel dx³-id - vis/vis - 4p- 400v~-25a - type ac - 300ma - départ bas",
+    "reference": "411664",
+    "slug": "interrupteur-differentiel-dx-id-visvis-4p-400v-25a-type-ac-300ma-depart-bas",
+    "category": 111,
+    "text": "",
+    "description": "<p><strong>Type AC</strong></p>\r\n<ul>\r\n<li>Vis/vis</li>\r\n<li>Sensibilit&eacute; : 300 mA</li>\r\n<li>In : 25 A</li>\r\n<li>Nombre de modules : 4</li>\r\n<li>Intensit&eacute; nominale In&nbsp;: 25 A</li>\r\n<li>Tension nominale : 400 V</li>\r\n<li>Fr&eacute;quence&nbsp;: 50 Hz</li>\r\n<li>Type&nbsp;: AC</li>\r\n<li>Sensibilit&eacute; : 300 mA</li>\r\n<li>Pouvoir de coupure diff&eacute;rentiel assign&eacute; : 1000 A</li>\r\n<li>Protection des bornes contre les contacts directs : IP20 (appareil c&acirc;bl&eacute;)</li>\r\n<li>Protection de la face avant contre les contacts directs : IP40</li>\r\n<li>Protection contre les chocs : IK04</li>\r\n<li>Temp&eacute;rature ambiante de fonctionnement : -25 &deg;C &agrave; + 60 &deg;C</li>\r\n<li>Temp&eacute;rature de stockage : - 40 &deg;C &agrave; + 70 &deg;C</li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:31:51.421Z",
+    "updated": "2021-10-10T07:27:12.999Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 52,
+  "fields": {
+    "name": "INTERRUPTEUR DIFFERENTIEL 4P 40A 300MA AC",
+    "reference": "411665",
+    "slug": "interrupteur-differentiel-4p-40a-300ma-ac",
+    "category": 113,
+    "text": "",
+    "description": "<div class=\"block-feature\">\r\n<div class=\"block-wrapper-content\">\r\n<div class=\"block-content-title\"><strong>T&eacute;trapolaires 400 V~</strong><br /><strong>Type AC</strong>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li data-info=\"Titre descript. 1\">Vis/vis</li>\r\n</ul>\r\n</div>\r\n<div class=\"block-content\">\r\n<ul>\r\n<li>Sensibilit&eacute; : 300 mA</li>\r\n<li>In : 40 A</li>\r\n<li>Nombre de modules : 4</li>\r\n</ul>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"block-feature block-feature-general\">\r\n<p class=\"title\"><strong>Caract&eacute;ristiques g&eacute;n&eacute;rales</strong></p>\r\n<div class=\"block-wrapper-content\">\r\n<div class=\"block-content-title\">\r\n<p><strong>Interrupteurs diff&eacute;rentiels DX&sup3;-ID &ndash; arriv&eacute;e haut / d&eacute;part bas</strong></p>\r\n<ul>\r\n<li data-info=\"Titre descript. 4.1\">Conformes &agrave; la norme NF EN 61008-1</li>\r\n<li data-info=\"Titre descript. 4.2\">Type AC : d&eacute;tectent les d&eacute;fauts &agrave; composante alternative</li>\r\n<li data-info=\"Titre descript. 4.3\">Type A : d&eacute;tectent les d&eacute;fauts &agrave; composantes alternative et continue (circuits sp&eacute;cialis&eacute;s : cuisini&egrave;re, plaque de cuisson, lave-linge&hellip;)</li>\r\n<li data-info=\"Titre descript. 4.4\">Type F : d&eacute;tectent les d&eacute;fauts &agrave; composantes alternative et continue, immunit&eacute; renforc&eacute;e aux d&eacute;clenchements intempestifs et d&eacute;tection des courants de d&eacute;fauts hautes fr&eacute;quences</li>\r\n<li data-info=\"Titre descript. 4.5\">Type B : d&eacute;tectent les d&eacute;fauts &agrave; composantes alternative et continue et les d&eacute;fauts &agrave; courant continu lisse (machineries &agrave; variation de vitesse, installations photovolta&iuml;ques, centres d&rsquo;appel, mat&eacute;riel m&eacute;dical&hellip;)</li>\r\n<li data-info=\"Titre descript. 4.6\">Acceptent les auxiliaires, les commandes motoris&eacute;es et les modules de raccordement DX&sup3; (sauf Type B)</li>\r\n<li data-info=\"Titre descript. 4.7\">Connexion vis/vis : arriv&eacute;e haute et sortie basse par bornes &agrave; vis</li>\r\n</ul>\r\n</div>\r\n</div>\r\n</div>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:34:32.151Z",
+    "updated": "2021-09-19T13:34:32.151Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 53,
+  "fields": {
+    "name": "INTERRUPTEUR DIFFÉRENTIEL, 4P, 63A, TYPEAC, 300MA",
+    "reference": "411666",
+    "slug": "interrupteur-differentiel-4p-63a-typeac-300ma",
+    "category": 115,
+    "text": "Interrupteur différentiel DX³-ID arrivée haute et départ bas à vis - 4P 400V~ 63A type AC 300mA - 4 modules",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:37:28.195Z",
+    "updated": "2021-09-19T13:37:28.195Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 54,
+  "fields": {
+    "name": "DX3-ID 4PG 80A AC 300MA",
+    "reference": "411667",
+    "slug": "dx3-id-4pg-80a-ac-300ma",
+    "category": 116,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T13:40:04.248Z",
+    "updated": "2021-09-19T13:40:04.248Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 55,
+  "fields": {
+    "name": "Disj de branchement ERDF - différentiel 500 mA - instantané - 2P - 45 A",
+    "reference": "401000",
+    "slug": "disj-de-branchement-erdf-differentiel-500-ma-instantane-2p-45-a",
+    "category": 143,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T14:12:38.947Z",
+    "updated": "2021-09-19T14:12:38.947Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 56,
+  "fields": {
+    "name": "Disjoncteur de branchement Enedis tétrapolaire différentiel 500mA instantané - 60A",
+    "reference": "401011",
+    "slug": "disjoncteur-de-branchement-enedis-tetrapolaire-differentiel-500ma-instantane-60a",
+    "category": 144,
+    "text": "",
+    "description": "<p><strong>Disjoncteur de branchement t&eacute;trapolaire 30/60A 500mA instantan&eacute;</strong>&nbsp;-250 / 440 V~</p>\r\n<p>Disjoncteur Basse Tension BACO pour tarif bleu de 3 &agrave; 36 kVA :<br />Coupe et sectionne l'ensemble de l'installation<br />Prot&egrave;ge contre les surcharges et les courts-circuits<br />Dispose d'un r&eacute;glage de calibre pour limiter la puissance au contrat EDF souscrit<br />Assure la protection des personnes contre les contacts indirects et pr&eacute;viennent des risques d'incendie en surveillant le niveau d'isolement (version diff&eacute;rentielle)</p>\r\n<p><br />Plombable<br />Agr&eacute;&eacute; NF C 62-411 (appareils diff&eacute;rentiels)<br />Diff&eacute;rentiel 500 mA instantan&eacute;<br />Intensit&eacute; nominale : 60 A<br />I r&eacute;glable : 30/40/50/60 A</p>\r\n<table id=\"product-attribute-specs-table\" class=\"data table additional-attributes\" style=\"width: 20.9021%;\">\r\n<tbody>\r\n<tr>\r\n<th class=\"col label\" style=\"width: 54.9753%;\" scope=\"row\">Poids net (kg)</th>\r\n<td class=\"col data\" style=\"width: 30.2632%;\" data-th=\"Poids net (kg)\">0.95</td>\r\n</tr>\r\n<tr>\r\n<th class=\"col label\" style=\"width: 54.9753%;\" scope=\"row\">Marque</th>\r\n<td class=\"col data\" style=\"width: 30.2632%;\" data-th=\"Marque\">Legrand</td>\r\n</tr>\r\n<tr>\r\n<th class=\"col label\" style=\"width: 54.9753%;\" scope=\"row\">Couleur</th>\r\n<td class=\"col data\" style=\"width: 30.2632%;\" data-th=\"Couleur\">Blanc</td>\r\n</tr>\r\n<tr>\r\n<th class=\"col label\" style=\"width: 54.9753%;\" scope=\"row\">CE</th>\r\n<td class=\"col data\" style=\"width: 30.2632%;\" data-th=\"CE\">Oui</td>\r\n</tr>\r\n<tr>\r\n<th class=\"col label\" style=\"width: 54.9753%;\" scope=\"row\">NF</th>\r\n<td class=\"col data\" style=\"width: 30.2632%;\" data-th=\"NF\">Oui</td>\r\n</tr>\r\n<tr>\r\n<th class=\"col label\" style=\"width: 54.9753%;\" scope=\"row\">&Eacute;tanche</th>\r\n<td class=\"col data\" style=\"width: 30.2632%;\" data-th=\"&Eacute;tanche\">Non</td>\r\n</tr>\r\n<tr>\r\n<th class=\"col label\" style=\"width: 54.9753%;\" scope=\"row\">&nbsp;</th>\r\n<td class=\"col data\" style=\"width: 30.2632%;\" data-th=\"Fiche technique\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T14:20:31.898Z",
+    "updated": "2021-09-19T14:20:31.898Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 57,
+  "fields": {
+    "name": "DISJONCTEUR DIFFÉRENTIEL PROTECT 300MA INSTANTANÉ 4P 63A",
+    "reference": "401138",
+    "slug": "disjoncteur-differentiel-protect-300ma-instantane-4p-63a",
+    "category": 115,
+    "text": "",
+    "description": "<p class=\"text\">Disjoncteur diff&eacute;rentiel de protection t&eacute;trapolaire r&eacute;glable, pour la protection des travailleurs, permet la protection contre les surintensit&eacute;s ainsi que les courants de d&eacute;faut &agrave; la terre</p>\r\n<ul>\r\n<li>Disjoncteur diff&eacute;rentiel r&eacute;glable BACO de protection des travailleurs t&eacute;trapolaire 400V~ courbe C - Intensit&eacute; nominale : 63A</li>\r\n<li>Fonctions :&nbsp;<br />- protection contre les surintensit&eacute;s, r&eacute;alis&eacute;e par un d&eacute;clencheur ol&eacute;o magn&eacute;tique de type \"dash-pot\"<br />- protection contre les courants de d&eacute;faut &agrave; la terre, r&eacute;alis&eacute;e par un d&eacute;clencheur &agrave; courant r&eacute;siduel diff&eacute;rentiel</li>\r\n<li>Diff&eacute;rentiel instantan&eacute; 300mA - Plombable</li>\r\n<li>I r&eacute;glable : 32A, 40A, 50A ou 63A</li>\r\n<li>Conforme &agrave; la norme NF EN 61009-1 - R&eacute;pond aux exigences du d&eacute;cret du 14 novembre 1988 sur la protection des travailleurs</li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T14:23:55.601Z",
+    "updated": "2021-09-19T14:23:55.601Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 58,
+  "fields": {
+    "name": "CACHE BORNE 2 MODULE ECO — Terminal shield box - IP30 - without terminal block - 2 modules",
+    "reference": "001356",
+    "slug": "cache-borne-2-module-eco-terminal-shield-box-ip30-without-terminal-block-2-modules",
+    "category": 146,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T14:45:23.460Z",
+    "updated": "2021-09-19T14:45:23.460Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 59,
+  "fields": {
+    "name": "CACHE BORNE 4 MODULE ECO — Terminal shield box - IP30 - without terminal block - 4 modules",
+    "reference": "001357",
+    "slug": "cache-borne-4-module-eco-terminal-shield-box-ip30-without-terminal-block-4-modules",
+    "category": 147,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T14:51:53.261Z",
+    "updated": "2021-09-19T14:51:53.261Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 60,
+  "fields": {
+    "name": "CACHE BORNE 6 MODULE ECO — Terminal shield box - IP30 - without terminal block - 6 modules",
+    "reference": "001358",
+    "slug": "cache-borne-6-module-eco-terminal-shield-box-ip30-without-terminal-block-6-modules",
+    "category": 148,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-19T15:01:11.289Z",
+    "updated": "2021-09-19T15:01:11.289Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 66,
+  "fields": {
+    "name": "Boîte monoposte Batibox pour cloisons sèches 1 poste ou 2 modules - profondeur 40mm",
+    "reference": "080041",
+    "slug": "boite-monoposte-batibox-pour-cloisons-seches-1-poste-ou-2-modules-profondeur-40mm",
+    "category": 54,
+    "text": "",
+    "description": "<p><strong>Bo&icirc;tes monopostes </strong>Conformes &agrave; la norme NF EN 60670-1&nbsp;</p>\r\n<p><strong>1 poste</strong>&nbsp;Profondeur 40 mm</p>\r\n<ul id=\"product-properties\" class=\"m-0 list-unstyled product-properies\" data-hook=\"\">\r\n<li><span class=\"font-weight-bold text-break\">Emballage :</span>&nbsp;<span class=\"text-break\">50 unit&eacute;s</span></li>\r\n<li><span class=\"font-weight-bold text-break\">Volume :</span>&nbsp;<span class=\"text-break\">11.91 dm3</span></li>\r\n<li><span class=\"font-weight-bold text-break\">Poids :</span>&nbsp;<span class=\"text-break\">1268.00 g</span></li>\r\n<li><span class=\"font-weight-bold text-break\">Gamme :</span>&nbsp;<span class=\"text-break\">Batibox</span></li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-20T15:31:44.174Z",
+    "updated": "2021-09-21T12:41:00.596Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 67,
+  "fields": {
+    "name": "Legrand 080042 Boîte MultiPoste Batibox pour Cloisons Sèches 2 Postes ou 4 à 5 Modules, 40mm Profondeur",
+    "reference": "080042",
+    "slug": "legrand-080042-boite-multiposte-batibox-pour-cloisons-seches-2-postes-ou-4-a-5-modules-40mm-profondeur",
+    "category": 54,
+    "text": "",
+    "description": "<h1 id=\"title\" class=\"a-size-large a-spacing-none\"><span id=\"productTitle\" class=\"a-size-large product-title-word-break\">Legrand 080042 Bo&icirc;te MultiPoste Batibox pour Cloisons S&egrave;ches 2 Postes ou 4 &agrave; 5 Modules, 40mm Profondeur, Jaune, Lot de 30</span></h1>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T12:44:26.893Z",
+    "updated": "2021-09-21T12:44:26.893Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 68,
+  "fields": {
+    "name": "Legrand - 080043 - BATIBOX CL.SECH 3POSTES P.40MM",
+    "reference": "080043",
+    "slug": "legrand-080043-batibox-clsech-3postes-p40mm",
+    "category": 54,
+    "text": "",
+    "description": "<p>Batibox cloisons s&egrave;ches, une bo&icirc;te &agrave; encastrer dans les plaques de pl&acirc;tre, de contreplaqu&eacute;, de bois ou de t&ocirc;le</p>\r\n<p>Bo&icirc;te Batibox multipostes 3 postes, 6 modules ou 8 modules profondeur 40mm<br />Montage &agrave; l'horizontale ou &agrave; la verticale<br />&Oslash;de per&ccedil;age 67mm - Entraxe 71mm - Pour appareillage &agrave; vis</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T12:50:07.318Z",
+    "updated": "2021-09-21T12:50:07.318Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 69,
+  "fields": {
+    "name": "Boîte monoposte Batibox maçonnerie carrée 1 poste associable - profondeur 40mm",
+    "reference": "080141",
+    "slug": "boite-monoposte-batibox-maconnerie-carree-1-poste-associable-profondeur-40mm",
+    "category": 52,
+    "text": "",
+    "description": "<p><strong>Bo&icirc;tes monopostes</strong>Conformes aux normes NF EN 60670-1&nbsp;<strong>Carr&eacute;es associables</strong>&nbsp;Pour fixation d'appareillage &agrave; vis ou &agrave; griffe Bo&icirc;tes 1 poste permettant la composition de bo&icirc;tes multipostes par association Utilisation possible en horizontal ou vertical (entraxe 71 mm) D&eacute;coupage des cloisons int&eacute;rieures (avant ou apr&egrave;s scellement) pour montage des fonctions &eacute;tendues Livr&eacute;es avec vis &eacute;quip&eacute;es de cache de protection Entr&eacute;es d&eacute;fon&ccedil;ables &Oslash;16-20-25 Profondeur 40 mm</p>\r\n<ul id=\"product-properties\" class=\"m-0 list-unstyled product-properies\" data-hook=\"\">\r\n<li><span class=\"font-weight-bold text-break\">Emballage :</span>&nbsp;<span class=\"text-break\">100 unit&eacute;s</span></li>\r\n<li><span class=\"font-weight-bold text-break\">Volume :</span>&nbsp;<span class=\"text-break\">29.00 dm3</span></li>\r\n<li><span class=\"font-weight-bold text-break\">Poids :</span>&nbsp;<span class=\"text-break\">3564.00 g</span></li>\r\n<li><span class=\"font-weight-bold text-break\">Gamme :</span>&nbsp;<span class=\"text-break\">Batibox</span></li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T13:01:32.827Z",
+    "updated": "2021-09-21T13:01:32.827Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 70,
+  "fields": {
+    "name": "Boîte MonoPoste Batibox pour Maçonnerie 1 Poste Carrée Associable, 50mm Profondeur",
+    "reference": "080151",
+    "slug": "boite-monoposte-batibox-pour-maconnerie-1-poste-carree-associable-50mm-profondeur",
+    "category": 52,
+    "text": "",
+    "description": "<h1 id=\"title\" class=\"a-size-large a-spacing-none\"><span id=\"productTitle\" class=\"a-size-large product-title-word-break\">Legrand 080151 Bo&icirc;te MonoPoste Batibox pour Ma&ccedil;onnerie 1 Poste Carr&eacute;e Associable, 50mm Profondeur, Lot de 100</span></h1>\r\n<ul class=\"a-unordered-list a-vertical a-spacing-mini\">\r\n<li><span class=\"a-list-item\">Volume: 33.72 dm3</span></li>\r\n<li><span class=\"a-list-item\">Poids: 4031.00 g</span></li>\r\n<li><span class=\"a-list-item\">Facile &agrave; utiliser</span></li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T13:09:06.978Z",
+    "updated": "2021-09-21T13:09:06.978Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 71,
+  "fields": {
+    "name": "Enrouleur à usage domestique avec 4x2P+T avec éclips de protection longueur 10m",
+    "reference": "090970",
+    "slug": "enrouleur-a-usage-domestique-avec-4x2pt-avec-eclips-de-protection-longueur-10m",
+    "category": 165,
+    "text": "",
+    "description": "<p>Rallonges et enrouleurs &agrave; usage domestique<br />Enrouleurs &agrave; usage domestique - 250 V~- Conformes &agrave; la norme NF EN 61242 - A 12- Avec &eacute;clips de protectionCapacit&eacute; moyenne - 2P+T - 10/16 A- 3000 W en 230 V~ (c&acirc;ble enti&egrave;rement d&eacute;roul&eacute;)- Avec protection thermique &agrave; r&eacute;armement manuel 4 prises 2P+T de raccordement suppl&eacute;mentaire- C&acirc;ble 3G 1,5 mm&sup2; H 05 VVF- Avec poign&eacute;e facilitant le transport et permettant l'accrochage- Livr&eacute;s avec &eacute;tiquette avec Gencod - 10 m</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T13:13:27.218Z",
+    "updated": "2021-09-21T13:13:27.218Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 72,
+  "fields": {
+    "name": "ENROUL.2P+T 15M 3X1,5 +DISJ.",
+    "reference": "090971",
+    "slug": "enroul2pt-15m-3x15-disj",
+    "category": 165,
+    "text": "",
+    "description": "<p>Enrouleur &agrave; usage domestique<br />250V~ - 15m - Capacit&eacute; moyenne - 2P+T -10A &agrave; 16A - Avec &eacute;clips de protection - 4 prises 2P+T de raccordement suppl&eacute;mentaire<br />C&acirc;ble 3G 1,5mm&sup2; H 05 VVF - 3000W en 230V~ (c&acirc;ble enti&egrave;rement d&eacute;roul&eacute;)</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T13:17:14.264Z",
+    "updated": "2021-09-21T13:17:14.264Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 73,
+  "fields": {
+    "name": "Kit Portier Visiophone avec Interphone et Écran Miroir 7\", Noir",
+    "reference": "369220",
+    "slug": "kit-portier-visiophone-avec-interphone-et-ecran-miroir-7-noir",
+    "category": 167,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T13:29:39.376Z",
+    "updated": "2021-09-21T13:29:39.376Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 74,
+  "fields": {
+    "name": "POSTE INTERIEUR VIDEO 7\" MIRROR 2 FILS",
+    "reference": "369225",
+    "slug": "poste-interieur-video-7-mirror-2-fils",
+    "category": 167,
+    "text": "",
+    "description": "<p>Unit&eacute; d'extension pour le Kit Vid&eacute;o Couleur Complet 7\" - Effet Miroir.<br />&Eacute;cran couleur LCD mains libres effet miroir 7\" avec alimentation enfichable incluse.<br />Kit de montage et vis<br />Mains libres<br />Double ouverture<br />Volume r&eacute;glable<br />Interrupteur<br />Installation jusqu'&agrave; 3 unit&eacute;s internes<br />Fonction interphone audio<br />&Eacute;cran couleur 7\"<br />Couleur : Effet miroir<br />Indice IP : IP54 r&eacute;sistant aux intemp&eacute;ries</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T13:37:41.541Z",
+    "updated": "2021-09-21T13:37:41.541Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 75,
+  "fields": {
+    "name": "Interphone kit vidéo écran tactile 7\" 2 fils",
+    "reference": "369320",
+    "slug": "interphone-kit-video-ecran-tactile-7-2-fils",
+    "category": 167,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T13:54:39.567Z",
+    "updated": "2021-09-21T13:54:39.567Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 76,
+  "fields": {
+    "name": "Écran tactile 7\" bifilaire",
+    "reference": "369325",
+    "slug": "ecran-tactile-7-bifilaire",
+    "category": 167,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T14:08:21.435Z",
+    "updated": "2021-09-21T14:08:21.435Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 77,
+  "fields": {
+    "name": "Kit portier visiophone écran tactile 10 pouces",
+    "reference": "369330",
+    "slug": "kit-portier-visiophone-ecran-tactile-10-pouces",
+    "category": 167,
+    "text": "",
+    "description": "<div class=\"row bottom-30\">\r\n<div class=\"col-lg-12\">\r\n<div class=\"tabs product-tabs\">\r\n<div id=\"tab-content\" class=\"tab-content\">\r\n<div id=\"description\" class=\"tab-pane fade in active\" role=\"tabpanel\">\r\n<div class=\"product-description\">Kit portier visiophone &eacute;cran tactile 10\"</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"easycarousels row\">\r\n<div class=\"c-wrapper w-2\">\r\n<div class=\"in_tabs clearfix compact_on ec-tabs-padding\">\r\n<p>&nbsp;</p>\r\n</div>\r\n</div>\r\n</div>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T14:11:02.598Z",
+    "updated": "2021-10-10T07:28:05.351Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 78,
+  "fields": {
+    "name": "POSTE INTERIEUR VIDEO 10\" TACTILE",
+    "reference": "369335",
+    "slug": "poste-interieur-video-10-tactile",
+    "category": 167,
+    "text": "",
+    "description": "<p>Unit&eacute; d'extension pour le kit vid&eacute;o couleur tactile complet 10\".<br />&Eacute;cran couleur tactile mains libres 10\"? avec m&eacute;moire audio et image, m&eacute;lodies MP3, fonction cadre photo num&eacute;rique et bloc d'alimentation inclus.<br />Kit de montage et vis<br />&Eacute;cran tactile<br />Mains libres<br />Double ouverture<br />Volume r&eacute;glable<br />Interrupteur<br />&eacute;conomiseur d'&eacute;cran d'horloge<br />M&eacute;lodie MP3 et cadre photo num&eacute;rique<br />Capture du visage des visiteurs et r&eacute;pondeur<br />Installation jusqu'&agrave; 3 unit&eacute;s internes<br />Fonction interphone audio<br />Kit mains libres vid&eacute;o couleur<br />&Eacute;cran couleur 10\"<br />Couleur : Argent<br />Indice IP : IP54 r&eacute;sistant aux intemp&eacute;ries</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T14:14:55.676Z",
+    "updated": "2021-09-21T14:14:55.676Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 79,
+  "fields": {
+    "name": "KIT AUDIO 1 POSTE ENTRYLEVEL — ENTRYLEVEL AUDIO KIT HS",
+    "reference": "369500",
+    "slug": "kit-audio-1-poste-entrylevel-entrylevel-audio-kit-hs",
+    "category": 168,
+    "text": "",
+    "description": "<p>Kit audio<br />Kits audio complets<br />Combin&eacute; ONE-FAMILY 3 fils Kit audio, mural avec alimentation interne, extensible jusqu'&agrave; 4 Unit&eacute;s Internes suppl&eacute;mentaires, offrant les fonctions suivantes : appel, interphone, activation serrure de porte<br />Compos&eacute; d'un combin&eacute; Audio Interne Unit&eacute;, LED de signalisation et fonction MUTE ; et un panneau d'entr&eacute;e discret en Zamak avec des r&eacute;glages de volume pare-pluie, microphone et haut-parleur<br />Le panneau d'entr&eacute;e peut &ecirc;tre facilement adapt&eacute; pour deux maisons familiales<br />Kit audio combin&eacute;</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T14:28:03.758Z",
+    "updated": "2021-09-21T14:28:03.758Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 80,
+  "fields": {
+    "name": "Combiné Audio pour Kit VideoPhone 3 Fils",
+    "reference": "369505",
+    "slug": "combine-audio-pour-kit-videophone-3-fils",
+    "category": 168,
+    "text": "",
+    "description": "<p>Unit&eacute; audio int&eacute;rieure suppl&eacute;mentaire avec r&eacute;cepteur</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-21T14:31:54.107Z",
+    "updated": "2021-09-21T14:31:54.107Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 81,
+  "fields": {
+    "name": "Interrupteur 10ax Blanc",
+    "reference": "764500",
+    "slug": "interrupteur-10ax-blanc",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T08:12:53.980Z",
+    "updated": "2021-09-26T08:12:53.980Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 82,
+  "fields": {
+    "name": "Va-Et-Vient 10ax Blac",
+    "reference": "764501",
+    "slug": "va-et-vient-10ax-blac",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T08:19:42.275Z",
+    "updated": "2021-09-26T08:19:42.275Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 83,
+  "fields": {
+    "name": "Inter Triple 10a Blanc",
+    "reference": "764503",
+    "slug": "inter-triple-10a-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<p><strong><span>Nilo&eacute;&trade; - interrupteurs, boutons-poussoirs et accessoires</span></strong></p>\r\n<ul>\r\n<li data-info=\"Titre descript. 4.1\"><span>M&eacute;canismes fournis avec couvercles et cadres de support en flow-pack</span></li>\r\n<li data-info=\"Titre descript. 4.2\"><span>A &eacute;quiper de plaques</span></li>\r\n<li data-info=\"Titre descript. 4.3\"><span>Fixation par vis ou griffes (fournies)</span></li>\r\n<li data-info=\"Titre descript. 4.4\"><span>Bornes automatiques ou &agrave; vis</span></li>\r\n</ul>\r\n<p><span><strong><span class=\"goog-text-highlight\">Interrupteurs unidirectionnels - 10 AX - 250 V~</span></strong><br /></span></p>\r\n<ul>\r\n<li data-info=\"Titre descript. 5.1\"><span>Se transforme en fonction &eacute;clairage avec l'accessoire r&eacute;f. 7 645 21/26 (sauf interrupteurs triples et interrupteurs &agrave; simple phase)</span></li>\r\n</ul>\r\n<p><span><strong>3 fois</strong><br /></span></p>\r\n<ul>\r\n<li data-info=\"Titre descript. 6.1\"><span>Bornes &agrave; vis</span></li>\r\n</ul>\r\n<ul>\r\n<li data-info=\"Titre descript. 1\"><span>blanche</span></li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T08:24:29.891Z",
+    "updated": "2021-09-26T08:24:29.891Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 84,
+  "fields": {
+    "name": "Commutateur 10ax Blanc",
+    "reference": "764504",
+    "slug": "commutateur-10ax-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<h1 class=\"h1 namne_details\">Interrupteurs Crois&eacute;</h1>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T08:43:41.667Z",
+    "updated": "2021-10-10T07:29:27.170Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 85,
+  "fields": {
+    "name": "DOUBLE INTER 10AX BLANC",
+    "reference": "764506",
+    "slug": "double-inter-10ax-blanc",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T08:54:25.036Z",
+    "updated": "2021-10-10T07:29:27.236Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 86,
+  "fields": {
+    "name": "Poussoir 6a No Nf Blanc",
+    "reference": "764507",
+    "slug": "poussoir-6a-no-nf-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<h1 class=\"mt-3 mt-md-0 text-center text-md-left product-details-title\">BOUTON SIMPLE INSTANTAN&Eacute;</h1>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T09:00:51.685Z",
+    "updated": "2021-10-10T07:29:27.296Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 87,
+  "fields": {
+    "name": "Double poussoir",
+    "reference": "764508",
+    "slug": "double-poussoir",
+    "category": 197,
+    "text": "",
+    "description": "<h1><span><span class=\"\">Bouton poussoir Nilo&eacute; - NO-NC - 2 postes - 6 A 250 V~ - bornes automatiques - blanc</span></span></h1>\r\n<div class=\"title\"><span>Caract&eacute;ristiques du produit</span></div>\r\n<p><span><span class=\"\"><strong>Boutons poussoirs - 6 A - 250 V~</strong><br /></span></span></p>\r\n<ul>\r\n<li data-info=\"Titre descript. 5.1\"><span>Boutons-poussoirs &agrave; contact NO-NF</span></li>\r\n<li data-info=\"Titre descript. 5.2\"><span>Bornes automatiques</span></li>\r\n<li data-info=\"Titre descript. 5.3\"><span>Se transforme en fonction &eacute;clairage avec l'accessoire r&eacute;f. 7 645 21/26 (sauf interrupteur IP44)</span></li>\r\n</ul>\r\n<p><span><span class=\"\"><strong>2 fois</strong><br /></span></span></p>\r\n<ul>\r\n<li data-info=\"Titre descript. 1\"><span>blanche</span></li>\r\n</ul>\r\n<p><span><strong>Nilo&eacute;&trade; - interrupteurs, boutons-poussoirs et accessoires</strong></span></p>\r\n<ul>\r\n<li data-info=\"Titre descript. 4.1\"><span>M&eacute;canismes fournis avec couvercles et cadres de support en flow-pack</span></li>\r\n<li data-info=\"Titre descript. 4.2\"><span>A &eacute;quiper de plaques</span></li>\r\n<li data-info=\"Titre descript. 4.3\"><span>Fixation par vis ou griffes (fournies)</span></li>\r\n<li data-info=\"Titre descript. 4.4\"><span>Bornes automatiques ou &agrave; vis</span></li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T09:03:18.637Z",
+    "updated": "2021-10-10T07:29:27.353Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 88,
+  "fields": {
+    "name": "Volet-Roulant Inter Blanc",
+    "reference": "764511",
+    "slug": "volet-roulant-inter-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<h1 class=\"mt-3 mt-md-0 text-center text-md-left product-details-title\">OMMUTATEUR DE CONTR&Ocirc;LE DIRECT DES RIDEAUX DE TROIS POSITIONS LE-764511 Nilo&eacute; 10&nbsp;A LEGRAND</h1>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T09:07:50.044Z",
+    "updated": "2021-10-10T07:29:27.420Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 89,
+  "fields": {
+    "name": "Volet-Roulant Poussoir",
+    "reference": "764512",
+    "slug": "volet-roulant-poussoir",
+    "category": 197,
+    "text": "",
+    "description": "<h1 class=\"mt-3 mt-md-0 text-center text-md-left product-details-title\">BOUTON DE LA COMMANDE DIRECTE DES RIDEAUX&nbsp;</h1>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T09:21:43.638Z",
+    "updated": "2021-09-26T09:21:43.638Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 90,
+  "fields": {
+    "name": "2P+TSch Eclips Blanc",
+    "reference": "764529",
+    "slug": "2ptsch-eclips-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<h2 class=\"goods-list-item__title\"><span><span class=\"\">PRISE DE COURANT STANDARD 2P+T NILOE - AVEC VOLETS - BORNES &Agrave; VIS - BLANC</span></span></h2>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T09:31:55.135Z",
+    "updated": "2021-10-10T07:29:27.478Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 91,
+  "fields": {
+    "name": "PRISE 2P ECLIPS BLANC",
+    "reference": "764538",
+    "slug": "prise-2p-eclips-blanc",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T09:43:58.672Z",
+    "updated": "2021-09-26T09:43:58.672Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 92,
+  "fields": {
+    "name": "2X2P+T SECH ECLIPS 1P BLANC",
+    "reference": "764544",
+    "slug": "2x2pt-sech-eclips-1p-blanc",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T13:42:42.370Z",
+    "updated": "2021-09-26T13:42:42.370Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 93,
+  "fields": {
+    "name": "2p+ Fb Eclips Ip44 Blanc",
+    "reference": "764537",
+    "slug": "2p-fb-eclips-ip44-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<h1>PRISE &Eacute;LECTRIQUE SIMPLE&nbsp;<span class=\"nazwa_duza\">LE-764537</span>&nbsp;Niloe 230&nbsp;V 16&nbsp;A IP44 LEGRAND</h1>\r\n<table class=\"STable\" border=\"1\" width=\"100%\" cellspacing=\"0\" cellpadding=\"5\" align=\"center\">\r\n<tbody>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_830\">Tension nominale</span>:</td>\r\n<td class=\"tab_value\">230&nbsp;V / 50&nbsp;Hz</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_3762\">R&eacute;sistance de courant maximale</span>:</td>\r\n<td class=\"tab_value\">16&nbsp;A</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_1516\">Mise &agrave; la terre</span>:</td>\r\n<td class=\"tab_value\"><img title=\"\" src=\"https://shopdelta.eu/img/p_table_true.png\" alt=\"\" border=\"0\" /></td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_8980\">Bornes de c&acirc;ble</span>:</td>\r\n<td class=\"tab_value\">bornes viss&eacute;es</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_3932\">Type de prise</span>:</td>\r\n<td class=\"tab_value\">CEE 7/5</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"no_row_id_30821\">Diaphragme de protection</span>:</td>\r\n<td class=\"tab_value\"><img title=\"\" src=\"https://shopdelta.eu/img/p_table_false.png\" alt=\"\" border=\"0\" /></td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_7162\">Application</span>:</td>\r\n<td class=\"tab_value\">S&eacute;rie des produits Niloe</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_2021\">Montage</span>:</td>\r\n<td class=\"tab_value\">Fixation &agrave; l'aide des griffes ou des vis</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"no_row_id_9084\">Caract&eacute;ristiques principales</span>:</td>\r\n<td class=\"tab_value\">\r\n<ul>\r\n<li><span class=\"article\">Classe d'&eacute;tanch&eacute;it&eacute;</span>&nbsp;:&nbsp;<span class=\"article\">IP44</span></li>\r\n<li>Boitier &eacute;tanche</li>\r\n</ul>\r\n</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_1006\">Couleur</span>:</td>\r\n<td class=\"tab_value\">Blanc</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_32\">Poids</span>:</td>\r\n<td class=\"tab_value\">0.07&nbsp;kg</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"no_row_id_130\">Dimensions</span>:</td>\r\n<td class=\"tab_value\">76&nbsp; x 76&nbsp; x 44&nbsp;mm</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_22236\">Fabricant/Marque</span>:</td>\r\n<td class=\"tab_value\">LEGRAND</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_22124\">Garantie</span>:</td>\r\n<td class=\"tab_value\">2 ans</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T13:46:12.338Z",
+    "updated": "2021-10-10T07:24:59.940Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 94,
+  "fields": {
+    "name": "TraverseeF-F Blanc",
+    "reference": "764549",
+    "slug": "traverseef-f-blanc",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T13:52:37.202Z",
+    "updated": "2021-09-26T13:52:37.202Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 95,
+  "fields": {
+    "name": "Tv Etole Type F Blanc",
+    "reference": "764550",
+    "slug": "tv-etole-type-f-blanc",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T14:00:02.927Z",
+    "updated": "2021-09-26T14:00:02.927Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 96,
+  "fields": {
+    "name": "Tv Terminal Blanc",
+    "reference": "764555",
+    "slug": "tv-terminal-blanc",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T14:06:59.385Z",
+    "updated": "2021-09-26T14:06:59.385Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 97,
+  "fields": {
+    "name": "Rj11 Blanc",
+    "reference": "764569",
+    "slug": "rj11-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<table class=\"STable\" border=\"1\" width=\"100%\" cellspacing=\"0\" cellpadding=\"5\" align=\"center\">\r\n<tbody>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_376\">Fixation</span>:</td>\r\n<td class=\"tab_value\">Fixation &agrave; l'aide des griffes ou des vis</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_44\">Mat&eacute;riau</span>:</td>\r\n<td class=\"tab_value\">Plastique</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_1006\">Couleur</span>:</td>\r\n<td class=\"tab_value\">Blanc</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_7214\">Application</span>:</td>\r\n<td class=\"tab_value\">RJ-11</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_626\">Nombre de sorties</span>:</td>\r\n<td class=\"tab_value\">1&nbsp;</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_7162\">Application</span>:</td>\r\n<td class=\"tab_value\">S&eacute;rie des produits Niloe</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"no_row_id_9084\">Caract&eacute;ristiques principales</span>:</td>\r\n<td class=\"tab_value\">Un m&eacute;canisme rapide et facile de fixation du toron</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_32\">Poids</span>:</td>\r\n<td class=\"tab_value\">0.036&nbsp;kg</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"no_row_id_130\">Dimensions</span>:</td>\r\n<td class=\"tab_value\">76&nbsp; x 76&nbsp; x 38&nbsp;mm</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_22236\">Fabricant/Marque</span>:</td>\r\n<td class=\"tab_value\">LEGRAND</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_22124\">Garantie</span>:</td>\r\n<td class=\"tab_value\">2 ans</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T14:09:55.191Z",
+    "updated": "2021-10-10T07:30:08.291Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 98,
+  "fields": {
+    "name": "Variateur Rot300w Blanc",
+    "reference": "764588",
+    "slug": "variateur-rot300w-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<p>Niloe Variateur universel rotatif 300W blanc</p>\r\n<p><span>Niloe est une s&eacute;rie de Legrand, sp&eacute;cialement cr&eacute;&eacute;e pour tous les types de maisons et d'immeubles de bureaux.&nbsp;Il vous assure toutes les fonctions essentielles : &eacute;clairage, connexion et communication.&nbsp;Variateur universel 300W, peut contr&ocirc;ler des ampoules &agrave; LED d'une puissance de 5W &agrave; 75W, couleur blanche 10AX adapt&eacute;e &agrave; votre maison et bureau.&nbsp;Vous seul pouvez choisir un cadre d&eacute;coratif avec des options parmi 11 couleurs diff&eacute;rentes.</span></p>\r\n<p><strong><span>Fixation</span></strong><span>&nbsp;: Mur</span></p>\r\n<p><strong><span>Mat&eacute;riel</span></strong><span>&nbsp;: Plastique</span></p>\r\n<p><strong><span>Couleur</span></strong><span>&nbsp;: Blanc</span></p>\r\n<p><strong><span>Puissance</span></strong><span>&nbsp;: 10AX</span></p>\r\n<p><strong><span>Tension :&nbsp;</span></strong><span>&nbsp;250V</span></p>\r\n<p><strong>Manufacturer</strong>: Legrand - France</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T14:26:33.562Z",
+    "updated": "2021-09-26T14:26:33.562Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 99,
+  "fields": {
+    "name": "Sortie Cable Asso. Blanc",
+    "reference": "764546",
+    "slug": "sortie-cable-asso-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<div id=\"info\" class=\"products-sec__spec products-sec__spec-info js-product-block-toggler-parent\">\r\n<div class=\"products-sec__spec-info-content js-product-block-toggler-content\" data-init=\"true\"><span><span class=\"\">Sortie de c&acirc;ble Niloe - pour installation multiple - blanc</span></span></div>\r\n</div>\r\n<div id=\"spec\" class=\"products-sec__spec js-product-block-toggler-parent\">\r\n<div class=\"product-link-to-pdf\">\r\n<ul>\r\n<li><span>mat&eacute;riau r&eacute;sistant aux rayures</span></li>\r\n<li><span><span class=\"\">montage universel avec \"griffes\" ou vis dans des bo&icirc;tiers d'installation de 60 mm</span></span></li>\r\n</ul>\r\n</div>\r\n</div>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T14:33:24.182Z",
+    "updated": "2021-09-26T14:33:24.182Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 100,
+  "fields": {
+    "name": "Chargeur 2 USB 2400 MA Blanc",
+    "reference": "764594",
+    "slug": "chargeur-2-usb-2400-ma-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<ul id=\"product-properties\" class=\"m-0 list-unstyled product-properies\" data-hook=\"\">\r\n<li><span class=\"font-weight-bold text-break\">Caract&eacute;ristiques principales :</span>&nbsp;<span class=\"text-break\">Alimentation : 220&nbsp; ... 240&nbsp;V AC Consommation d'&eacute;nergie &lt; 0.1&nbsp;W (mode Standby) Tension de sortie : 5&nbsp;V DC Courant de sortie max. 2400&nbsp;mA Classe II Classe d'&eacute;tanch&eacute;it&eacute; : IP40 Classe de r&eacute;sistance m&eacute;canique : IK04</span></li>\r\n</ul>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T14:46:06.991Z",
+    "updated": "2021-09-26T14:46:06.991Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 101,
+  "fields": {
+    "name": "Plaque simple Blanc",
+    "reference": "665001",
+    "slug": "plaque-simple-blanc",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T14:52:13.551Z",
+    "updated": "2021-09-26T14:52:13.551Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 102,
+  "fields": {
+    "name": "Plaque double 71 Blanc",
+    "reference": "665002",
+    "slug": "plaque-double-71-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<p>plaque-de-finition-double-poste-horizont-vertical-entraxe-71mm-casual-debflex-blanc-brillant-742002-P-37-26547075_1</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T14:57:15.323Z",
+    "updated": "2021-09-26T14:57:15.324Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 103,
+  "fields": {
+    "name": "Plaque triple 71 Blanc",
+    "reference": "665003",
+    "slug": "plaque-triple-71-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<p align=\"JUSTIFY\">Cadre triple &agrave; fixer sur les m&eacute;canismes Niloe. Fixation verticale ou horizontale possible.</p>\r\n<p align=\"JUSTIFY\">Selon vos besoins, nous pouvons fixer des &eacute;l&eacute;ments de l'&eacute;quipement indiqu&eacute; ci-dessous comme \"les &eacute;l&eacute;ments de collaboration\" dans le LE-665003 \".</p>\r\n<table class=\"STable\" border=\"1\" width=\"100%\" cellspacing=\"0\" cellpadding=\"5\" align=\"center\">\r\n<tbody>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_7162\">Application</span>:</td>\r\n<td class=\"tab_value\">S&eacute;rie des produits Niloe</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_1937\">Nombre des segments</span>:</td>\r\n<td class=\"tab_value\">3&nbsp;</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_10284\">Mat&eacute;riau de fabrication</span>:</td>\r\n<td class=\"tab_value\">Mati&egrave;re autoextenguible ABS</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_1006\">Couleur</span>:</td>\r\n<td class=\"tab_value\">Blanc (RAL 9003)</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"article\"><span class=\"row_id_143\">Classe d'&eacute;tanch&eacute;it&eacute;</span></span>:</td>\r\n<td class=\"tab_value\"><span class=\"article\">IP44</span></td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"article\"><span class=\"row_id_7563\">Classe de r&eacute;sistance m&eacute;canique</span></span>:</td>\r\n<td class=\"tab_value\"><span class=\"article\">IK04</span></td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"no_row_id_163\">Temp&eacute;rature de travail</span>:</td>\r\n<td class=\"tab_value\">-5&nbsp;&deg;C ... 35&nbsp;&deg;C</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_32\">Poids</span>:</td>\r\n<td class=\"tab_value\">0.028&nbsp;kg</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"no_row_id_130\">Dimensions</span>:</td>\r\n<td class=\"tab_value\">50.6&nbsp; x 50.6&nbsp;mm (dimension enti&egrave;re du trou)<br />71&nbsp;mm (distance entre les centres des trous)<br />228&nbsp; x 86&nbsp; x 10&nbsp;mm</td>\r\n</tr>\r\n<tr class=\"dark\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_22236\">Fabricant/Marque</span>:</td>\r\n<td class=\"tab_value\">LEGRAND</td>\r\n</tr>\r\n<tr class=\"bright\">\r\n<td class=\"tab_title\" width=\"40%\"><span class=\"row_id_22124\">Garantie</span>:</td>\r\n<td class=\"tab_value\">2 ans</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T15:03:15.254Z",
+    "updated": "2021-10-10T07:30:08.364Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 104,
+  "fields": {
+    "name": "Plaque quadruple 71 Blanc",
+    "reference": "665004",
+    "slug": "plaque-quadruple-71-blanc",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T15:21:05.940Z",
+    "updated": "2021-09-26T15:21:05.940Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 105,
+  "fields": {
+    "name": "Plaque quintuple 71 Blanc",
+    "reference": "665005",
+    "slug": "plaque-quintuple-71-blanc",
+    "category": 197,
+    "text": "",
+    "description": "<p>Plaque de cadre &agrave; 5 groupes pour montage sur les m&eacute;canismes Niloe</p>\r\n<p>Possibilit&eacute; de montage vertical ou horizontal</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-26T15:25:30.720Z",
+    "updated": "2021-09-26T15:25:30.720Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 106,
+  "fields": {
+    "name": "Plaque simple Ivoire",
+    "reference": "665011",
+    "slug": "plaque-simple-ivoire",
+    "category": 197,
+    "text": "",
+    "description": "<h1 class=\"mt-3 mt-md-0 text-center text-md-left product-details-title\">Plaque 1 poste Legrand Nilo&eacute; - lin</h1>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T07:42:46.047Z",
+    "updated": "2021-09-27T07:42:46.047Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 107,
+  "fields": {
+    "name": "Plaque double 71 Ivoire",
+    "reference": "665012",
+    "slug": "plaque-double-71-ivoire",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T07:59:24.567Z",
+    "updated": "2021-09-27T07:59:24.567Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 108,
+  "fields": {
+    "name": "Plaque triple 71 Ivoire",
+    "reference": "665013",
+    "slug": "plaque-triple-71-ivoire",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T08:14:35.699Z",
+    "updated": "2021-09-27T08:14:35.699Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 109,
+  "fields": {
+    "name": "Plaque quadruple 71 Ivoire",
+    "reference": "665014",
+    "slug": "plaque-quadruple-71-ivoire",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T08:25:48.385Z",
+    "updated": "2021-09-27T08:25:48.386Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 110,
+  "fields": {
+    "name": "Plaque simple Rouge",
+    "reference": "665021",
+    "slug": "plaque-simple-rouge",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T08:49:29.093Z",
+    "updated": "2021-09-27T08:49:29.093Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 112,
+  "fields": {
+    "name": "Plaque double 71 Rouge",
+    "reference": "665022",
+    "slug": "plaque-double-71-rouge",
+    "category": 197,
+    "text": "",
+    "description": "<h1 class=\"h1\">&nbsp;</h1>\r\n<p>&nbsp;</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T09:05:06.846Z",
+    "updated": "2021-09-27T09:05:06.846Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 113,
+  "fields": {
+    "name": "Plaque triple 71 Rouge",
+    "reference": "665023",
+    "slug": "plaque-triple-71-rouge",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T09:17:46.745Z",
+    "updated": "2021-09-27T09:17:46.745Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 114,
+  "fields": {
+    "name": "Plaque simple Taupe",
+    "reference": "665031",
+    "slug": "plaque-simple-taupe",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T09:26:10.957Z",
+    "updated": "2021-09-27T09:26:10.957Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 115,
+  "fields": {
+    "name": "Plaque double 71 Taupe",
+    "reference": "665032",
+    "slug": "plaque-double-71-taupe",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T09:37:12.280Z",
+    "updated": "2021-09-27T09:37:12.280Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 116,
+  "fields": {
+    "name": "Plaque triple 71 Taupe",
+    "reference": "665033",
+    "slug": "plaque-triple-71-taupe",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T09:50:08.386Z",
+    "updated": "2021-09-27T09:50:08.386Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 117,
+  "fields": {
+    "name": "Plaque Onyx 1 poste",
+    "reference": "096701",
+    "slug": "plaque-onyx-1-poste",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T10:08:29.553Z",
+    "updated": "2021-09-27T10:08:29.553Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 118,
+  "fields": {
+    "name": "Plaque Fougere 1 poste",
+    "reference": "096703",
+    "slug": "plaque-fougere-1-poste",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T10:21:27.287Z",
+    "updated": "2021-09-27T10:21:27.287Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 119,
+  "fields": {
+    "name": "PLAQUE GALET 1 POSTE",
+    "reference": "096704",
+    "slug": "plaque-galet-1-poste",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T10:31:01.568Z",
+    "updated": "2021-09-27T10:31:01.568Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 120,
+  "fields": {
+    "name": "PLAQUE ARGENT 1 POSTE",
+    "reference": "096705",
+    "slug": "plaque-argent-1-poste",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T10:39:59.147Z",
+    "updated": "2021-09-27T10:39:59.147Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 121,
+  "fields": {
+    "name": "PLAQUE FONTE 1 POSTE",
+    "reference": "096706",
+    "slug": "plaque-fonte-1-poste",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T10:48:16.201Z",
+    "updated": "2021-09-27T10:48:16.201Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 122,
+  "fields": {
+    "name": "PLAQUE PRUNE 1 POSTE",
+    "reference": "096707",
+    "slug": "plaque-prune-1-poste",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T10:58:12.866Z",
+    "updated": "2021-09-27T10:58:12.866Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 123,
+  "fields": {
+    "name": "PLAQUE CACAO 1 POSTE",
+    "reference": "096708",
+    "slug": "plaque-cacao-1-poste",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T11:05:50.637Z",
+    "updated": "2021-09-27T11:05:50.637Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 124,
+  "fields": {
+    "name": "PLAQUE ONYX 2 P ENTRAXE 71MM",
+    "reference": "096711",
+    "slug": "plaque-onyx-2-p-entraxe-71mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T11:14:37.190Z",
+    "updated": "2021-09-27T11:14:37.190Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 125,
+  "fields": {
+    "name": "PLAQUE FOUGERE 2 P 71MM",
+    "reference": "096713",
+    "slug": "plaque-fougere-2-p-71mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T11:26:53.964Z",
+    "updated": "2021-09-27T11:26:53.964Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 126,
+  "fields": {
+    "name": "PLAQUE GALET 2 P ENTRAXE 71MM",
+    "reference": "096714",
+    "slug": "plaque-galet-2-p-entraxe-71mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T12:06:41.643Z",
+    "updated": "2021-09-27T12:06:41.643Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 127,
+  "fields": {
+    "name": "Support à vis pour Mosaic , Céliane ou Soliroc pour 1 poste ou 2 modules",
+    "reference": "080251",
+    "slug": "support-a-vis-pour-mosaic-celiane-ou-soliroc-pour-1-poste-ou-2-modules",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T12:39:34.595Z",
+    "updated": "2021-09-27T13:26:44.266Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 128,
+  "fields": {
+    "name": "Interrupteur ou va-et-vient 10AX 250V~ Mosaic Easy-Led 2 modules - blanc",
+    "reference": "077011",
+    "slug": "interrupteur-ou-va-et-vient-10ax-250v-mosaic-easy-led-2-modules-blanc",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T12:52:06.616Z",
+    "updated": "2021-09-27T13:26:44.356Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 129,
+  "fields": {
+    "name": "PLAQUE ARGENT 2 P ENTRAXE 71MM",
+    "reference": "096715",
+    "slug": "plaque-argent-2-p-entraxe-71mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T13:07:42.642Z",
+    "updated": "2021-09-27T13:07:42.642Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 130,
+  "fields": {
+    "name": "Plaque de finition Mosaic pour 2 modules blanc",
+    "reference": "078802",
+    "slug": "plaque-de-finition-mosaic-pour-2-modules-blanc",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T13:07:49.988Z",
+    "updated": "2021-09-27T13:26:44.490Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 131,
+  "fields": {
+    "name": "PLAQUE FONTE 2 P ENTRAXE 71MM",
+    "reference": "096716",
+    "slug": "plaque-fonte-2-p-entraxe-71mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T13:16:23.663Z",
+    "updated": "2021-09-27T13:16:23.663Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 132,
+  "fields": {
+    "name": "PLAQUE PRUNE 2 P ENTRAXE 71MM",
+    "reference": "096717",
+    "slug": "plaque-prune-2-p-entraxe-71mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T13:29:10.597Z",
+    "updated": "2021-09-27T13:29:10.597Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 133,
+  "fields": {
+    "name": "Interrupteur ou va-et-vient 10AX 250V~ Mosaic Easy-Led 2 modules - blanc voyont",
+    "reference": "000112",
+    "slug": "interrupteur-ou-va-et-vient-10ax-250v-mosaic-easy-led-2-modules-blanc-voyont",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T13:38:41.910Z",
+    "updated": "2021-09-27T13:38:41.910Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 134,
+  "fields": {
+    "name": "PLAQUE CACAO 2 P ENTRAXE 71MM",
+    "reference": "096718",
+    "slug": "plaque-cacao-2-p-entraxe-71mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T13:46:46.496Z",
+    "updated": "2021-09-27T13:46:46.496Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 135,
+  "fields": {
+    "name": "Voyant lumineux 230V 0,15mA - pour mécanismes Céliane",
+    "reference": "067686",
+    "slug": "voyant-lumineux-230v-015ma-pour-mecanismes-celiane",
+    "category": 220,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T13:49:37.624Z",
+    "updated": "2021-09-27T13:49:37.624Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 136,
+  "fields": {
+    "name": "PLAQUE ONYX 3 P ENTRAXE 71MM",
+    "reference": "096721",
+    "slug": "plaque-onyx-3-p-entraxe-71mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T13:55:14.733Z",
+    "updated": "2021-09-27T13:55:14.733Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 137,
+  "fields": {
+    "name": "Interrupteur ou va-et-vient 10AX 250V~ Mosaic Easy-Led 1 module - blanc",
+    "reference": "077001",
+    "slug": "interrupteur-ou-va-et-vient-10ax-250v-mosaic-easy-led-1-module-blanc",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T13:55:38.250Z",
+    "updated": "2021-09-27T13:55:38.250Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 138,
+  "fields": {
+    "name": "PLAQUE FOUGERE 3 P 71MM",
+    "reference": "096723",
+    "slug": "plaque-fougere-3-p-71mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T14:02:41.960Z",
+    "updated": "2021-09-27T14:02:41.960Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 139,
+  "fields": {
+    "name": "Interrupteur ou va-et-vient 10AX 250V~ Mosaic Easy-Led 1 module - blanc VOYONT",
+    "reference": "000256",
+    "slug": "interrupteur-ou-va-et-vient-10ax-250v-mosaic-easy-led-1-module-blanc-voyont",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T14:06:35.316Z",
+    "updated": "2021-09-27T14:06:35.316Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 140,
+  "fields": {
+    "name": "PLAQUE ARGENT 3 P ENTRAXE 71 MM",
+    "reference": "096725",
+    "slug": "plaque-argent-3-p-entraxe-71-mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T14:09:42.478Z",
+    "updated": "2021-09-27T14:09:42.478Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 141,
+  "fields": {
+    "name": "Poussoir ou poussoir inverseur Mosaic Easy-Led 6A 250V~ 2 modules - blanc (2M)",
+    "reference": "077041",
+    "slug": "poussoir-ou-poussoir-inverseur-mosaic-easy-led-6a-250v-2-modules-blanc",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T14:15:50.010Z",
+    "updated": "2021-10-10T08:26:57.389Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 142,
+  "fields": {
+    "name": "PLAQUE FONTE 3 P ENTRAXE 71MM",
+    "reference": "096726",
+    "slug": "plaque-fonte-3-p-entraxe-71mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T14:16:06.907Z",
+    "updated": "2021-09-27T14:16:06.907Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 143,
+  "fields": {
+    "name": "PLAQUE PRUNE 3 P ENTRAXE",
+    "reference": "096727",
+    "slug": "plaque-prune-3-p-entraxe",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T14:26:10.544Z",
+    "updated": "2021-09-27T14:26:10.544Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 144,
+  "fields": {
+    "name": "PLAQUE CACAO 3 P ENTRAXE 71MM",
+    "reference": "096728",
+    "slug": "plaque-cacao-3-p-entraxe-71mm",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T14:31:21.479Z",
+    "updated": "2021-09-27T14:31:21.479Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 145,
+  "fields": {
+    "name": "Poussoir ou poussoir inverseur Mosaic Easy-Led 6A 250V~ 1 module - blanc",
+    "reference": "077031",
+    "slug": "poussoir-ou-poussoir-inverseur-mosaic-easy-led-6a-250v-1-module-blanc",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T14:34:51.549Z",
+    "updated": "2021-09-27T14:34:51.549Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 146,
+  "fields": {
+    "name": "Poussoir ou poussoir inverseur Mosaic Easy-Led 6A 250V~ 1 module - blanc voyont",
+    "reference": "077032",
+    "slug": "poussoir-ou-poussoir-inverseur-mosaic-easy-led-6a-250v-1-module-blanc-voyont",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 5,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T14:40:51.949Z",
+    "updated": "2021-10-10T07:31:21.312Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 147,
+  "fields": {
+    "name": "PLAQUE 1 POSTE CHAMPAGNE",
+    "reference": "397061",
+    "slug": "plaque-1-poste-champagne",
+    "category": 197,
+    "text": "",
+    "description": "<p>Legrand Nilo&eacute; cadre simple, couleur Champagne</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T14:44:48.897Z",
+    "updated": "2021-09-27T14:44:48.897Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 148,
+  "fields": {
+    "name": "PLAQUE 2 POSTES CHAMPAGNE",
+    "reference": "397062",
+    "slug": "plaque-2-postes-champagne",
+    "category": 197,
+    "text": "",
+    "description": "<p>Cadre double Legrand Nilo&eacute;, couleur Champagne</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T14:49:08.356Z",
+    "updated": "2021-09-27T14:49:08.356Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 149,
+  "fields": {
+    "name": "PLAQUE 3 POSTES CHAMPAGNE",
+    "reference": "397063",
+    "slug": "plaque-3-postes-champagne",
+    "category": 197,
+    "text": "Cadre triple Legrand Niloé, couleur Champagne",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T15:01:24.019Z",
+    "updated": "2021-09-27T15:01:24.019Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 150,
+  "fields": {
+    "name": "Support à vis pour Mosaic , Céliane ou Soliroc pour 2 postes ou 4 à 5 modules",
+    "reference": "080252",
+    "slug": "support-a-vis-pour-mosaic-celiane-ou-soliroc-pour-2-postes-ou-4-a-5-modules",
+    "category": 220,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T15:05:09.503Z",
+    "updated": "2021-09-27T15:16:17.727Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 151,
+  "fields": {
+    "name": "Plaque de finition horizontale Mosaic pour 2x2 modules blanc",
+    "reference": "078804",
+    "slug": "plaque-de-finition-horizontale-mosaic-pour-2x2-modules-blanc",
+    "category": 220,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T15:10:37.558Z",
+    "updated": "2021-09-27T15:15:43.797Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 152,
+  "fields": {
+    "name": "Support à vis pour Mosaic , Céliane ou Soliroc pour 3 postes ou 6 à 8 modules",
+    "reference": "080253",
+    "slug": "support-a-vis-pour-mosaic-celiane-ou-soliroc-pour-3-postes-ou-6-a-8-modules",
+    "category": 220,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T15:14:48.322Z",
+    "updated": "2021-09-27T15:15:43.867Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 153,
+  "fields": {
+    "name": "PLAQUE 2 POSTES BOIS FONCE",
+    "reference": "397092",
+    "slug": "plaque-2-postes-bois-fonce",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T15:19:33.954Z",
+    "updated": "2021-09-27T15:19:33.954Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 154,
+  "fields": {
+    "name": "PLAQUE 3 POSTES BOIS FONCE",
+    "reference": "397093",
+    "slug": "plaque-3-postes-bois-fonce",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-27T15:27:15.985Z",
+    "updated": "2021-09-27T15:27:15.985Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 155,
+  "fields": {
+    "name": "Plaque de finition horizontale Mosaic pour 6 modules blanc",
+    "reference": "078816",
+    "slug": "plaque-de-finition-horizontale-mosaic-pour-6-modules-blanc",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T07:20:30.309Z",
+    "updated": "2021-09-28T07:20:30.309Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 156,
+  "fields": {
+    "name": "Prise de courant 2P+T Surface Mosaic 2 modules avec connexion par bornes automatiques - blanc",
+    "reference": "077111",
+    "slug": "prise-de-courant-2pt-surface-mosaic-2-modules-avec-connexion-par-bornes-automatiques-blanc",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T07:27:11.207Z",
+    "updated": "2021-09-28T07:27:11.207Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 157,
+  "fields": {
+    "name": "Prise de courant 2P+T Surface Mosaic 2 modules avec connexion par bornes automatiques - rouge antimicrobien",
+    "reference": "077118",
+    "slug": "prise-de-courant-2pt-surface-mosaic-2-modules-avec-connexion-par-bornes-automatiques-rouge-antimicrobien",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T07:35:07.885Z",
+    "updated": "2021-09-28T07:35:07.885Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 158,
+  "fields": {
+    "name": "Prise RJ11 4 contacts Mosaic 2 modules - blanc",
+    "reference": "078731",
+    "slug": "prise-rj11-4-contacts-mosaic-2-modules-blanc",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T07:40:40.971Z",
+    "updated": "2021-09-28T07:40:40.971Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 159,
+  "fields": {
+    "name": "PLAQUE 2 POSTES BOIS CLAIR",
+    "reference": "397095",
+    "slug": "plaque-2-postes-bois-clair",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T07:46:06.458Z",
+    "updated": "2021-09-28T07:46:06.458Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 160,
+  "fields": {
+    "name": "Prise de courant 2P+T Surface à détrompage Mosaic Link raccordement latéral 2 modules - rouge",
+    "reference": "077114",
+    "slug": "prise-de-courant-2pt-surface-a-detrompage-mosaic-link-raccordement-lateral-2-modules-rouge",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T07:48:45.820Z",
+    "updated": "2021-09-28T07:48:45.820Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 161,
+  "fields": {
+    "name": "Prise RJ45 catégorie6 UTP Mosaic 2 modules - blanc",
+    "reference": "000201",
+    "slug": "prise-rj45-categorie6-utp-mosaic-2-modules-blanc",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T07:56:19.545Z",
+    "updated": "2021-09-28T07:56:19.545Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 162,
+  "fields": {
+    "name": "Plaque Mosaic 2 modules avec membrane étanche IP44 - blanc antimicrobien",
+    "reference": "078880",
+    "slug": "plaque-mosaic-2-modules-avec-membrane-etanche-ip44-blanc-antimicrobien",
+    "category": 195,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T08:01:54.576Z",
+    "updated": "2021-09-28T08:01:54.576Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 163,
+  "fields": {
+    "name": "Interrupteur ou va-et-vient ou commande de VMC Céliane 10AX 230V~",
+    "reference": "067001",
+    "slug": "interrupteur-ou-va-et-vient-ou-commande-de-vmc-celiane-10ax-230v",
+    "category": 220,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T08:24:51.733Z",
+    "updated": "2021-09-28T08:24:51.733Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 164,
+  "fields": {
+    "name": "Prise de courant standard Français Céliane 16A 250V 2P+T bornes automatiques",
+    "reference": "067111",
+    "slug": "prise-de-courant-standard-francais-celiane-16a-250v-2pt-bornes-automatiques",
+    "category": 220,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T08:33:50.667Z",
+    "updated": "2021-09-28T08:33:50.667Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 165,
+  "fields": {
+    "name": "PLAQUE 3 POSTES BOIS CLAIR",
+    "reference": "397097",
+    "slug": "plaque-3-postes-bois-clair",
+    "category": 197,
+    "text": "",
+    "description": "",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": 6,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T08:37:59.254Z",
+    "updated": "2021-09-28T08:37:59.254Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 166,
+  "fields": {
+    "name": "FICHE 16A 2P+T 230V IP44",
+    "reference": "555124",
+    "slug": "fiche-16a-2pt-230v-ip44",
+    "category": 221,
+    "text": "",
+    "description": "<p>Fiche mobile droite P17 IP44<br />Bleu - 200V~ &agrave; 250V~ - 16A - 2P+T<br />Plastique</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T08:53:24.234Z",
+    "updated": "2021-09-28T08:53:24.234Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 167,
+  "fields": {
+    "name": "FICHE 16A 3P+T 230V IP44",
+    "reference": "555128",
+    "slug": "fiche-16a-3pt-230v-ip44",
+    "category": 221,
+    "text": "",
+    "description": "<p>Fiche mobile droite P17 IP44 16A - 380V~ &agrave; 415V~ - 3P+T</p>\r\n<p>P 17 - BT 16 et 32 A - IP 44 - fiches et prises mobiles- IK 09 sauf prise saillie IK 08- Mati&egrave;re : plastique<br />Fiches mobiles droites- Serrage du c&acirc;ble et fermeture sans outil- Orientation unique des vis de connexion- Livr&eacute;es non verrouill&eacute;esRouge 380/415 V~ - 3P+T - 16 A :</p>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T08:57:56.818Z",
+    "updated": "2021-09-28T08:57:56.818Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 168,
+  "fields": {
+    "name": "FICHE 16A 4P+T 230V IP44",
+    "reference": "555129",
+    "slug": "fiche-16a-4pt-230v-ip44",
+    "category": 221,
+    "text": "",
+    "description": "<h1 id=\"title\" class=\"a-size-large a-spacing-none\"><span id=\"productTitle\" class=\"a-size-large product-title-word-break\">Legrand 555129 Fiche mobile droite P17 IP44 16A, 380V~ &agrave; 415V~, 3P+N+T</span></h1>\r\n<div id=\"featurebullets_feature_div\" class=\"celwidget\" data-feature-name=\"featurebullets\" data-csa-c-id=\"v58aue-yrqj83-h7o6lk-gfxyb5\" data-cel-widget=\"featurebullets_feature_div\">\r\n<div id=\"feature-bullets\" class=\"a-section a-spacing-medium a-spacing-top-small\">\r\n<ul class=\"a-unordered-list a-vertical a-spacing-mini\">\r\n<li><span class=\"a-list-item\">Fiche mobile droite p 17</span></li>\r\n<li><span class=\"a-list-item\">380/415 volts - 16 amp&egrave;res</span></li>\r\n<li><span class=\"a-list-item\">3p&ocirc;les + terre + neutre - indice de protection 44</span></li>\r\n<li><span class=\"a-list-item\">Serrage du c&acirc;ble et fermeture sans outil</span></li>\r\n<li><span class=\"a-list-item\">Orientation unique des vis de connexion</span></li>\r\n</ul>\r\n</div>\r\n</div>\r\n<div id=\"bissProductSpecification_feature_div\" class=\"celwidget\" data-feature-name=\"bissProductSpecification\" data-csa-c-id=\"5kgc9u-q90o4-yc9xp8-gurvqu\" data-cel-widget=\"bissProductSpecification_feature_div\"></div>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T09:03:04.221Z",
+    "updated": "2021-09-28T09:03:04.221Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 169,
+  "fields": {
+    "name": "SOCLE SAIL. 16A 2P+T 110V IP44",
+    "reference": "555151",
+    "slug": "socle-sail-16a-2pt-110v-ip44",
+    "category": 221,
+    "text": "",
+    "description": "<div id=\"product-description-short-1395\" class=\"product-description-short sm-bottom\">\r\n<p>LEGRAND - PRISE 16A 2P+E 110/130V IP44, P17</p>\r\n</div>\r\n<div class=\"product-information light-box-bg mb-3\">\r\n<div class=\"product-prices sm-bottom\">\r\n<div class=\"d-flex flex-wrap align-items-center\"><span><span class=\"\">BS EN conforme 60309-1 et IEC 60309-1 et BS EN 60309-2 et IEC 60309-2</span></span><br /><span><span class=\"\">IP 44 selon la norme&nbsp;</span><span class=\"\">BS EN 60529 et IEC 60529</span></span><br /><span><span class=\"\">IK 09 selon la norme&nbsp;</span><span class=\"\">BS EN 62262 et IEC 62262</span></span><br /><span><span class=\"\">Mati&egrave;re: polyamide 6</span></span><br /><span><span class=\"\">Autoextinguible : 850 &deg;C (support des parties actives) / 650 &deg;C (bo&icirc;tier plastique)</span></span></div>\r\n</div>\r\n</div>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T09:07:46.516Z",
+    "updated": "2021-09-28T09:07:46.517Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 170,
+  "fields": {
+    "name": "SOCLE SAIL. 16A 2P+T 230V IP44",
+    "reference": "000118",
+    "slug": "socle-sail-16a-2pt-230v-ip44",
+    "category": 221,
+    "text": "",
+    "description": "<h1 class=\"mt-3 mt-md-0 text-center text-md-left product-details-title\">Prise saillie fixe P17 IP44 16A - 200V~ &agrave; 250V~ - 2P+T</h1>",
+    "price": "1.00",
+    "old_price": null,
+    "gamme": null,
+    "actif": true,
+    "new": true,
+    "top": true,
+    "status": "N",
+    "stock": 1,
+    "created": "2021-09-28T09:10:24.274Z",
+    "updated": "2021-09-28T09:10:24.274Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 171,
+  "fields": {
+    "name": "SOCLE SAIL. 16A 3P+T 415V IP44",
+    "reference": "555158",
+    "slug": "socle-sail-16a-3pt-415v-ip44",
+    "category": 221,
+    "text": "",
+    "description": 

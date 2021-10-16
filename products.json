@@ -1,0 +1,672 @@
+[
+    {
+        "model": "business.business",
+        "pk": 1,
+        "fields": {
+            "name": "Kahraba Center",
+            "logo": "images/logos/LOGO_KAHRABA_CENTER_Ks9Fpm3.png",
+            "logo_negatif": "images/slides/LOGO_KAHRABA_CENTER.png",
+            "title": "Kahraba Center | Domotique",
+            "adress": "Kahraba Center, Dar El Beïda, el Hamiz SNTP",
+            "email": "dg1@kahrabacenter.com",
+            "email2": "",
+            "phone": "+213 561 556 050",
+            "phone2": "",
+            "about": "<center>\r\n<h1 class=\"text-uppercase\"><span style=\"font-size: 18pt; font-family: helvetica, arial, sans-serif;\">KAHRABA CENTER FOURNISSEUR DES GRANDES MARQUES ELECTRIQUES POUR PROFESSIONNELS ET PARTICULIERS</span></h1>\r\n</center>\r\n<section class=\"ftco-section ftco-no-pb\"><center>\r\n<div class=\"container\">\r\n<div class=\"row no-gutters \">\r\n<div class=\"my-4\">\r\n<h4 class=\"text-center\" style=\"text-align: left;\"><span style=\"font-family: helvetica, arial, sans-serif;\">Sp&eacute;cialis&eacute;e dans la distribution professionnelle de mat&eacute;riel et solutions &eacute;lectriques pour le march&eacute; du b&acirc;timent, de l&rsquo;industrie et de l&rsquo;Energie. Nous distribuons les plus grandes marques, les derni&egrave;res innovations, n&eacute;gocions les meilleurs prix et livrons nos clients sur leurs chantiers partout en Alg&eacute;rie. Depuis plus de 30 ann&eacute;es, nous sommes la r&eacute;f&eacute;rence pour nos partenaires.</span></h4>\r\n</div>\r\n</div>\r\n</div>\r\n</center></section>",
+            "about_photo": "slides/214835306_112340861112496_3655238098754017932_n.png",
+            "facebook": "https://www.facebook.com/kahrabacntr/",
+            "insta": null,
+            "twitter": null,
+            "google_plus": null,
+            "youtube": null,
+            "chat_code": "",
+            "pixel": "",
+            "analytics": "",
+            "contact_message": "",
+            "google_maps": ""
+        }
+    },
+    {
+        "model": "business.slide",
+        "pk": 1,
+        "fields": {
+            "photo": "slides/Page_daccueil_grand_slide_haut_7l06pYy.png",
+            "title": "Titre",
+            "sub_title": "Sous titre",
+            "url": "http://127.0.0.1:8000/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.slide",
+        "pk": 2,
+        "fields": {
+            "photo": "slides/Page_daccueil_grand_slide_haut2.png",
+            "title": "DEUXIEME SLIDE",
+            "sub_title": "SOUS-TITRE",
+            "url": "http://127.0.0.1:8000/produits",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.threephotos",
+        "pk": 1,
+        "fields": {
+            "photo": "slides/Page_dacceuil_3_Slides_8.png",
+            "url": "http://127.0.0.1:8000/"
+        }
+    },
+    {
+        "model": "business.threephotos",
+        "pk": 5,
+        "fields": {
+            "photo": "slides/img-configurateur-celiane.gif",
+            "url": "http://127.0.0.1:8000/"
+        }
+    },
+    {
+        "model": "business.threephotos",
+        "pk": 6,
+        "fields": {
+            "photo": "slides/Page_dacceuil_3_Slides_6.png",
+            "url": "http://127.0.0.1:8000/produits"
+        }
+    },
+    {
+        "model": "business.dualbanner",
+        "pk": 2,
+        "fields": {
+            "photo": "slides/570x200_PDYoYPd.png",
+            "url": "http://127.0.0.1:8000/produits",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.dualbanner",
+        "pk": 3,
+        "fields": {
+            "photo": "slides/octopus_signature.jpg",
+            "url": "http://127.0.0.1:8000/produits",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.largebanner",
+        "pk": 1,
+        "fields": {
+            "photo": "slides/Page_daccueil_grand_banner_bas.png",
+            "title": "BIG TITLE",
+            "sub_title": "BIG SUB TITLE",
+            "url": "http://127.0.0.1:8000/"
+        }
+    },
+    {
+        "model": "business.counter",
+        "pk": 1,
+        "fields": {
+            "name": "Années d’expérience",
+            "before": null,
+            "number": 30,
+            "icon": "icons/3.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.counter",
+        "pk": 2,
+        "fields": {
+            "name": "Références en stock",
+            "before": null,
+            "number": "5000",
+            "icon": "icons/2.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.counter",
+        "pk": 3,
+        "fields": {
+            "name": "Clients satisfaits",
+            "before": null,
+            "number": 4735,
+            "icon": "icons/download.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.counter",
+        "pk": 4,
+        "fields": {
+            "name": "Projets réalisés",
+            "before": "+",
+            "number": 400,
+            "icon": "icons/4.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 3,
+        "fields": {
+            "title": "Hôtel Sheraton",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T13:39:33.872Z",
+            "updated": "2021-10-04T13:53:39.565Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 4,
+        "fields": {
+            "title": "El Aurassi Hôtel",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:06:25.848Z",
+            "updated": "2021-10-04T14:06:25.848Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 5,
+        "fields": {
+            "title": "Aymen Promotion Immobilière",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:08:22.327Z",
+            "updated": "2021-10-04T14:08:22.327Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 6,
+        "fields": {
+            "title": "Alco Immobilière",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:09:47.333Z",
+            "updated": "2021-10-04T14:09:47.333Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 7,
+        "fields": {
+            "title": "GAEA Promotion",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:11:01.845Z",
+            "updated": "2021-10-04T14:30:34.737Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 8,
+        "fields": {
+            "title": "CRCEG",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:31:46.098Z",
+            "updated": "2021-10-04T14:31:46.098Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 9,
+        "fields": {
+            "title": "CRCC",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:33:12.881Z",
+            "updated": "2021-10-04T14:35:23.225Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 10,
+        "fields": {
+            "title": "Groupe GICA",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:36:55.066Z",
+            "updated": "2021-10-04T14:36:55.066Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 11,
+        "fields": {
+            "title": "Hikma.",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:40:09.547Z",
+            "updated": "2021-10-04T14:40:09.547Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 12,
+        "fields": {
+            "title": "Algérie Télécom",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:42:55.171Z",
+            "updated": "2021-10-04T14:43:52.849Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 13,
+        "fields": {
+            "title": "Groupe Cosider",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:45:32.751Z",
+            "updated": "2021-10-04T14:47:23.699Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 14,
+        "fields": {
+            "title": "Sonatrach",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:50:00.523Z",
+            "updated": "2021-10-04T14:50:11.297Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 15,
+        "fields": {
+            "title": "SEAAL",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:51:56.399Z",
+            "updated": "2021-10-04T14:52:33.907Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 16,
+        "fields": {
+            "title": "SAA Assurances",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:55:36.426Z",
+            "updated": "2021-10-04T14:56:32.817Z"
+        }
+    },
+    {
+        "model": "business.realisation",
+        "pk": 17,
+        "fields": {
+            "title": "Banque de Développement Local BDL",
+            "description": "",
+            "actif": true,
+            "created": "2021-10-04T14:58:55.658Z",
+            "updated": "2021-10-04T14:58:55.658Z"
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 6,
+        "fields": {
+            "realisation": 3,
+            "image": "images/projets/14566_203353005438_197853115438_4002637_2308014_n.jpg",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 7,
+        "fields": {
+            "realisation": 4,
+            "image": "images/projets/el-aurassi-hotel-algiers.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 8,
+        "fields": {
+            "realisation": 5,
+            "image": "images/projets/229353381_3023408434597535_2423971715589186465_n.jpg",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 9,
+        "fields": {
+            "realisation": 6,
+            "image": "images/projets/alco_logo.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 10,
+        "fields": {
+            "realisation": 7,
+            "image": "images/projets/117427880_120704636396521_2816971443785417501_n.jpg",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 11,
+        "fields": {
+            "realisation": 8,
+            "image": "images/projets/crceg.jpg",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 12,
+        "fields": {
+            "realisation": 9,
+            "image": "images/projets/CRCCLOGO.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 13,
+        "fields": {
+            "realisation": 10,
+            "image": "images/projets/mini-logo360x220.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 14,
+        "fields": {
+            "realisation": 11,
+            "image": "images/projets/Hik_Logo_Primary_Coral_rgb.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 15,
+        "fields": {
+            "realisation": 12,
+            "image": "images/projets/logo_Algérie_Télécom_vIdvcjT.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 16,
+        "fields": {
+            "realisation": 13,
+            "image": "images/projets/téléchargement_2.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 17,
+        "fields": {
+            "realisation": 14,
+            "image": "images/projets/Sonatrach.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 18,
+        "fields": {
+            "realisation": 15,
+            "image": "images/projets/a3839c7c36b8c4ccd5f43d5e767dbe2f_M.jpg",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 19,
+        "fields": {
+            "realisation": 16,
+            "image": "images/projets/saa-assurances-seeklogo_oZeTaMV.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.realisationphotos",
+        "pk": 20,
+        "fields": {
+            "realisation": 17,
+            "image": "images/projets/Logo_BDL_.png",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 1,
+        "fields": {
+            "logo": "icons/Legrand-Red-JPG.jpg",
+            "siteweb": "https://www.legrand.fr/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 2,
+        "fields": {
+            "logo": "icons/1280px-ABB_logo.svg.png",
+            "siteweb": "https://global.abb/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 3,
+        "fields": {
+            "logo": "icons/Philips-Logo-BSR-Group.png",
+            "siteweb": "https://www.philips.fr/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 11,
+        "fields": {
+            "logo": "icons/CTORCH.png",
+            "siteweb": "https://www.zjlamp.com/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 12,
+        "fields": {
+            "logo": "icons/téléchargement_2.png",
+            "siteweb": "https://www.wellmaxgroup.com/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 13,
+        "fields": {
+            "logo": "icons/RGB-COMMUNICATIONS-PARTNER-WITH-LANDE-AS-EXCLUSIVE-DISTRIBUTOR-FOR-UK.jpg",
+            "siteweb": "http://lande.fr/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 14,
+        "fields": {
+            "logo": "icons/téléchargement_4.png",
+            "siteweb": "https://hager.com/fr",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 15,
+        "fields": {
+            "logo": "icons/Fichier_1.png",
+            "siteweb": "https://chintglobal.com/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 16,
+        "fields": {
+            "logo": "icons/1200px-Elsewedy_Electric_Logo.svg.png",
+            "siteweb": "https://www.elsewedyelectric.com/en/home/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 17,
+        "fields": {
+            "logo": "icons/logo-videx-en.png",
+            "siteweb": "https://www.videx.it/en/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 18,
+        "fields": {
+            "logo": "icons/SOCOMEC.png",
+            "siteweb": "https://www.socomec.fr/fr",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 21,
+        "fields": {
+            "logo": "icons/telesystem_logo.png",
+            "siteweb": "https://www.telesystem.us/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 22,
+        "fields": {
+            "logo": "icons/logohd-red.png",
+            "siteweb": "https://www.linx-com.com/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 23,
+        "fields": {
+            "logo": "icons/logo.png",
+            "siteweb": "https://www.sylvania-lighting.com/fr-fr/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 24,
+        "fields": {
+            "logo": "icons/Fichier_2.png",
+            "siteweb": "https://www.osram.fr/cb/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 25,
+        "fields": {
+            "logo": "icons/Fichier_3.png",
+            "siteweb": "https://www.generalcable.com/eu/fr",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 26,
+        "fields": {
+            "logo": "icons/Fichier_4.png",
+            "siteweb": "https://www.se.com/dz/fr/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 27,
+        "fields": {
+            "logo": "icons/Fichier_5.png",
+            "siteweb": "https://www.somfy.fr/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 28,
+        "fields": {
+            "logo": "icons/Fichier_6.png",
+            "siteweb": "https://www.commax.com/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 29,
+        "fields": {
+            "logo": "icons/Fichier_8.png",
+            "siteweb": "https://www.se.com/fr/fr/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 30,
+        "fields": {
+            "logo": "icons/Fichier_10.png",
+            "siteweb": "https://www.emerson.com/fr-fr",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 31,
+        "fields": {
+            "logo": "icons/Fichier_11.png",
+            "siteweb": "https://www.eaton.com/fr/fr",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 32,
+        "fields": {
+            "logo": "icons/Fichier_12.png",
+            "siteweb": "https://www.drakauk.com/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 33,
+        "fields": {
+            "logo": "icons/crbst_logocabel.png",
+            "siteweb": "https://www.cabel-dz.com/",
+            "actif": true
+        }
+    },
+    {
+        "model": "business.partner",
+        "pk": 34,
+        "fields": {
+            "logo": "icons/téléchargement_5.png",
+            "siteweb": "https://www.catel-dz.com/",
+            "actif": true
+        }
+    }
+]

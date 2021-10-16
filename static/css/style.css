@@ -245,6 +245,9 @@ span.tooltip-content {
 .nice-select .option:hover {
 	color: #ffffff;
 }
+.nice-select .wide {
+	overflow-y: scroll;
+}
 iframe {
 	width: 100%;
 	height: 300px;
@@ -539,7 +542,7 @@ textarea:focus {
 /* Slider Progress Bar */
 .slider-active .owl-item.active .slider-progress {
 	-webkit-animation: 5000ms ease-in-out 0s normal none 1 running timebar;
-	animation: 10000ms ease-in-out 0s normal none 1 running timebar;
+	animation: 4000ms ease-in-out 0s normal none 1 running timebar;
 	background: rgba(0, 0, 0, .3);
 	height: 5px;
 	left: 0;
@@ -5003,7 +5006,8 @@ span.required {
   min-height: 30px;
 }
 .product-image > a img {
-  width: 100%;
+width: auto;
+max-height: 200px;
 }
 .shop-products-wrapper .tab-content .tab-pane.active {
     display: block;

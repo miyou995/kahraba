@@ -5,8 +5,9 @@ from django.urls import path, include
 from config.settings import base
 from django.conf.urls.static import static
 
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+
     path('', include("core.urls")),
     path('', include("business.urls")),
     path('cart/', include("cart.urls")),
@@ -23,4 +24,11 @@ urlpatterns += static(base.MEDIA_URL, document_root=base.MEDIA_ROOT)
 if base.DEBUG:
     import debug_toolbar
     urlpatterns += path('__debug__/', include(debug_toolbar.urls)),
+    urlpatterns += path('admin/', admin.site.urls),
+else:
+    urlpatterns += path('kahraba-admin/', admin.site.urls),
+
+
+
+
 

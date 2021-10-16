@@ -188,7 +188,7 @@ def cart_one_add(request, product_id):
         'total_price': cart.get_total_price(),
         'length' : len(cart),
     }
-    return render(request, 'snipetts/cart-count.html',context)
+    return render(request, 'snippets/cart-count.html',context)
     # return HttpResponse(len(cart))
     # pass
 
@@ -217,10 +217,10 @@ def cart_one_add(request, product_id):
 #         print('lha9t')
 #         # return redirect('cart:cart_detail')
 #         if request.htmx:
-#             return render(request, 'snipetts/cart-rows.html',  context)
+#             return render(request, 'snippets/cart-rows.html',  context)
 #         # except:
 #         #     print('THE form', form)
-#     return render(request, 'snipetts/cart-rows.html',  context)
+#     return render(request, 'snippets/cart-rows.html',  context)
 
 
 
@@ -248,15 +248,15 @@ def cart_product_update(request, pk):
         print('lha9t')
         # return redirect('cart:cart_detail')
         if request.htmx:
-            return render(request, 'snipetts/cart-row.html',  context)
+            return render(request, 'snippets/cart-row.html',  context)
         # except:
         #     print('THE form', form)
-    return render(request, 'snipetts/cart-rows.html',  context)
+    return render(request, 'snippets/cart-rows.html',  context)
 
 
     if request.htmx:
         print('yes htmx')
-        return render(request, 'snipetts/cart-rows.html',  context)
+        return render(request, 'snippets/cart-rows.html',  context)
     return render(request, 'cart.html', {'cart' : cart})
 
 def cart_remove(request, product_id):

@@ -3,25 +3,59 @@
 {% load mptt_tags %}
 
 {% block content %}
-<div class="slider-with-banner" style="margin-top: 20px;">
-    <div class="">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="slider-area pt-sm-30 pt-xs-30">
-                    <div class="slider-active owl-carousel">
-                        {% for slide in big_slides %}
-                        <a href="{{slide.url}}">
-                            <div class="single-slide align-center-left animation-style-02 bg-4" style="background-image: url({{slide.photo.url}});">
-                                <div class="slider-progress"></div>
+        <div class="slider-with-banner" style="margin-top: 20px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <!--Category Menu Start-->
+                        <div class="category-menu">
+                            <div class="category-heading">
+                                <h2 class="categories-toggle"><span>categories</span></h2>
                             </div>
-                        </a>
-                        {% endfor %}
+                            <div id="cate-toggle" class="category-menu-list">
+                                <ul>
+                                    {% for category in categories %}
+                                        <li class="right-menu {% if forloop.counter > 8 %}rx-child{% endif %}"><a class="tree-title" href="{{category.get_absolute_url}}">{{category.name}}</a>
+                                            {% if category.children.count > 0 %}
+                                                <ul class="cat-mega-menu">
+                                                    {% for tree in category.children.all %}
+                                                        <li class="right-menu cat-mega-title">
+                                                            <a href="{{node.get_absolute_url}}">{{tree.name}}</a>
+                                                            <ul>
+                                                                {% for sub in tree.children.all %}
+                                                                    <li><a href="{{sub.get_absolute_url}}">{{sub.name}}</a></li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            {% endif %}
+                                        </li>
+                                    {% endfor %}  
+                                    <li class="rx-parent">
+                                        <a class="rx-default">Afficher Plus</a>
+                                        <a class="rx-show">Afficher Moins</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="slider-area pt-sm-30 pt-xs-30">
+                            <div class="slider-active owl-carousel">
+                                {% for slide in big_slides %}
+                                    <a href="{{slide.url}}">
+                                        <div class="single-slide align-center-left animation-style-02 bg-4" style="background-image: url({{slide.photo.url}});">
+                                            <div class="slider-progress"></div>
+                                        </div>
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
         <!-- Begin Li's Static Banner Area -->
         <div class="li-static-banner pt-20 pt-sm-30 pt-xs-30">
             <div class="container">
@@ -54,7 +88,7 @@
                             <div class="special-product-active owl-carousel">
                                 {% for product in new_products %}
                                     <div class="col-lg-12">
-                                        {% include "snipetts/product-block.html" %}
+                                        {% include "snippets/product-block.html" %}
                                     </div>
                                 {% endfor %}
                             </div>
@@ -73,16 +107,18 @@
                     <div class="col-lg-12">
                         <div class="li-banner-2 pt-15 pb-15">
                             <div class="row">
-                                <!-- Begin Single Banner Area -->
-                                {% for banner in dual_banners %}
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="single-banner">
-                                            <a href="{{banner.url}}">
-                                                <img src="{{banner.photo.url}}" alt="Li's Static Banner">
-                                            </a>
+                                {% if dual_banners.count == 2 %}
+                                    {% for banner in dual_banners %}
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="single-banner">
+                                                <a href="{{banner.url}}">
+                                                    <img src="{{banner.photo.url}}" alt="Li's Static Banner">
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                {% endfor %}
+                                    {% endfor %}
+                                {% endif %}
+
                             </div>
                         </div>
                     </div>
@@ -122,7 +158,7 @@
                                         <div class="product-active owl-carousel">
                                             {% for product in cat.products.all %}
                                                 <div class="col-lg-12">
-                                                    {% include "snipetts/product-block.html" %}
+                                                    {% include "snippets/product-block.html" %}
                                                 </div>
                                             {% endfor %}
                                         </div>

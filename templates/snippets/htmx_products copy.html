@@ -1,0 +1,67 @@
+{% load static %}
+<div class="col-lg-9 order-1 order-lg-2" id="removed-products">
+    <div class="single-banner shop-page-banner">
+        <div class="row">
+            {% for cat in category.get_children %}
+            <div class="col-sm-6 col-md-4">
+                <a href="{{cat.get_absolute_url}}">
+                <div class="cat-box pt-3 d-flex" >
+                        <span class="d-inline-block pr-10">
+                            <span class="d-flex category-span">
+                                {% if cat.icon %}
+                                    <img class="d-block img-fluid" src="{{cat.icon.url}}" alt="{{cat.name}}" >
+                                {% else %}
+                                    <img class="d-block img-fluid" src="{% static "images/icons/category.png" %}" alt="no icon" >
+                                {% endif %}
+                            </span>
+                        </span>
+                        <span class="align-middle d-inline-block text">{{cat.name}}</span>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="shop-top-bar mt-30">
+        <div class="shop-bar-inner">
+            <div class="product-view-mode">
+                <ul class="nav shop-item-filter-list" role="tablist">
+                    <li class="active" role="presentation"><a aria-selected="true" class="active show" data-toggle="tab" role="tab" aria-controls="grid-view" href="#grid-view"><i class="fa fa-th"></i></a></li>
+                    <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="list-view" href="#list-view"><i class="fa fa-th-list"></i></a></li>
+                </ul>
+            </div>
+            <div class="toolbar-amount">
+                <span>{{products.count}} produit trouver</span>
+            </div>
+        </div>
+    </div>
+    <div class="shop-products-wrapper" id="removed-products">
+        <div class="tab-content">
+            <div id="grid-view" class="tab-pane fade active show" role="tabpanel">
+                <div class="product-area shop-product-area">
+                    <div class="row">
+                        {% for product in products %}
+                            <div class="col-lg-4 col-md-4 col-sm-6 mt-40">
+                                {% include "snippets/product-block.html" %}
+                            </div>
+                        {% empty %}
+                            <h4 class="ml-5">Aucun produit trouver pour votre recherche</h4>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div id="list-view" class="tab-pane fade product-list-view" role="tabpanel">
+                <div class="row">
+                    <div class="col">
+                        {% for product in products %}
+                            {% include "snippets/product-list-view.html" %}
+                        {% empty %}
+                            <h4 class="ml-5">Aucun produit trouver pour votre recherche</h4>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</div>

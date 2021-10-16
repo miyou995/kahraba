@@ -1,0 +1,7 @@
+<label>Commune <span class="required">*</span></label>
+<select class="nice-select wide" name="commune" id="communesId" required>
+    <option value="">---------</option>
+{% for commune in communes %}
+<option value="{{ commune.id }}">{{ commune.name }}</option>
+{% endfor %}
+</select>

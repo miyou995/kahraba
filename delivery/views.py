@@ -10,7 +10,7 @@ def load_communes(request):
     else:
         communes = []
     # print('les wilayas', communes)
-    return render(request, 'snipetts/communes_options.html', {'communes': communes})
+    return render(request, 'snippets/communes_options.html', {'communes': communes})
 
 def delivery_cost(request):
     wilaya_id = request.GET.get('wilaya_id')
@@ -19,5 +19,5 @@ def delivery_cost(request):
         cost = wilaya.price
     else:
         cost = ''
-    return render(request, 'snipetts/delivery_cost.html', {'cost' : cost})
+    return render(request, 'snippets/delivery_cost.html', {'cost' : cost})
 

@@ -8,8 +8,13 @@ admin.site.enable_nav_sidebar = False
 admin.site.unregister(Group)
 from django.db.models import Count
 from django.db import models
+from import_export.admin import ImportExportModelAdmin, ExportMixin
+from import_export import resources
+from import_export.fields import Field
+from import_export.widgets import ManyToManyWidget
+from django.contrib.admin import SimpleListFilter
 
- 
+
 class AtributesInline(admin.TabularInline):
     model = Atribute
 
@@ -18,7 +23,6 @@ class GammesInline(admin.TabularInline):
 
 class ProductDocumentInline(admin.TabularInline):
     model = ProductDocument
-
 
 class AtributesValueInline(admin.TabularInline):
     model = AtributesValue
@@ -49,7 +53,6 @@ class PhotosLinesAdmin(admin.TabularInline):
 #     inlines = [AtributesInline]
 
 
-
 class BrandAdmin(admin.ModelAdmin):
     list_display = ('id', 'name',  'actif')
     list_display_links = ('id','name' )
@@ -57,7 +60,6 @@ class BrandAdmin(admin.ModelAdmin):
     list_editable = [ 'actif']
     search_fields = ('name',)
     inlines = [GammesInline]
-
 
 
 class CategoryAdmin(DjangoMpttAdmin):
@@ -74,20 +76,47 @@ class CategoryAdmin(DjangoMpttAdmin):
     list_editable = [ 'actif']
     search_fields = ('name',)
     exlude = ['slug']
-    
 
 
-class ProductAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'category', 'old_price',  'price', 'new', 'top', 'actif', 'status')
+class HasImages(SimpleListFilter):
+    title = "Photos" 
+    parameter_name ="pic"
+        # return Product.objects.filter(photos=True)
+    def lookups(self, request, model_admin):
+        return (
+            ('true', 'Avec Photos'),
+            ('false', 'Sans Photos')
+        )
+    def queryset(self, request, queryset):
+        if not self.value():
+            return queryset
+        if self.value().lower() == 'true':
+            return Product.objects.filter(photos__isnull=False)
+        elif self.value().lower() == 'false':
+            return Product.objects.filter(photos__isnull=True)
+
+class ProductResource(resources.ModelResource):
+    class Meta:
+        model = Product
+        # exclude = ('confirmer', )
+        # widget = ManyToManyWidget(Country, field='name')
+        fields = ('id', 'name', 'price', 'reference','category','text','old_price','gamme','specifications')
+        export_product = ('id', 'name', 'price', 'reference','category','text','old_price','gamme','specifications')
+
+
+class ProductAdmin(ExportMixin, admin.ModelAdmin):
+
+    list_display = ('id', 'name', 'category', 'old_price',  'price', 'new', 'top', 'actif', 'stock','status')
     prepopulated_fields = {"slug": ("name",)}
     list_display_links = ('id','name' )
     list_per_page = 40
-    list_filter = ('gamme', 'category','new')
-    list_editable = ['category', 'price', 'new', 'top', 'actif', 'old_price', 'status']
+    list_filter = ('gamme',HasImages ,'new')
+    list_editable = ['category', 'price', 'new', 'top', 'actif', 'old_price', 'stock','status']
     search_fields = ('name','reference')
     exlude = ['slug']
     inlines = [ProductDetailInline, ProductDocumentInline, PhotosLinesAdmin]# a comenter pour KAHRABACENTER.com
     save_as= True
+    resource_class = ProductResource
     
 
 # Contact
@@ -105,18 +134,15 @@ class ContactFormAdmin(admin.ModelAdmin):
     search_fields = ('id', 'phone', 'email')
 
 
-
 class PhotosAdmin(admin.ModelAdmin):
     def image_tag(self):
-        return format_html('<img src="{}" height="150"  />'.format(self.big_slide.url))
+        return format_html('<img src="{}" height="150"/>'.format(self.big_slide.url))
     image_tag.short_description = 'Image'
     image_tag.allow_tags = True
     list_display = ('id', image_tag, 'actif', 'is_big', 'is_small', 'big_slide')
     list_editable = ['actif', 'is_big', 'is_small', 'big_slide']
     list_display_links = ('id',image_tag)
     list_per_page = 40
-
-
 
 
 admin.site.register(Category, CategoryAdmin)
