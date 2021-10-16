@@ -15,15 +15,15 @@
                             <div id="cate-toggle" class="category-menu-list">
                                 <ul>
                                     {% for category in categories %}
-                                        <li class="right-menu {% if forloop.counter > 8 %}rx-child{% endif %}"><a class="tree-title" href="{{category.get_absolute_url}}">{{category.name}}</a>
+                                        <li class="right-menu {% if forloop.counter > 8 %}rx-child{% endif %}"><a class="tree-title text-uppercase" href="{{category.get_absolute_url}}">{{category.name}}</a>
                                             {% if category.children.count > 0 %}
                                                 <ul class="cat-mega-menu">
                                                     {% for tree in category.children.all %}
                                                         <li class="right-menu cat-mega-title">
-                                                            <a href="{{node.get_absolute_url}}">{{tree.name}}</a>
+                                                            <a class="text-uppercase" href="{{node.get_absolute_url}}">{{tree.name}}</a>
                                                             <ul>
                                                                 {% for sub in tree.children.all %}
-                                                                    <li><a href="{{sub.get_absolute_url}}">{{sub.name}}</a></li>
+                                                                    <li><a class="text-uppercase" href="{{sub.get_absolute_url}}">{{sub.name}}</a></li>
                                                                 {% endfor %}
                                                             </ul>
                                                         </li>
@@ -140,7 +140,7 @@
                                         {% if forloop.first %}
                                             class="active"
                                         {% endif %}
-                                        data-toggle="tab" href="#{{cat.id}}"><span>{{cat.name}}</span></a></li>
+                                        data-toggle="tab" href="#{{cat.id}}"><span class="text-uppercase">{{cat.name}}</span></a></li>
                                 {% endfor %}
                             </ul>
                         </div>

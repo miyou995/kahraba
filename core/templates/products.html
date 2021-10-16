@@ -54,12 +54,12 @@
                                         <ul>
                                             {% recursetree categories %}
                                                 {% if node.children.count > 0 %}
-                                                    <li class="has-sub"><a href="{{node.get_absolute_url}}" style="font-size: 15px;">{{node.name}}</a>
+                                                    <li class="has-sub text-uppercase"><a href="{{node.get_absolute_url}}" style="font-size: 15px;">{{node.name}}</a>
                                                         <ul>
                                                             {% for cat in node.children.all %}
                                                                 <li>
                                                                     <input class="d-inline" type="checkbox" value="" name="cat" id="cat-{{cat.id}}" value="{{cat.id}}">
-                                                                    <label class="d-inline" for="cat-{{cat.id}}">
+                                                                    <label class="d-inline text-uppercase" for="cat-{{cat.id}}">
                                                                         <span></span>
                                                                         {{cat.name}}
                                                                     </label>

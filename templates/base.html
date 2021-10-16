@@ -87,7 +87,7 @@
                                     <select class="nice-select select-search-category" name="category">
                                         <option value="all" >Tous les produits</option>
                                         {% for cat in categories %}
-                                            <option value="{{cat.id}}">{{cat.name}}</option>
+                                            <option class="text-uppercase" value="{{cat.id}}">{{cat.name}}</option>
                                         {% empty %}
                                             pas de catégories pour le moment
                                         {% endfor %}
@@ -170,13 +170,13 @@
                                                     {% recursetree categories %}
                                                         <li 
                                                         {% if node.children.count > 0 %}
-                                                            class="sub-dropdown-holder"
+                                                            class="sub-dropdown-holder text-uppercase"
                                                         {% endif %}
-                                                        ><a href="{{node.get_absolute_url}}">{{node.name}}</a>
+                                                        ><a class="text-uppercase" href="{{node.get_absolute_url}}">{{node.name}}</a>
                                                             {% if node.children.count > 0 %}
                                                                 <ul class="hb-dropdown hb-sub-dropdown">
                                                                     {% for tree in node.children.all %}
-                                                                        <li><a href="{{tree.get_absolute_url}}">{{tree.name}}</a></li>
+                                                                        <li><a class="text-uppercase" href="{{tree.get_absolute_url}}">{{tree.name}}</a></li>
                                                                     {% endfor %}
                                                                 </ul>
                                                             {% endif %}
