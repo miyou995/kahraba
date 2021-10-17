@@ -14,9 +14,10 @@ from import_export.fields import Field
 from import_export.widgets import ManyToManyWidget
 from django.contrib.admin import SimpleListFilter
 
-from compressor.filters import CompilerFilter
-class PostCSSFilter(CompilerFilter):
-    command = 'postcss'
+# from compressor.filters import CompilerFilter
+
+# class PostCSSFilter(CompilerFilter):
+#     command = 'postcss'
 
 
 
