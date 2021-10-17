@@ -15,7 +15,9 @@ defusedxml==0.7.1
 diff-match-patch==20200713
 dj-database-url==0.5.0
 Django==3.2.6
+django-appconf==1.0.5
 django-cleanup==5.2.0
+django-compressor==2.4.1
 django-debug-toolbar==3.2.2
 django-filter==2.4.0
 django-htmx==1.2.1
@@ -38,7 +40,7 @@ odfpy==1.4.1
 openpyxl==3.0.7
 Pillow==8.3.1
 prompt-toolkit==3.0.20
-# psycopg2==2.9.1
+psycopg2==2.9.1
 psycopg2-binary==2.9.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
@@ -48,7 +50,9 @@ pyphen==0.11.0
 python-decouple==3.4
 pytz==2021.1
 PyYAML==5.4.1
+rcssmin==1.0.6
 redis==3.5.3
+rjsmin==1.1.0
 rsa==4.7.2
 sentry-sdk==1.4.3
 sgmllib3k==1.0.0
