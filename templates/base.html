@@ -23,7 +23,6 @@
         <meta property="og:site_name" content="{{business.name}} | {{business.title}}" />
     <title>{{business.title}}</title>
         <!-- Favicon -->
-        {% compress css %}
             <link rel="shortcut icon" type="image/x-icon" href="{{business.logo.url}}">
             <!-- Material Design Iconic Font-V2.2.0 -->
             <link rel="stylesheet" href="{% static "css/material-design-iconic-font.min.css" %}">
@@ -56,10 +55,7 @@
             <!-- Responsive CSS -->
             <link rel="stylesheet" href="{% static "css/responsive.css" %}">
             <!-- Modernizr js -->
-            {% endcompress %}
-            {% compress js  %}
                 <script src="{% static "js/vendor/modernizr-2.8.3.min.js" %}"></script>
-            {% endcompress %}
     </head>
     <body>
       
@@ -429,7 +425,6 @@
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
         
-        {% compress js  %}
             <script src="{% static "js/vendor/jquery-1.12.4.min.js" %}"></script>
             <!-- Popper js -->
             <script src="{% static "js/vendor/popper.min.js" %}"></script>
@@ -458,35 +453,32 @@
             <!-- Counterup -->
             <script src="{% static "js/jquery.counterup.min.js" %}"></script>
             <!-- Waypoints -->
+            
             <script src="{% static "js/waypoints.min.js" %}"></script>
             <!-- Barrating -->
             <script src="{% static "js/jquery.barrating.min.js" %}"></script>
             <!-- Jquery-ui -->
             <script src="{% static "js/jquery-ui.min.js" %}"></script>
-            <!-- Venobox -->
             <script src="{% static "js/venobox.min.js" %}"></script>
             <!-- Nice Select js -->
             <script src="{% static "js/jquery.nice-select.min.js" %}"></script>
             <!-- ScrollUp js -->
             <script src="{% static "js/scrollUp.min.js" %}"></script>
-            <!-- Main/Activator js -->
             <script src="{% static "js/main.js" %}"></script>
-            <script src="{% static "js/custom.js" %}"></script>
             <script type="text/javascript" src="{% static "js/vendor/sweetalert.min.js" %}"></script>
+            <!-- Venobox -->
+            <!-- Main/Activator js -->
+            {% block extrajs %}
+            
+            {% endblock extrajs %}
             <script src="https://unpkg.com/htmx.org@1.5.0" ></script>
-        {% endcompress %}
-
-        {% block extrajs %}
-          
-        {% endblock extrajs %}
-        {% compress js %}
+            <script type="text/javascript" src="{% static "js/site-base.js" %}"></script>
+            <script type="text/javascript" src="{% static "CACHE/js/awesome.8dd1a2872443.js" %}" charset="utf-8"></script>
             <script>
                 document.body.addEventListener('htmx:configRequest', (event) => {
                 event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
                 })
             </script>
-        {% endcompress %}
-      
     </body>
 <!-- 40432:14-->
 </html>

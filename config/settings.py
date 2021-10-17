@@ -62,7 +62,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -164,25 +164,35 @@ STATIC_URL = "/static/"
 
 STATIC_ROOT = BASE_DIR / "assets"
 
-STATICFILES_DIRS = [BASE_DIR / "static"]
+# STATICFILES_DIRS = [BASE_DIR / "assets"]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    # other finders..
     'compressor.finders.CompressorFinder',
 )
 
-
+# ==============================================================================
+# DJANGO COMPRESSOR
+# ==============================================================================
 
 # COMPRESS_FILTERS = {'css': ['core.admin.PostCSSFilter']}
 
-# COMPRESS_ROOT = BASE_DIR / 'static'
+COMPRESS_ROOT = BASE_DIR / 'assets'
 
-# COMPRESS_ENABLED = True
+COMPRESS_ENABLED = True
 
+COMPRESS_CSS_FILTERS = ["compressor.filters.cssmin.CSSMinFilter"]
+COMPRESS_JS_FILTERS = ["compressor.filters.jsmin.JSMinFilter"]
 
+COMPRESS_OFFLINE = True
+if not COMPRESS_ENABLED:
+    COMPRESS_ENABLED = True
+    COMPRESS_CSS_FILTERS = ["compressor.filters.cssmin.CSSMinFilter"]
+    COMPRESS_JS_FILTERS = ["compressor.filters.jsmin.JSMinFilter"]
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # ==============================================================================
 # MEDIA FILES SETTINGS
