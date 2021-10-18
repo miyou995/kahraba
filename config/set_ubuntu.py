@@ -55,6 +55,7 @@ INTERNAL_IPS = ["127.0.0.1"]
 WSGI_APPLICATION = "config.wsgi.application"
 
 
+
 # ==============================================================================
 # MIDDLEWARE SETTINGS
 # ==============================================================================
@@ -70,6 +71,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
 ]
+
 
 # ==============================================================================
 # TEMPLATES SETTINGS
@@ -100,23 +102,22 @@ TEMPLATES = [
 # DATABASES SETTINGS
 # ==============================================================================
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#      'NAME': BASE_DIR / 'db.sqlite3',
+#   }
+#}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': "kahraba_7000",
+        'USER': "postgres",
+        'PASSWORD': "miyou0209",
+        'HOST': "127.0.0.1",
+        'PORT': "5432",
     }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': "kahraba_7000",
-#         'USER': "postgres",
-#         'PASSWORD': "miyou0209",
-#         'HOST': "localhost",
-#         'PORT': "5432",
-#     }
-# }
-
 # ==============================================================================
 # AUTHENTICATION AND AUTHORIZATION SETTINGS
 # ==============================================================================
@@ -162,10 +163,8 @@ STATIC_URL = "/static/"
 
 STATIC_ROOT = BASE_DIR / "static"
 
+# STATICFILES_DIRS = [BASE_DIR / "assets"]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-
-# if not DEBUG:
-#     STATICFILES_DIRS = [BASE_DIR / "static"]
 
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -180,7 +179,7 @@ STATICFILES_FINDERS = (
 
 # COMPRESS_FILTERS = {'css': ['core.admin.PostCSSFilter']}
 
-COMPRESS_ROOT = BASE_DIR / 'static'
+COMPRESS_ROOT = BASE_DIR / 'assets'
 
 COMPRESS_ENABLED = True
 
@@ -256,19 +255,19 @@ else:
     EMAIL_USE_TLS = True
     EMAIL_USE_SSL = False
 
-    
 
-# CSRF_COOKIE_SECURE = True
-# CSRF_COOKIE_HTTPONLY = True
 
-# SECURE_HSTS_SECONDS = 60 * 60 * 24 * 7 * 52  # one year
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-# SECURE_SSL_REDIRECT = True
-# SECURE_BROWSER_XSS_FILTER = True
-# SECURE_CONTENT_TYPE_NOSNIFF = True
-# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+#CSRF_COOKIE_SECURE = True
+#CSRF_COOKIE_HTTPONLY = True
 
-# SESSION_COOKIE_SECURE = True
+#SECURE_HSTS_SECONDS = 60 * 60 * 24 * 7 * 52  # one year
+#SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+#SECURE_SSL_REDIRECT = True
+#SECURE_BROWSER_XSS_FILTER = True
+#SECURE_CONTENT_TYPE_NOSNIFF = True
+#SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+#SESSION_COOKIE_SECURE = True
 
 
 sentry_sdk.init(
