@@ -60,6 +60,8 @@ WantedBy=multi-user.target
 
 ...
 
+# NGINX
+
 sudo nano /etc/nginx/sites-available/kahraba
 
 server {
@@ -84,12 +86,27 @@ server {
     }
 }
 
+## add ssl
+
+create ssl dir with # mkdir ssl 
+
+gneerate ceritficat with 
+
+> sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ssl/kahraba.key -out ssl/kahraba.crt
+
+ajouter a nginx 
+>listen 443 ssl;
+ssl_certificate /home/taki/kahraba/kahraba/ssl/kahraba.crt;
+ssl_certificate_key /home/taki/kahraba/kahraba/ssl/kahraba.key;
+
+
+
  sudo ln -s /etc/nginx/sites-available/kahraba /etc/nginx/sites-enabled
 
 
 # not loaded images 
--> swithed on nginx conf from statis to assets
--> admin css not found 
+> swithed on nginx conf from statis to assets
+> admin css not found 
 
 
 
@@ -115,3 +132,19 @@ gunicorn commands
 
 restart :
 sudo systemctl restart gunicorn
+
+
+# ADMIN CSS error solved
+
+> changed static_files root from assets to static and removed stativ files dirs on prod
+>  vdvv
++ wscs
++ sdcfdsc
+
+
+
+ALLOWED_HOSTS = ['167.99.203.219', 'www.shop.kahrabacenter.com', 'shop.kahrabacenter.com]
+
+shop.kahrabacenter.com www.shop.kahrabacenter.com 
+
+ALLOWED_HOSTS = ['167.99.203.219', 'shop.kahrabacenter.com', 'www.shop.kahrabacenter.com']

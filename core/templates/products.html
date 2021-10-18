@@ -12,7 +12,7 @@
                                 <ul>
                                     <li><a href="{% url 'core:index' %}">Acceuil</a></li>
                                     {% for cat in category.get_ancestors %}
-                                    <li><a href="{{cat.get_absolute_Zurl}}">{{cat.name}}</a></li>
+                                    <li><a href="{{cat.get_absolute_url}}">{{cat.name}}</a></li>
                                     {% endfor %}
                                     <li class="active">{{category.name}}</li>
                                 </ul>

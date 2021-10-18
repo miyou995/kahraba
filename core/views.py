@@ -22,11 +22,10 @@ from django.core.management.utils import get_random_secret_key
 
 class IndexView(TemplateView):
     template_name = "index.html"
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["new_products"] = Product.objects.filter(new=True, actif=True)
-        context["top_products"] = Product.objects.filter(top=True, actif=True)
+        context["new_products"] = Product.objects.filter(new=True, actif=True)[:10]
+        context["top_products"] = Product.objects.filter(top=True, actif=True)[:10]
         context["big_slides"]   = Slide.objects.filter(actif=True)
         context["three_photos"] = ThreePhotos.objects.all()[:3]
         context["dual_banners"] = DualBanner.objects.all()[:2]

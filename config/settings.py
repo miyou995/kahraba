@@ -15,7 +15,7 @@ SECRET_KEY = config("SECRET_KEY", default="django-insecure$kahraba.configs.local
 
 DEBUG = config("DEBUG", default=True, cast=bool)
 
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="*", cast=Csv())
+ALLOWED_HOSTS = ['127.0.0.1','167.99.203.219', 'shop.kahrabacenter.com', 'www.shop.kahrabacenter.com']
 
 
 INSTALLED_APPS = [
@@ -55,7 +55,6 @@ INTERNAL_IPS = ["127.0.0.1"]
 WSGI_APPLICATION = "config.wsgi.application"
 
 
-
 # ==============================================================================
 # MIDDLEWARE SETTINGS
 # ==============================================================================
@@ -71,7 +70,6 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
 ]
-
 
 # ==============================================================================
 # TEMPLATES SETTINGS
@@ -111,11 +109,11 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': config('NAME'),
-#         'USER': config('USER'),
-#         'PASSWORD': config('PASSWORD'),
-#         'HOST': config('HOST'),
-#         'PORT': config('PORT'),
+#         'NAME': "kahraba_7000",
+#         'USER': "postgres",
+#         'PASSWORD': "miyou0209",
+#         'HOST': "localhost",
+#         'PORT': "5432",
 #     }
 # }
 
@@ -164,7 +162,8 @@ STATIC_URL = "/static/"
 
 STATIC_ROOT = BASE_DIR / "assets"
 
-# STATICFILES_DIRS = [BASE_DIR / "assets"]
+if not DEBUG:
+    STATICFILES_DIRS = [BASE_DIR / "static"]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 STATICFILES_FINDERS = (

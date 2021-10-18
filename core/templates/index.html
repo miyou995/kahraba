@@ -118,7 +118,6 @@
                                         </div>
                                     {% endfor %}
                                 {% endif %}
-
                             </div>
                         </div>
                     </div>
@@ -140,7 +139,9 @@
                                         {% if forloop.first %}
                                             class="active"
                                         {% endif %}
-                                        data-toggle="tab" href="#{{cat.id}}"><span class="text-uppercase">{{cat.name}}</span></a></li>
+                                        data-toggle="tab" href="#{{cat.id}}">
+                                        <span class="text-uppercase">{{cat.name}}</span>
+                                    </a></li>
                                 {% endfor %}
                             </ul>
                         </div>

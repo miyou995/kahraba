@@ -283,10 +283,10 @@
                                 <!-- Begin Footer Block Area -->
                                 <div class="col-lg-4 col-md-4 col-sm-6">
                                     <div class="footer-block">
-                                        <h3 class="footer-block-title">Product</h3>
+                                        <h3 class="footer-block-title">Catégories populaires</h3>
                                         <ul>
-                                            {% for cat in categories %}
-                                                <li><a href="{{cat.get_absolute_url}}">{{cat.name}}</a></li>
+                                            {% for cat in bottom_categories %}
+                                                <li><a class="text-uppercase" href="{{cat.get_absolute_url}}">{{cat.name}}</a></li>
                                             {% endfor %}
                                         </ul>
                                     </div>
@@ -297,9 +297,9 @@
                                     <div class="footer-block">
                                         <h3 class="footer-block-title">{{business.name}}</h3>
                                         <ul>
-                                            <li><a href="#">Nos réalisations</a></li>
-                                            <li><a href="#">A propos</a></li>
-                                            <li><a href="#">Contact</a></li>
+                                            <li><a class="text-uppercase" href="#">Nos réalisations</a></li>
+                                            <li><a class="text-uppercase" href="#">A propos</a></li>
+                                            <li><a class="text-uppercase" href="#">Contact</a></li>
                                         </ul>
                                     </div>
                                 </div>

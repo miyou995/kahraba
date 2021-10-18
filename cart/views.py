@@ -72,7 +72,7 @@ def cart_detail(request):
                     html = render_to_string('order_pdf.html' , {'order' : order, 'business': business})
                     out = BytesIO()
                     pdf_file = weasyprint.HTML(string=html).write_pdf(response)
-                    mail = EmailMessage(subject, message, 'inter.taki@gmail.com',[order.email])
+                    mail = EmailMessage(subject, message, 'octopus.emailing@gmail.com',[order.email])
                     mail.attach(pdf_file,out.getvalue(),'application/pdf')
                     mail.send()
                     context = {
