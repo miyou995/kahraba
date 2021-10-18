@@ -1,7 +1,9 @@
 from django.contrib import admin
 
 from .models import Wilaya, Commune
-
+from import_export import fields, resources
+from import_export.widgets import ForeignKeyWidget
+from import_export import widgets
 
 from import_export.admin import ImportExportModelAdmin
 # from import_export.widgets import ForeignKeyWidget
@@ -17,13 +19,25 @@ class WilayaAdmin(ImportExportModelAdmin):
     list_per_page = 30
 
 
+
+
+
+class CommuneResource(resources.ModelResource):
+    # wilaya_id = fields.Field(column_name='wilaya_id',attribute='wilaya_id',widget=ForeignKeyWidget(Wilaya, 'mat')) 
+    class Meta:
+        model = Commune
+        fields = ('wilaya_id','name')
+        exclude = ('id',)
+        # import_id_fields = ('id',)
+
+
 @admin.register(Commune)
 class CommuneAdmin(ImportExportModelAdmin):
-    # resource_class = CommuneResource  
-    list_display = ['id', 'name','wilaya']
-    list_display_links =('id', 'name')
-    search_fields = ('name',)
+    list_display = ('name','wilaya_id')
+    resource_class = CommuneResource
+    # list_display_links =('id', 'name')
+    # search_fields = ('name',)
+    # list_per_page = 40
 
-    list_per_page = 40
 
-    pass
+

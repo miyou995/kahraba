@@ -100,22 +100,22 @@ TEMPLATES = [
 # DATABASES SETTINGS
 # ==============================================================================
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': "kahraba_7000",
-#         'USER': "postgres",
-#         'PASSWORD': "miyou0209",
-#         'HOST': "localhost",
-#         'PORT': "5432",
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': "kahraba_7000",
+        'USER': "postgres",
+        'PASSWORD': "miyou0209",
+        'HOST': "localhost",
+        'PORT': "5432",
+    }
+}
 
 # ==============================================================================
 # AUTHENTICATION AND AUTHORIZATION SETTINGS

@@ -2,8 +2,9 @@ from django.db import models
 
 
 class Wilaya(models.Model):
+
     name = models.CharField(max_length=40, verbose_name="Wilaya")
-    mat = models.IntegerField(verbose_name='Matricule')
+    mat = models.IntegerField(verbose_name='Matricule', blank=True,null=True)
     price = models.DecimalField( max_digits=10, verbose_name="Prix de Livraison", decimal_places=2)
     active = models.BooleanField(default=True, verbose_name="Livraison Active")
     
